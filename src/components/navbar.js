@@ -15,7 +15,7 @@ const Navbar = ({ title }) => {
       right={0}
       left={0}
       p={20}
-      justifyContent="space-between"
+      justify="space-between"
     >
       <Link to="/" children={titleTop} />
 

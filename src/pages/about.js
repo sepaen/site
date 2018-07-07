@@ -28,10 +28,10 @@ const AboutPage = ({ data }) => (
       <Cell
         gridColumn="2/6"
         flexDirection="column"
-        justifyContent="center"
-        alignItems="stretch"
+        justify="center"
+        align="stretch"
       >
-        <Markdown dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} align="justify" />
+        <Markdown dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
         <Text>
           Keep up to date by

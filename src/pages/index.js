@@ -17,7 +17,7 @@ export const query = graphql`
 
 const IndexPage = ({ data }) => (
   <Layout title={data.site.siteMetadata.title}>
-    <Flex flex={1} justifyContent="center" alignItems="center">
+    <Flex flex={1} justify="center" align="center">
       <Logo width={500} height={155} />
     </Flex>
   </Layout>
