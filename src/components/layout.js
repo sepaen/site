@@ -16,13 +16,7 @@ const Layout = ({ title, children }) => (
     />
 
     <Navbar title={title} />
-
-    <Grid
-      flex={1}
-      gridTemplateColumns="repeat(6, 1fr)"
-      children={children}
-    />
-
+    {children}
     <Footer title={title} />
   </>
 )

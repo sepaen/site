@@ -10,6 +10,10 @@ const Footer = ({ title }) => {
   return (
     <Flex
       is="footer"
+      position="fixed"
+      bottom={0}
+      left={0}
+      p={20}
     >
       <Link to="/" children={titleBottom} />
     </Flex>

@@ -10,7 +10,11 @@ const Navbar = ({ title }) => {
   return (
     <Flex
       is="nav"
-      position="relative"
+      position="fixed"
+      top={0}
+      right={0}
+      left={0}
+      p={20}
       justifyContent="space-between"
     >
       <Link to="/" children={titleTop} />

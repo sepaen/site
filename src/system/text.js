@@ -11,7 +11,7 @@ import {
 
 import Base from './base'
 
-const Text = styled(Base).attrs({ is: 'span' })`
+const Text = styled(Base).attrs({ is: 'p', m: 0 })`
   ${fontSize}
   ${fontFamily}
   ${textAlign}
