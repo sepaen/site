@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Logo from '../components/logo'
-import Cell from '../system/cell'
+import Flex from '../system/flex'
 
 export const query = graphql`
   query IndexQuery {
@@ -17,9 +17,9 @@ export const query = graphql`
 
 const IndexPage = ({ data }) => (
   <Layout title={data.site.siteMetadata.title}>
-    <Cell gridColumn="1/-1" justifyContent="center" alignItems="center">
+    <Flex flex={1} justifyContent="center" alignItems="center">
       <Logo width={500} height={155} />
-    </Cell>
+    </Flex>
   </Layout>
 )
 

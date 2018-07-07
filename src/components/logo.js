@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import logoImage from '../images/logo.png'
 import Image from '../system/image'
 
-const Logo = styled(Image).attrs({ url: logoImage })`
+const Logo = styled(Image).attrs({ src: logoImage })`
   flex-shrink: 0;
   background-size: ${p => p.width}px ${p => p.height}px;
 `
