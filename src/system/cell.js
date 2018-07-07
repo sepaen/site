@@ -5,9 +5,9 @@ import {
   gridRow
 } from 'styled-system'
 
-import Base from './base'
+import Flex from './flex'
 
-const Cell = styled(Base)`
+const Cell = styled(Flex)`
   ${gridColumn}
   ${gridRow}
 `

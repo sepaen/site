@@ -10,6 +10,8 @@ parserOptions:
     experimentalObjectRestSpread: true
     jsx: true
   sourceType: module
+globals:
+  - graphql
 plugins:
   - react
 rules:
