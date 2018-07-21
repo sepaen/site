@@ -6,7 +6,7 @@ import Text from '../system/text'
 import Image from '../system/image'
 
 const ProjectPreview = ({ project, ...props }) => (
-  <Content {...props} id={'anchor-' + project.frontmatter.slug}>
+  <Content {...props}>
     <Cell gridColumn="1" flexDirection="column" mr={4}>
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />

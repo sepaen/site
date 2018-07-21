@@ -28,8 +28,6 @@ const AboutPage = ({ data }) => (
       <Cell
         gridColumn="2/6"
         flexDirection="column"
-        justify="center"
-        align="stretch"
       >
         <Markdown dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
