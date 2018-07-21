@@ -46,8 +46,8 @@ const ProjectDetails = ({ project, ...props }) => (
         <Image
           key={image.publicURL}
           src={image.publicURL}
-          maxWidth="90%"
-          maxHeight="90%"
+          maxWidth="100%"
+          maxHeight="100%"
           ml={margin(i)}
           mt={margin(i)}
         />

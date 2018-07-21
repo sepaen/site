@@ -14,10 +14,10 @@ const Markdown = ({ html, ...props }) => (
 
 export default styled(Markdown)`
   h1 {
-
+    margin: 0;
   }
 
   p {
-
+    margin: 0;
   }
 `
