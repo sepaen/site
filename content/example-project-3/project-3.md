@@ -1,7 +1,9 @@
 ---
-title: Example project
-slug: example-project
-description: a short description of the project
+type: project
+title: Example project 3
+slug: example-project-3
+description: A third project
+date: 2018-07-08
 images:
   - "./image-1.jpeg"
   - "./image-2.jpeg"
