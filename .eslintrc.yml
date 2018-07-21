@@ -10,8 +10,6 @@ parserOptions:
     experimentalObjectRestSpread: true
     jsx: true
   sourceType: module
-globals:
-  - graphql
 plugins:
   - react
 rules:
@@ -28,4 +26,6 @@ rules:
     - error
     - never
   react/prop-types:
+    - off
+  react/no-children-prop:
     - off
