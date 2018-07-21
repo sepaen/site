@@ -1,11 +1,18 @@
+import React from 'react'
 import styled from 'styled-components'
 
-import withProps from '../utils/with-props';
 import Base from '../system/base'
 
-const Markdown = styled(
-  withProps(Base, { is: 'section' })
-)`
+const Markdown = ({ html, ...props }) => (
+  <Base
+    {...props}
+    is="section"
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
+)
+
+
+export default styled(Markdown)`
   h1 {
 
   }
@@ -14,5 +21,3 @@ const Markdown = styled(
 
   }
 `
-
-export default Markdown

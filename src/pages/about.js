@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => (
         gridColumn="2/6"
         flexDirection="column"
       >
-        <Markdown dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <Markdown html={data.markdownRemark.html} />
 
         <Text>
           Keep up to date by
