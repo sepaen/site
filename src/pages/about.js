@@ -16,7 +16,7 @@ export const query = graphql`
       }
     }
 
-    markdownRemark(frontmatter: { slug: { eq: "about" } }) {
+    markdownRemark(frontmatter: { type: { eq: "about" } }) {
       html
     }
   }
@@ -42,4 +42,4 @@ const AboutPage = ({ data }) => (
   </Layout>
 )
 
-export default AboutPage;
+export default AboutPage
