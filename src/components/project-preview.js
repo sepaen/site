@@ -4,6 +4,7 @@ import Content from './content'
 import Cell from '../system/cell'
 import Text from '../system/text'
 import Image from '../system/image'
+import Link from '../system/link'
 
 const ProjectPreview = ({ project, ...props }) => (
   <Content {...props} id={'anchor-' + project.frontmatter.slug}>
@@ -13,11 +14,13 @@ const ProjectPreview = ({ project, ...props }) => (
     </Cell>
 
     <Cell gridColumn="2/6" justify="center" align="flex-start">
-      <Image
-        src={project.frontmatter.images[1].publicURL}
-        maxWidth="100%"
-        maxHeight="100%"
-      />
+      <Link to={`/projects/${project.frontmatter.slug}`}>
+        <Image
+          src={project.frontmatter.images[1].publicURL}
+          maxWidth="100%"
+          maxHeight="100%"
+        />
+      </Link>
     </Cell>
   </Content>
 )
