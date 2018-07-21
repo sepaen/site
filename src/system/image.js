@@ -1,9 +1,10 @@
 import withProps from '../utils/with-props'
-import Base from './base'
+import Flex from './flex'
 
-const Image = withProps(Base, {
+const Image = withProps(Flex, {
   is: 'img',
   domProps: ['src'],
+  flexShrink: 0,
   border: 'none'
 })
 

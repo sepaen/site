@@ -10,6 +10,7 @@ const Footer = ({ title }) => {
     <Flex
       is="footer"
       position="fixed"
+      zIndex={2}
       bottom={0}
       left={0}
       p={20}

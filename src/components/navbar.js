@@ -10,6 +10,7 @@ const Navbar = ({ title }) => {
     <Flex
       is="nav"
       position="fixed"
+      zIndex={2}
       top={0}
       right={0}
       left={0}

@@ -44,7 +44,7 @@ function filterDOMProps(props, whitelist=[]) {
 }
 
 const Base = ({ is:Tag='div', domProps, ...props }) => {
-  const passedProps = (typeof Tag === 'string')
+  const passedProps = Boolean(domProps) || (typeof Tag === 'string')
     ? filterDOMProps(props, domProps)
     : props
 
@@ -52,6 +52,7 @@ const Base = ({ is:Tag='div', domProps, ...props }) => {
 }
 
 const transform = responsiveStyle({ prop: 'transform' })
+const transition = responsiveStyle({ prop: 'transition' })
 const cursor = responsiveStyle({ prop: 'cursor' })
 
 export default styled(Base)`
@@ -78,7 +79,9 @@ export default styled(Base)`
   ${borderColor}
 
   ${color}
-  ${transform}
   ${cursor}
+
+  ${transform}
+  ${transition}
 `
 

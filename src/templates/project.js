@@ -20,6 +20,10 @@ export const query = graphql`
         title
         slug
         description
+        client
+        date(formatString: "YYYY")
+        extra
+        url
         images {
           publicURL
         }
