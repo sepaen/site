@@ -7,9 +7,12 @@ import {
   gridAutoFlow
 } from 'styled-system'
 
+import withProps from '../utils/with-props'
 import Flex from './flex'
 
-const Grid = styled(Flex).attrs({ display: 'grid' })`
+const Grid = styled(
+  withProps(Flex, { display: 'grid' })
+)`
   ${gridTemplateColumns}
   ${gridTemplateRows}
   ${gridGap}

@@ -7,20 +7,28 @@ import {
   alignItems,
   alignContent,
   alignSelf,
-  order
+  order,
+  responsiveStyle
 } from 'styled-system'
 
+import withProps from '../utils/with-props'
 import Base from './base'
 
-const Flex = styled(Base).attrs({ display: 'flex' })`
+const flexShrink = responsiveStyle({ prop: 'flexShrink' })
+const overflow = responsiveStyle({ prop: 'overflow' })
+
+const Flex = styled(
+  withProps(Base, { display: 'flex' })
+)`
   ${flex}
   ${flexDirection}
+  ${flexShrink}
   ${justifyContent}
   ${alignItems}
   ${alignContent}
   ${alignSelf}
   ${order}
-  ${p => ('flexShrink' in p) && `flex-shrink: ${p.flexShrink};`}
+  ${overflow}
 `
 
 export default Flex

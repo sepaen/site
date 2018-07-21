@@ -20,13 +20,15 @@ import {
   borders,
   borderRadius,
   borderColor,
-  color
+  color,
+  responsiveStyle
 } from 'styled-system'
 
 
 const CALLBACK_RX = /^on[A-Z][\w]*/
 
 const defaultWhitelist = [
+  'id',
   'children',
   'className',
   'style',
@@ -48,6 +50,9 @@ const Base = ({ is:Tag='div', domProps, ...props }) => {
 
   return <Tag {...passedProps} />
 }
+
+const transform = responsiveStyle({ prop: 'transform' })
+const cursor = responsiveStyle({ prop: 'cursor' })
 
 export default styled(Base)`
   ${display}
@@ -73,5 +78,7 @@ export default styled(Base)`
   ${borderColor}
 
   ${color}
+  ${transform}
+  ${cursor}
 `
 

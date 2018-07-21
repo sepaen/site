@@ -9,9 +9,12 @@ import {
   letterSpacing
 } from 'styled-system'
 
+import withProps from '../utils/with-props'
 import Base from './base'
 
-const Text = styled(Base).attrs({ is: 'p', m: 0 })`
+const Text = styled(
+  withProps(Base, { is: 'p', m: 0 })
+)`
   ${fontSize}
   ${fontFamily}
   ${textAlign}
