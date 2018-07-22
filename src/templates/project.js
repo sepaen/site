@@ -49,7 +49,7 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
   const projects = data.allMarkdownRemark.edges
 
   return (
-    <Layout title={title}>
+    <Layout title={title} bg={project.frontmatter.color}>
       <ProjectDetails project={project} />
 
       <NextProject

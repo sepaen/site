@@ -35,12 +35,20 @@ export const query = graphql`
   }
 `
 
+function findProject(projects, slug) {
+  return slug.length
+    ? projects.find(({ node }) => node.frontmatter.slug === slug)
+    : projects[0]
+}
+
 const ProjectsPage = ({ data, location }) => {
+  const slug = location.hash.slice(1)
   const title = data.site.siteMetadata.title
   const projects = data.allMarkdownRemark.edges
+  const current = findProject(projects, slug).node
 
   return (
-    <Layout title={title}>
+    <Layout title={title} bg={current.frontmatter.color}>
       <ScrollToHash location={location}>
         {projects.map(({ node }) => (
           <ProjectPreview
@@ -51,7 +59,7 @@ const ProjectsPage = ({ data, location }) => {
       </ScrollToHash>
 
       <NextProject hash
-        current={location.hash.slice(1)}
+        current={slug}
         projects={projects}
       />
     </Layout>

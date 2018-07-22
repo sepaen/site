@@ -13,7 +13,7 @@ const ProjectDescription = ({ project, ...props }) => (
   <Flex
     {...props}
     height="50%"
-    bg="red"
+    bg={project.frontmatter.color}
     p={20}
   >
     <Flex flexDirection="column" mr={20}>
@@ -35,7 +35,6 @@ const ProjectDetails = ({ project, ...props }) => (
   <Content
     {...props}
     overflow="hidden"
-    bg={project.frontmatter.color}
   >
     <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
       <Text children={project.frontmatter.title} />
