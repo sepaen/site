@@ -2,6 +2,9 @@ import React from 'react'
 import Flex from '../system/flex'
 import withProps from '../utils/with-props'
 
+import next from '../images/next.svg'
+import previous from '../images/previous.svg'
+
 const Area = withProps(Flex, { flex: 1, zIndex: 1 })
 
 class Gallery extends React.Component {
@@ -62,8 +65,8 @@ class Gallery extends React.Component {
           />
         ))}
 
-        {(index > 0) && <Area onClick={() => this.select(index - 1)} cursor="n-resize" />}
-        {(index < len-1) && <Area onClick={() => this.select(index + 1)} cursor="s-resize" />}
+        {(index > 0) && <Area onClick={() => this.select(index - 1)} cursor={`url(${previous}), auto`} />}
+        {(index < len-1) && <Area onClick={() => this.select(index + 1)} cursor={`url(${next}), auto`} />}
       </Flex>
     )
   }
