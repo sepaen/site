@@ -7,7 +7,11 @@ import Image from '../system/image'
 import Link from '../system/link'
 
 const ProjectPreview = ({ project, ...props }) => (
-  <Content {...props} id={'anchor-' + project.frontmatter.slug}>
+  <Content
+    {...props}
+    id={'anchor-' + project.frontmatter.slug}
+    bg={project.frontmatter.color}
+  >
     <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />

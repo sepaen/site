@@ -4,13 +4,20 @@ import Flex from '../system/flex'
 import next from '../images/next.svg'
 import previous from '../images/previous.svg'
 
+function margin(i, len) {
+  const isFirst = i === 0
+  const isLast = i === len - 1
+
+  return (isFirst || isLast) ? 0 : (i % 3 - 1) * 20
+}
+
 const Area = ({ disabled, cursor, onClick, ...props}) => (
   <Flex
     {...props}
     flex={1}
-    zIndex={2}
+    zIndex={1}
     cursor={!disabled && cursor}
-    onClick={!disabled && onClick}
+    onClick={!disabled ? onClick : null}
   />
 )
 
@@ -36,11 +43,9 @@ class Gallery extends React.Component {
   }
 
   translate(index) {
-    if (index <= this.state.index) {
-      return 'translate3d(0, 0, 0)'
-    } else {
-      return 'translate3d(0, 100%, 0)'
-    }
+    return (index <= this.state.index)
+      ? 'translate3d(0, 0, 0)'
+      : 'translate3d(0, 200%, 0)'
   }
 
   render() {
@@ -68,7 +73,9 @@ class Gallery extends React.Component {
             alignItems="center"
             transform={this.translate(i)}
             transition={(up || index) && 'transform 0.3s ease-in-out'}
-            p={15}
+            p={30}
+            mt={margin(i, len)}
+            ml={margin(i, len)}
           />
         ))}
 

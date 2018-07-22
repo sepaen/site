@@ -24,6 +24,7 @@ export const query = graphql`
             title
             slug
             description
+            color
             images {
               publicURL
             }

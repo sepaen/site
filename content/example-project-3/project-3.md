@@ -7,6 +7,7 @@ date: 2018-07-08
 client: Client Name
 extra: Extra information
 url: http://www.example.com
+color: "#d3b5b5"
 images:
   - "./image-1.jpeg"
   - "./image-2.jpeg"

@@ -9,10 +9,6 @@ import Image from '../system/image'
 import Markdown from '../system/markdown'
 import Link from '../system/link'
 
-function margin(i) {
-  return (i % 2 - 1) * 30
-}
-
 const ProjectDescription = ({ project, ...props }) => (
   <Flex
     {...props}
@@ -36,24 +32,29 @@ const ProjectDescription = ({ project, ...props }) => (
 
 
 const ProjectDetails = ({ project, ...props }) => (
-  <Content {...props} overflow="hidden">
+  <Content
+    {...props}
+    overflow="hidden"
+    bg={project.frontmatter.color}
+  >
     <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
       <Text children={project.frontmatter.title} />
     </Cell>
 
     <Gallery is={Cell} gridColumn="2/6">
-      {project.frontmatter.images.map((image, i) => (
+      {project.frontmatter.images.map(image => (
         <Image
           key={image.publicURL}
           src={image.publicURL}
           maxWidth="100%"
           maxHeight="100%"
-          ml={margin(i)}
-          mt={margin(i)}
         />
       ))}
 
-      <ProjectDescription project={project} />
+      <ProjectDescription
+        project={project}
+        width="calc(100% - 40px)"
+      />
     </Gallery>
   </Content>
 )

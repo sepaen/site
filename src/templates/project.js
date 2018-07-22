@@ -24,6 +24,7 @@ export const query = graphql`
         date(formatString: "YYYY")
         extra
         url
+        color
         images {
           publicURL
         }
