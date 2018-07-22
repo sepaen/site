@@ -31,7 +31,7 @@ const ProjectPreview = ({ project, ...props }) => (
         height="100%"
         justifyContent="center"
         alignItems="center"
-        p={15}
+        p={30}
       >
         <Image
           src={project.frontmatter.images[0].publicURL}
