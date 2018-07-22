@@ -1,11 +1,18 @@
 import React from 'react'
 import Flex from '../system/flex'
-import withProps from '../utils/with-props'
 
 import next from '../images/next.svg'
 import previous from '../images/previous.svg'
 
-const Area = withProps(Flex, { flex: 1, zIndex: 1 })
+const Area = ({ disabled, cursor, onClick, ...props}) => (
+  <Flex
+    {...props}
+    flex={1}
+    zIndex={2}
+    cursor={!disabled && cursor}
+    onClick={!disabled && onClick}
+  />
+)
 
 class Gallery extends React.Component {
   state = {
@@ -65,8 +72,16 @@ class Gallery extends React.Component {
           />
         ))}
 
-        {(index > 0) && <Area onClick={() => this.select(index - 1)} cursor={`url(${previous}), auto`} />}
-        {(index < len-1) && <Area onClick={() => this.select(index + 1)} cursor={`url(${next}), auto`} />}
+        <Area
+          disabled={index === 0}
+          onClick={() => this.select(index - 1)}
+          cursor={`url(${previous}), auto`}
+        />
+        <Area
+          disabled={index === len - 1}
+          onClick={() => this.select(index + 1)}
+          cursor={`url(${next}), auto`}
+        />
       </Flex>
     )
   }
