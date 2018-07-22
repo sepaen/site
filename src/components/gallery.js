@@ -1,6 +1,6 @@
 import React from 'react'
 import Flex from '../system/flex'
-import withProps from '../utils/with-props';
+import withProps from '../utils/with-props'
 
 const Area = withProps(Flex, { flex: 1, zIndex: 1 })
 
@@ -34,7 +34,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { images, children, ...props } = this.props
+    const { children, ...props } = this.props
     const { index, up } = this.state
     const len = React.Children.count(children)
 
