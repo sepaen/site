@@ -4,15 +4,14 @@ import styled from 'styled-components'
 import Base from '../system/base'
 
 const Markdown = ({ html, ...props }) => (
-  <Base
-    {...props}
-    is="section"
-    dangerouslySetInnerHTML={{ __html: html }}
-  />
+  <Base {...props} is="section" dangerouslySetInnerHTML={{ __html: html }} />
 )
 
-
 export default styled(Markdown)`
+  * {
+    color: white;
+  }
+
   h1 {
     margin: 0;
   }

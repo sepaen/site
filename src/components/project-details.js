@@ -15,7 +15,6 @@ const ProjectDescription = ({ project, ...props }) => (
       <Text children={project.frontmatter.client} />
       <Text children={project.frontmatter.date} mb={20} />
 
-      <Text children={project.frontmatter.extra} />
       <Text children={project.frontmatter.extra} mb={20} />
 
       <Link to={project.frontmatter.url} children={project.frontmatter.url} />
@@ -47,7 +46,7 @@ const ProjectDetails = ({ project, ...props }) => (
         />
       ))}
 
-      <ProjectDescription project={project} width="calc(100% - 40px)" />
+      <ProjectDescription project={project} width="calc(100% - 80px)" />
     </Gallery>
   </Content>
 )
