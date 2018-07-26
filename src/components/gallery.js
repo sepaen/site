@@ -10,6 +10,10 @@ function margin(i, len) {
   return isFirst || isLast ? 0 : ((i % 3) - 1) * 20
 }
 
+function wheight() {
+  return window ? window.innerHeight : 0
+}
+
 class Gallery extends React.Component {
   state = {
     index: 0,
@@ -65,13 +69,11 @@ class Gallery extends React.Component {
 
         <Cursor
           is={Text}
-          onClick={e =>
-            this.select(index + (e.pageY < window.innerHeight / 2 ? -1 : 1))
-          }
+          onClick={e => this.select(index + (e.pageY < wheight() / 2 ? -1 : 1))}
           render={({ y }) =>
-            y < 60 || y > window.innerHeight - 60
+            y < 60 || y > wheight() - 60
               ? null
-              : y < window.innerHeight / 2
+              : y < wheight() / 2
                 ? 'Previous'
                 : 'Next'
           }
