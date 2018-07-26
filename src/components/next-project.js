@@ -1,12 +1,13 @@
 import React from 'react'
+import extractSlug from '../utils/extract-slug'
 import Link from '../system/link'
 
 function nextProject(current = '', projects = [], hash) {
   const index = current.length
-    ? projects.findIndex(({ node }) => node.frontmatter.slug === current)
+    ? projects.findIndex(({ node }) => extractSlug(node) === current)
     : 0
   const next = projects[(index + 1) % projects.length].node
-  const slug = next.frontmatter.slug
+  const slug = extractSlug(next)
 
   return hash ? { href: `/projects#${slug}` } : { to: `/projects/${slug}` }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import extractSlug from '../utils/extract-slug'
 import Content from './content'
 import Cell from '../system/cell'
 import Text from '../system/text'
@@ -9,7 +10,7 @@ import Link from '../system/link'
 const ProjectPreview = ({ project, ...props }) => (
   <Content
     {...props}
-    id={'anchor-' + project.frontmatter.slug}
+    id={'anchor-' + extractSlug(project)}
     bg={project.frontmatter.color}
   >
     <Cell
@@ -25,7 +26,7 @@ const ProjectPreview = ({ project, ...props }) => (
 
     <Cell gridColumn="2/6" position="relative" height="100%">
       <Link
-        to={`/projects/${project.frontmatter.slug}`}
+        to={`/projects/${extractSlug(project)}`}
         position="absolute"
         top={0}
         left={0}

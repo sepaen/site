@@ -6,19 +6,18 @@ import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
 
 export const query = graphql`
-  query ProjectDetailsQuery($slug: String!) {
+  query ProjectDetailsQuery($fileRx: String!) {
     site {
       siteMetadata {
         title
       }
     }
 
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(fileAbsolutePath: { regex: $fileRx }) {
       html
 
       frontmatter {
         title
-        slug
         description
         client
         date(formatString: "YYYY")
@@ -27,14 +26,14 @@ export const query = graphql`
         color
         images
       }
+
+      fileAbsolutePath
     }
 
     allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
       edges {
         node {
-          frontmatter {
-            slug
-          }
+          fileAbsolutePath
         }
       }
     }

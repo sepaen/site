@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import ScrollToHash from '../components/scroll-to-hash'
 import ProjectPreview from '../components/project-preview'
 import NextProject from '../components/next-project'
+import extractSlug from '../utils/extract-slug'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -22,11 +23,12 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            slug
             description
             color
             images
           }
+
+          fileAbsolutePath
         }
       }
     }
@@ -35,7 +37,7 @@ export const query = graphql`
 
 function findProject(projects, slug) {
   return slug.length
-    ? projects.find(({ node }) => node.frontmatter.slug === slug)
+    ? projects.find(({ node }) => extractSlug(node) === slug)
     : projects[0]
 }
 
@@ -50,7 +52,7 @@ const ProjectsPage = ({ data, location }) => {
       <ScrollToHash location={location} anchor="project-preview">
         {projects.map(({ node }) => (
           <ProjectPreview
-            key={node.frontmatter.slug}
+            key={extractSlug(node)}
             project={node}
             className="project-preview"
           />
