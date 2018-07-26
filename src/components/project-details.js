@@ -37,7 +37,7 @@ const ProjectDetails = ({ project, ...props }) => (
       <Text children={project.frontmatter.title} />
     </Cell>
 
-    <Gallery is={Cell} gridColumn="2/6">
+    <Gallery is={Cell} gridColumn="2/6" py={50}>
       {project.frontmatter.images.map(image => (
         <Image
           key={image.publicURL}

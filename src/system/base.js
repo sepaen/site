@@ -22,9 +22,8 @@ import {
   borderColor,
   color,
   style,
-  responsiveStyle
+  responsiveStyle,
 } from 'styled-system'
-
 
 const CALLBACK_RX = /^on[A-Z][\w]*/
 
@@ -33,21 +32,24 @@ const defaultWhitelist = [
   'children',
   'className',
   'style',
-  'dangerouslySetInnerHTML'
+  'dangerouslySetInnerHTML',
 ]
 
-function filterDOMProps(props, whitelist=[]) {
-  return pickBy(props, (_, key) => (
-    defaultWhitelist.includes(key)
-    || whitelist.includes(key))
-    || CALLBACK_RX.test(key)
+function filterDOMProps(props, whitelist = []) {
+  return pickBy(
+    props,
+    (_, key) =>
+      defaultWhitelist.includes(key) ||
+      whitelist.includes(key) ||
+      CALLBACK_RX.test(key)
   )
 }
 
-const Base = ({ is:Tag='div', domProps, ...props }) => {
-  const passedProps = Boolean(domProps) || (typeof Tag === 'string')
-    ? filterDOMProps(props, domProps)
-    : props
+const Base = ({ is: Tag = 'div', domProps, ...props }) => {
+  const passedProps =
+    Boolean(domProps) || typeof Tag === 'string'
+      ? filterDOMProps(props, domProps)
+      : props
 
   return <Tag {...passedProps} />
 }
@@ -55,7 +57,11 @@ const Base = ({ is:Tag='div', domProps, ...props }) => {
 const transform = responsiveStyle({ prop: 'transform' })
 const transition = responsiveStyle({ prop: 'transition' })
 const cursor = responsiveStyle({ prop: 'cursor' })
-const mixBlendMode = style({ prop: 'mixBlendMode', cssProperty: 'mix-blend-mode' })
+const mixBlendMode = style({
+  prop: 'mixBlendMode',
+  cssProperty: 'mix-blend-mode',
+})
+const userSelect = style({ prop: 'userSelect', cssProperty: 'user-select' })
 
 export default styled(Base)`
   ${display}
@@ -86,5 +92,6 @@ export default styled(Base)`
 
   ${transform}
   ${transition}
-`
 
+  ${userSelect}
+`

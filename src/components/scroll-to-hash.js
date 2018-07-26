@@ -1,15 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
-import debounce from 'lodash/debounce'
 import Flex from '../system/flex'
-
-function findAncestor(el, className) {
-  while (!el.classList.contains(className) && (el = el.parentElement)) {
-    continue
-  }
-
-  return el
-}
 
 class ScrollToHash extends React.Component {
   componentDidMount() {

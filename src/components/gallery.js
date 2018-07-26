@@ -1,30 +1,19 @@
 import React from 'react'
 import Flex from '../system/flex'
-
-import next from '../images/next.svg'
-import previous from '../images/previous.svg'
+import Text from '../system/text'
+import Cursor from './cursor'
 
 function margin(i, len) {
   const isFirst = i === 0
   const isLast = i === len - 1
 
-  return (isFirst || isLast) ? 0 : (i % 3 - 1) * 20
+  return isFirst || isLast ? 0 : ((i % 3) - 1) * 20
 }
-
-const Area = ({ disabled, cursor, onClick, ...props}) => (
-  <Flex
-    {...props}
-    flex={1}
-    zIndex={1}
-    cursor={!disabled && cursor}
-    onClick={!disabled ? onClick : null}
-  />
-)
 
 class Gallery extends React.Component {
   state = {
     index: 0,
-    up: false
+    up: false,
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -43,7 +32,7 @@ class Gallery extends React.Component {
   }
 
   translate(index) {
-    return (index <= this.state.index)
+    return index <= this.state.index
       ? 'translate3d(0, 0, 0)'
       : 'translate3d(0, 200%, 0)'
   }
@@ -54,12 +43,7 @@ class Gallery extends React.Component {
     const len = React.Children.count(children)
 
     return (
-      <Flex
-        {...props}
-        position="relative"
-        flexDirection="column"
-        height="100%"
-      >
+      <Flex {...props} position="relative" flexDirection="column" height="100%">
         {React.Children.map(children, (child, i) => (
           <Flex
             key={i}
@@ -79,15 +63,13 @@ class Gallery extends React.Component {
           />
         ))}
 
-        <Area
-          disabled={index === 0}
-          onClick={() => this.select(index - 1)}
-          cursor={`url(${previous}), auto`}
-        />
-        <Area
-          disabled={index === len - 1}
-          onClick={() => this.select(index + 1)}
-          cursor={`url(${next}), auto`}
+        <Cursor
+          is={Text}
+          onClick={e =>
+            this.select(index + (e.pageY < window.innerHeight / 2 ? -1 : 1))
+          }
+          render={({ y }) => (y < window.innerHeight / 2 ? 'Previous' : 'Next')}
+          mixBlendMode="difference"
         />
       </Flex>
     )
