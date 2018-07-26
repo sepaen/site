@@ -25,9 +25,7 @@ export const query = graphql`
         extra
         url
         color
-        images {
-          publicURL
-        }
+        images
       }
     }
 
@@ -52,10 +50,7 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
     <Layout title={title} bg={project.frontmatter.color}>
       <ProjectDetails project={project} />
 
-      <NextProject
-        current={pageContext.slug}
-        projects={projects}
-      />
+      <NextProject current={pageContext.slug} projects={projects} />
     </Layout>
   )
 }

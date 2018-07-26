@@ -15,7 +15,7 @@ export const query = graphql`
     }
 
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "project" } } },
+      filter: { frontmatter: { type: { eq: "project" } } }
       sort: { fields: frontmatter___date }
     ) {
       edges {
@@ -25,9 +25,7 @@ export const query = graphql`
             slug
             description
             color
-            images {
-              publicURL
-            }
+            images
           }
         }
       }
@@ -59,13 +57,9 @@ const ProjectsPage = ({ data, location }) => {
         ))}
       </ScrollToHash>
 
-      <NextProject hash
-        current={slug}
-        projects={projects}
-      />
+      <NextProject hash current={slug} projects={projects} />
     </Layout>
   )
 }
 
 export default ProjectsPage
-

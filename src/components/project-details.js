@@ -38,12 +38,7 @@ const ProjectDetails = ({ project, ...props }) => (
 
     <Gallery is={Cell} gridColumn="2/6" py={50}>
       {project.frontmatter.images.map(image => (
-        <Image
-          key={image.publicURL}
-          src={image.publicURL}
-          maxWidth="100%"
-          maxHeight="100%"
-        />
+        <Image key={image} src={image} maxWidth="100%" maxHeight="100%" />
       ))}
 
       <ProjectDescription project={project} width="calc(100% - 80px)" />

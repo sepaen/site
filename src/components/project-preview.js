@@ -36,7 +36,7 @@ const ProjectPreview = ({ project, ...props }) => (
         p={30}
       >
         <Image
-          src={project.frontmatter.images[0].publicURL}
+          src={project.frontmatter.images[0]}
           maxWidth="100%"
           maxHeight="100%"
         />
