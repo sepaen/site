@@ -68,7 +68,13 @@ class Gallery extends React.Component {
           onClick={e =>
             this.select(index + (e.pageY < window.innerHeight / 2 ? -1 : 1))
           }
-          render={({ y }) => (y < window.innerHeight / 2 ? 'Previous' : 'Next')}
+          render={({ y }) =>
+            y < 60 || y > window.innerHeight - 60
+              ? null
+              : y < window.innerHeight / 2
+                ? 'Previous'
+                : 'Next'
+          }
           mixBlendMode="difference"
         />
       </Flex>

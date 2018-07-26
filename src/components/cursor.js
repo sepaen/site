@@ -1,5 +1,4 @@
 import React from 'react'
-import Text from '../system/text'
 import Flex from '../system/flex'
 
 class Cursor extends React.Component {
@@ -33,7 +32,7 @@ class Cursor extends React.Component {
 
     const content = render({ ...props, x, y })
 
-    return (
+    return !content ? null : (
       <Flex
         {...props}
         children={content}
