@@ -3,7 +3,7 @@ import React from 'react'
 import Flex from '../system/flex'
 import Link from '../system/link'
 
-const Footer = ({ title }) => {
+const Footer = ({ title, ...props }) => {
   const [_, titleBottom] = title.split(' ')
 
   return (
@@ -13,7 +13,9 @@ const Footer = ({ title }) => {
       zIndex={2}
       bottom={0}
       left={0}
+      mixBlendMode="difference"
       p={20}
+      {...props}
     >
       <Link to="/" children={titleBottom} />
     </Flex>

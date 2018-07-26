@@ -12,16 +12,18 @@ const ProjectPreview = ({ project, ...props }) => (
     id={'anchor-' + project.frontmatter.slug}
     bg={project.frontmatter.color}
   >
-    <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
+    <Cell
+      gridColumn="1"
+      flexDirection="column"
+      height="66%"
+      mixBlendMode="difference"
+      mr={4}
+    >
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />
     </Cell>
 
-    <Cell
-      gridColumn="2/6"
-      position="relative"
-      height="100%"
-    >
+    <Cell gridColumn="2/6" position="relative" height="100%">
       <Link
         to={`/projects/${project.frontmatter.slug}`}
         position="absolute"

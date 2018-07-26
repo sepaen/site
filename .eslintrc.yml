@@ -30,3 +30,5 @@ rules:
     - off
   react/no-children-prop:
     - off
+  react/display-name:
+    - off

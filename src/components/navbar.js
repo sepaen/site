@@ -3,7 +3,7 @@ import React from 'react'
 import Flex from '../system/flex'
 import Link from '../system/link'
 
-const Navbar = ({ title }) => {
+const Navbar = ({ title, ...props }) => {
   const [titleTop] = title.split(' ')
 
   return (
@@ -14,8 +14,10 @@ const Navbar = ({ title }) => {
       top={0}
       right={0}
       left={0}
-      p={20}
       justify="space-between"
+      mixBlendMode="difference"
+      p={20}
+      {...props}
     >
       <Link to="/" children={titleTop} />
 

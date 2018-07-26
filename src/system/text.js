@@ -6,21 +6,25 @@ import {
   textAlign,
   lineHeight,
   fontWeight,
-  letterSpacing
+  letterSpacing,
+  responsiveStyle,
 } from 'styled-system'
 
 import withProps from '../utils/with-props'
-import Base from './base'
+import Flex from './flex'
 
-const Text = styled(
-  withProps(Base, { is: 'p', m: 0 })
-)`
+const textTransform = responsiveStyle({ prop: 'textTransform' })
+const textDecoration = responsiveStyle({ prop: 'textDecoration' })
+
+const Text = styled(withProps(Flex, { is: 'p', display: 'inline-flex', m: 0 }))`
   ${fontSize}
   ${fontFamily}
   ${textAlign}
   ${lineHeight}
   ${fontWeight}
   ${letterSpacing}
+  ${textTransform}
+  ${textDecoration}
 `
 
 export default Text

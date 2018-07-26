@@ -1,8 +1,7 @@
 import { injectGlobal } from 'styled-components'
 
 injectGlobal`
-  html, body, #___gatsby {
-    height: 100%;
+  html, body {
     margin: 0;
     padding: 0;
   }
@@ -14,5 +13,11 @@ injectGlobal`
   #___gatsby {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    background: #fff;
+
+    h1, p, span, a {
+      color: white;
+    }
   }
 `

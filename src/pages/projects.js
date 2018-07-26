@@ -49,11 +49,12 @@ const ProjectsPage = ({ data, location }) => {
 
   return (
     <Layout title={title} bg={current.frontmatter.color}>
-      <ScrollToHash location={location}>
+      <ScrollToHash location={location} anchor="project-preview">
         {projects.map(({ node }) => (
           <ProjectPreview
             key={node.frontmatter.slug}
             project={node}
+            className="project-preview"
           />
         ))}
       </ScrollToHash>

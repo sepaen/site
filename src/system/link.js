@@ -1,11 +1,18 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
-import Flex from './flex'
+import Text from './text'
 
 const Link = props => {
   const Component = props.to ? GatsbyLink : 'a'
-  return <Flex is={Component} domProps={['href', 'to']} {...props} />
+
+  return (
+    <Text
+      is={Component}
+      domProps={['href', 'to']}
+      display="inline-flex"
+      {...props}
+    />
+  )
 }
 
 export default Link
-

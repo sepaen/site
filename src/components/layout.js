@@ -3,10 +3,9 @@ import Helmet from 'react-helmet'
 
 import Navbar from './navbar'
 import Footer from './footer'
-import Page from '../system/page'
 
-const Layout = ({ title, children, ...props }) => (
-  <Page {...props}>
+const Layout = ({ title, children }) => (
+  <>
     <Helmet
       title={title}
       meta={[
@@ -18,7 +17,7 @@ const Layout = ({ title, children, ...props }) => (
     <Navbar title={title} />
     {children}
     <Footer title={title} />
-  </Page>
+  </>
 )
 
 export default Layout

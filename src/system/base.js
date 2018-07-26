@@ -21,6 +21,7 @@ import {
   borderRadius,
   borderColor,
   color,
+  style,
   responsiveStyle
 } from 'styled-system'
 
@@ -54,6 +55,7 @@ const Base = ({ is:Tag='div', domProps, ...props }) => {
 const transform = responsiveStyle({ prop: 'transform' })
 const transition = responsiveStyle({ prop: 'transition' })
 const cursor = responsiveStyle({ prop: 'cursor' })
+const mixBlendMode = style({ prop: 'mixBlendMode', cssProperty: 'mix-blend-mode' })
 
 export default styled(Base)`
   ${display}
@@ -80,6 +82,7 @@ export default styled(Base)`
 
   ${color}
   ${cursor}
+  ${mixBlendMode}
 
   ${transform}
   ${transition}

@@ -1,6 +1,15 @@
 import React from 'react'
 import get from 'lodash/get'
+import debounce from 'lodash/debounce'
 import Flex from '../system/flex'
+
+function findAncestor(el, className) {
+  while (!el.classList.contains(className) && (el = el.parentElement)) {
+    continue
+  }
+
+  return el
+}
 
 class ScrollToHash extends React.Component {
   componentDidMount() {
@@ -11,7 +20,7 @@ class ScrollToHash extends React.Component {
     const hash = get(this.props, 'location.hash')
     const prevHash = get(prevProps, 'location.hash')
 
-    if (hash && (hash !== prevHash)) {
+    if (hash && hash !== prevHash) {
       this.scrollToHash({ behavior: 'smooth' })
     }
   }
@@ -26,13 +35,7 @@ class ScrollToHash extends React.Component {
   }
 
   render() {
-    return (
-      <Flex
-        {...this.props}
-        flexDirection="column"
-        height="100%"
-      />
-    )
+    return <Flex {...this.props} flexDirection="column" height="100%" />
   }
 }
 
