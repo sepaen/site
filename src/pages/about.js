@@ -27,11 +27,8 @@ const NEWSLETTER_EMAIL = ''
 const AboutPage = ({ data }) => (
   <Layout title={data.site.siteMetadata.title}>
     <Content>
-      <Cell
-        gridColumn="2/6"
-        flexDirection="column"
-      >
-        <Markdown html={data.markdownRemark.html} />
+      <Cell gridColumn="2/6" flexDirection="column" mixBlendMode="difference">
+        <Markdown html={data.markdownRemark.html} mb={4} />
 
         <Text>
           Keep up to date by
