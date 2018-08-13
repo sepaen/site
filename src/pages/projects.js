@@ -2,10 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import ScrollToHash from '../components/scroll-to-hash'
 import ProjectPreview from '../components/project-preview'
-import NextProject from '../components/next-project'
 import extractSlug from '../utils/extract-slug'
+import ProjectSwiper from '../components/project-swiper'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -35,21 +34,13 @@ export const query = graphql`
   }
 `
 
-function findProject(projects, slug) {
-  return slug.length
-    ? projects.find(({ node }) => extractSlug(node) === slug)
-    : projects[0]
-}
-
-const ProjectsPage = ({ data, location }) => {
-  const slug = location.hash.slice(1)
+const ProjectsPage = ({ data }) => {
   const title = data.site.siteMetadata.title
   const projects = data.allMarkdownRemark.edges
-  const current = findProject(projects, slug).node
 
   return (
-    <Layout title={title} bg={current.frontmatter.color}>
-      <ScrollToHash location={location} anchor="project-preview">
+    <Layout title={title}>
+      <ProjectSwiper>
         {projects.map(({ node }) => (
           <ProjectPreview
             key={extractSlug(node)}
@@ -57,9 +48,7 @@ const ProjectsPage = ({ data, location }) => {
             className="project-preview"
           />
         ))}
-      </ScrollToHash>
-
-      <NextProject hash current={slug} projects={projects} />
+      </ProjectSwiper>
     </Layout>
   )
 }
