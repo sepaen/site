@@ -2,10 +2,10 @@ import React from 'react'
 import debounce from 'lodash/debounce'
 import Flex from '../system/flex'
 
-const NORTH = 'SWIPE_NORTH'
-const SOUTH = 'SWIPE_SOUTH'
-const EAST = 'SWIPE_EAST'
-const WEST = 'SWIPE_WEST'
+const UP = 'SWIPE_UP'
+const DOWN = 'SWIPE_DOWN'
+const RIGHT = 'SWIPE_RIGHT'
+const LEFT = 'SWIPE_LEFT'
 
 function pos(touch) {
   return { x: touch.clientX, y: touch.clientY }
@@ -23,21 +23,34 @@ class Swiper extends React.Component {
 
   detectSwipe = (deltaX, deltaY) => {
     const THRESHOLD = this.props.threshold
+    const directions = []
 
     if (deltaY <= -THRESHOLD) {
-      this.onSwipe(NORTH)
-    } else if (deltaY >= THRESHOLD) {
-      this.onSwipe(SOUTH)
-    } else if (deltaX >= THRESHOLD) {
-      this.onSwipe(EAST)
-    } else if (deltaX <= -THRESHOLD) {
-      this.onSwipe(WEST)
+      directions.push(UP)
     }
+
+    if (deltaY >= THRESHOLD) {
+      directions.push(DOWN)
+    }
+
+    if (deltaX >= THRESHOLD) {
+      directions.push(RIGHT)
+    }
+
+    if (deltaX <= -THRESHOLD) {
+      directions.push(LEFT)
+    }
+
+    this.onSwipe(directions)
   }
 
   onWheel = e => {
-    // boosted for firefox
-    this.detectSwipe(e.deltaX * 100, e.deltaY * 100)
+    const isPx = e.deltaMode === 0
+
+    const deltaX = isPx ? -e.deltaX : -e.deltaX * 100
+    const deltaY = isPx ? -e.deltaY : -e.deltaY * 100
+
+    this.detectSwipe(deltaX, deltaY)
   }
 
   onTouchStart = e => {
@@ -47,14 +60,14 @@ class Swiper extends React.Component {
   onTouchMove = e => {
     const touchMove = pos(e.touches[0])
 
-    const deltaX = this.touchStart.x - touchMove.x
-    const deltaY = this.touchStart.y - touchMove.y
+    const deltaX = touchMove.x - this.touchStart.x
+    const deltaY = touchMove.y - this.touchStart.y
 
     this.detectSwipe(deltaX, deltaY)
   }
 
-  onSwipe = debounce(direction => {
-    this.props.onSwipe(direction)
+  onSwipe = debounce(directions => {
+    this.props.onSwipe(directions)
   }, 50)
 
   render() {
@@ -71,9 +84,9 @@ class Swiper extends React.Component {
   }
 }
 
-Swiper.NORTH = NORTH
-Swiper.SOUTH = SOUTH
-Swiper.EAST = EAST
-Swiper.WEST = WEST
+Swiper.UP = UP
+Swiper.DOWN = DOWN
+Swiper.RIGHT = RIGHT
+Swiper.LEFT = LEFT
 
 export default Swiper

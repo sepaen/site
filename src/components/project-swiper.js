@@ -6,7 +6,6 @@ import withProps from '../utils/with-props'
 
 const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
   > * {
-    flex-shrink: 0;
     transform: translate3d(0, ${p => -p.index * 100}vh, 0);
     transition: transform ease-in-out 0.3s;
   }
@@ -24,13 +23,13 @@ class ProjectSwiper extends React.Component {
     this.setState({ index: newIndex })
   }
 
-  onSwipe = direction => {
+  onSwipe = directions => {
     const { index } = this.state
 
-    if (direction === Swiper.NORTH) {
-      this.select(index - 1)
-    } else if (direction === Swiper.SOUTH) {
+    if (directions.includes(Swiper.UP)) {
       this.select(index + 1)
+    } else if (directions.includes(Swiper.DOWN)) {
+      this.select(index - 1)
     }
   }
 
