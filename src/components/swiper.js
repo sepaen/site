@@ -13,7 +13,7 @@ function pos(touch) {
 
 class Swiper extends React.Component {
   static defaultProps = {
-    threshold: 100,
+    threshold: 50,
   }
 
   componentDidMount() {
@@ -41,7 +41,11 @@ class Swiper extends React.Component {
       directions.push(LEFT)
     }
 
-    this.onSwipe(directions)
+    if (directions.length) {
+      this.directions = directions
+    }
+
+    this.onSwipe()
   }
 
   onWheel = e => {
@@ -66,9 +70,14 @@ class Swiper extends React.Component {
     this.detectSwipe(deltaX, deltaY)
   }
 
-  onSwipe = debounce(directions => {
-    this.props.onSwipe(directions)
-  }, 50)
+  onSwipe = debounce(
+    () => {
+      this.props.onSwipe(this.directions)
+      this.directions = []
+    },
+    100,
+    { leading: true, trailing: false }
+  )
 
   render() {
     const { onSwipe, ...props } = this.props
