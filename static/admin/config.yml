@@ -28,12 +28,25 @@ collections:
           - { label: Image, name: image, widget: image }
       - { label: Body, name: body, widget: markdown }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: jobs
+    label: Jobs
+    folder: content/jobs
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Type, name: type, widget: hidden, default: job }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Requirements, name: requirements, widget: text }
+      - { label: 'How to apply', name: howto, widget: text }
+
+  - name: pages
+    label: Pages
     files:
-      - label: 'Contact Page'
-        name: 'contact'
-        file: 'content/pages/contact.md'
+      - label: Contact Page
+        name: contact
+        file: content/pages/contact.md
         fields:
           - { label: type, name: type, widget: hidden, default: contact }
           - { label: Title, name: title, widget: string }
@@ -51,8 +64,8 @@ collections:
               - { label: URL, name: url, widget: string }
 
       - label: 'About Page'
-        name: 'about'
-        file: 'content/pages/about.md'
+        name: about
+        file: content/pages/about.md
         fields:
           - { label: type, name: type, widget: hidden, default: about }
           - { label: Body, name: body, widget: markdown }

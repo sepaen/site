@@ -10,14 +10,18 @@ import Markdown from '../system/markdown'
 import Link from '../system/link'
 
 const ProjectDescription = ({ project, ...props }) => (
-  <Flex {...props} height="50%" bg={project.frontmatter.color} p={20}>
+  <Flex {...props} zIndex={100} bg={project.frontmatter.color} p={20}>
     <Flex flexDirection="column" mr={20} mixBlendMode="difference">
       <Text children={project.frontmatter.client} />
       <Text children={project.frontmatter.date} mb={20} />
 
       <Text children={project.frontmatter.extra} mb={20} />
 
-      <Link to={project.frontmatter.url} children={project.frontmatter.url} />
+      <Link
+        href={project.frontmatter.url}
+        target="blank"
+        children={project.frontmatter.url}
+      />
     </Flex>
 
     <Markdown html={project.html} mixBlendMode="difference" />
@@ -41,7 +45,7 @@ const ProjectDetails = ({ project, ...props }) => (
         <Image key={image} src={image} maxWidth="100%" maxHeight="100%" />
       ))}
 
-      <ProjectDescription project={project} width="calc(100% - 80px)" />
+      <ProjectDescription project={project} />
     </Gallery>
   </Content>
 )

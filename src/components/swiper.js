@@ -16,11 +16,6 @@ class Swiper extends React.Component {
     threshold: 50,
   }
 
-  componentDidMount() {
-    // prevent chrome mobile pull-to-refresh
-    document.body.style.overflowY = 'hidden'
-  }
-
   detectSwipe = (deltaX, deltaY) => {
     const THRESHOLD = this.props.threshold
     const directions = []
