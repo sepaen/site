@@ -8,7 +8,7 @@ const Link = props => {
   return (
     <Text
       is={Component}
-      domProps={['href', 'to']}
+      domProps={['href', 'to', 'target']}
       display="inline-flex"
       {...props}
     />

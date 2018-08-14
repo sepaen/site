@@ -11,20 +11,48 @@ collections:
     label: Projects
     folder: content/projects
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     fields:
-      - {label: Type, name: type, widget: hidden, default: project}
-      - {label: Date, name: date, widget: datetime}
-      - {label: Title, name: title, widget: string}
-      - {label: Description, name: description, widget: string}
-      - {label: Client, name: client, widget: string}
-      - {label: "Client website", name: url, widget: string}
-      - {label: Extra information, name: extra, widget: string}
-      - {label: Color, name: color, widget: string}
+      - { label: Type, name: type, widget: hidden, default: project }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Client, name: client, widget: string }
+      - { label: 'Client website', name: url, widget: string }
+      - { label: Extra information, name: extra, widget: string }
+      - { label: Color, name: color, widget: string }
       - label: Images
         name: images
         widget: list
         fields:
-          - {label: Image, name: image, widget: image}
-      - {label: Body, name: body, widget: markdown}
+          - { label: Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown }
 
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Contact Page'
+        name: 'contact'
+        file: 'content/pages/contact.md'
+        fields:
+          - { label: type, name: type, widget: hidden, default: contact }
+          - { label: Title, name: title, widget: string }
+          - { label: Email, name: email, widget: string }
+          - name: phone
+            label: Phone numbers
+            widget: list
+            field:
+              - { label: Number, name: number, widget: string }
+          - name: social
+            label: Social networks
+            widget: list
+            fields:
+              - { label: Platform, name: platform, widget: string }
+              - { label: URL, name: url, widget: string }
+
+      - label: 'About Page'
+        name: 'about'
+        file: 'content/pages/about.md'
+        fields:
+          - { label: type, name: type, widget: hidden, default: about }
+          - { label: Body, name: body, widget: markdown }
