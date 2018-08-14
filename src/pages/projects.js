@@ -24,7 +24,9 @@ export const query = graphql`
             title
             description
             color
-            images
+            images {
+              image
+            }
           }
 
           fileAbsolutePath

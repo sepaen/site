@@ -37,7 +37,7 @@ const ProjectDetails = ({ project, ...props }) => (
     </Cell>
 
     <Gallery is={Cell} gridColumn="2/6" py={50}>
-      {project.frontmatter.images.map(image => (
+      {project.frontmatter.images.map(({ image }) => (
         <Image key={image} src={image} maxWidth="100%" maxHeight="100%" />
       ))}
 

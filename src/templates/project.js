@@ -24,7 +24,9 @@ export const query = graphql`
         extra
         url
         color
-        images
+        images {
+          image
+        }
       }
 
       fileAbsolutePath
