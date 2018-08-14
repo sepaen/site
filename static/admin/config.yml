@@ -54,7 +54,7 @@ collections:
           - name: phone
             label: Phone numbers
             widget: list
-            field:
+            fields:
               - { label: Number, name: number, widget: string }
           - name: social
             label: Social networks
