@@ -36,11 +36,9 @@ class Swiper extends React.Component {
       directions.push(LEFT)
     }
 
-    if (directions.length) {
-      this.directions = directions
+    if (directions.length > 0) {
+      this.onSwipe(directions)
     }
-
-    this.onSwipe()
   }
 
   onWheel = e => {
@@ -66,11 +64,10 @@ class Swiper extends React.Component {
   }
 
   onSwipe = debounce(
-    () => {
-      this.props.onSwipe(this.directions)
-      this.directions = []
+    directions => {
+      this.props.onSwipe(directions)
     },
-    100,
+    50,
     { leading: true, trailing: false }
   )
 
