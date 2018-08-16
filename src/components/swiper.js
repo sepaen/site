@@ -18,7 +18,13 @@ class Swiper extends React.Component {
   }
 
   componentDidMount() {
+    // prevent chrome mobile pull-to-refresh
+    document.body.style.overflowY = 'hidden'
     this.browser = bowser.getParser(navigator.userAgent).getBrowserName()
+  }
+
+  componentWillUnmount() {
+    document.body.style.overflowY = null
   }
 
   detectSwipe = (deltaX, deltaY) => {
@@ -72,7 +78,7 @@ class Swiper extends React.Component {
     directions => {
       this.props.onSwipe(directions)
     },
-    50,
+    100,
     { leading: true, trailing: false }
   )
 

@@ -16,15 +16,6 @@ class ProjectSwiper extends React.Component {
     index: 0,
   }
 
-  componentDidMount() {
-    // prevent chrome mobile pull-to-refresh
-    document.body.style.overflowY = 'hidden'
-  }
-
-  componentWillUnmount() {
-    document.body.style.overflowY = null
-  }
-
   select = index => {
     const size = this.props.children.length
     const newIndex = Math.max(0, Math.min(index, size - 1))
