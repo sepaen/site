@@ -1,4 +1,5 @@
 import React from 'react'
+import bowser from 'bowser'
 import debounce from 'lodash/debounce'
 import Flex from '../system/flex'
 
@@ -14,6 +15,10 @@ function pos(touch) {
 class Swiper extends React.Component {
   static defaultProps = {
     threshold: 50,
+  }
+
+  componentDidMount() {
+    this.browser = bowser.getParser(navigator.userAgent).getBrowserName()
   }
 
   detectSwipe = (deltaX, deltaY) => {
@@ -42,10 +47,10 @@ class Swiper extends React.Component {
   }
 
   onWheel = e => {
-    const isPx = e.deltaMode === 0
+    const needsBoost = e.deltaMode !== 0 || this.browser === 'Safari'
 
-    const deltaX = isPx ? -e.deltaX : -e.deltaX * 100
-    const deltaY = isPx ? -e.deltaY : -e.deltaY * 100
+    const deltaX = needsBoost ? -e.deltaX * 100 : -e.deltaX
+    const deltaY = needsBoost ? -e.deltaY * 100 : -e.deltaY
 
     this.detectSwipe(deltaX, deltaY)
   }
