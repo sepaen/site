@@ -19,7 +19,7 @@ const Navbar = ({ title, ...props }) => {
       p={20}
       {...props}
     >
-      <Link to="/" children={titleTop} />
+      <Link to="/" children={titleTop} textTransform="uppercase" />
 
       <Flex alignSelf="flex-start">
         <Link to="/projects" children="Projects" mr={3} />

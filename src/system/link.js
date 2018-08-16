@@ -10,6 +10,7 @@ const Link = props => {
       is={Component}
       domProps={['href', 'to', 'target']}
       display="inline-flex"
+      textDecoration="none"
       {...props}
     />
   )
