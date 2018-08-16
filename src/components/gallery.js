@@ -95,6 +95,7 @@ class Gallery extends React.Component {
         justifyContent="center"
         alignItems="center"
         height="100%"
+        cursor="none"
       >
         {firsts.map((child, i) => (
           <Flex

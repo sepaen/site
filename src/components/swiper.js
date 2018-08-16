@@ -74,13 +74,10 @@ class Swiper extends React.Component {
     this.detectSwipe(deltaX, deltaY)
   }
 
-  onSwipe = debounce(
-    directions => {
-      this.props.onSwipe(directions)
-    },
-    100,
-    { leading: true, trailing: false }
-  )
+  onSwipe = debounce(directions => this.props.onSwipe(directions), 100, {
+    leading: true,
+    trailing: false,
+  })
 
   render() {
     const { onSwipe, ...props } = this.props

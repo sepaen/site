@@ -43,7 +43,6 @@ class Cursor extends React.Component {
         height={50}
         justifyContent="center"
         alignItems="center"
-        cursor="none"
         userSelect="none"
       />
     )
