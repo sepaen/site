@@ -13,7 +13,6 @@ const Footer = ({ title, ...props }) => {
       zIndex={2}
       bottom={0}
       left={0}
-      mixBlendMode="difference"
       p={20}
       {...props}
     >

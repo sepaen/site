@@ -42,7 +42,7 @@ const ContactPage = ({ data }) => {
   return (
     <Layout title={siteTitle}>
       <Content>
-        <Cell gridColumn="2/6" flexDirection="column" mixBlendMode="difference">
+        <Cell gridColumn="2/6" flexDirection="column">
           <Col>
             <Text children={contact.title} />
             <Link href={`mailto:${contact.email}`} children={contact.email} />

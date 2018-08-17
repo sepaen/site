@@ -11,7 +11,7 @@ import Link from '../system/link'
 
 const ProjectDescription = ({ project, ...props }) => (
   <Flex {...props} zIndex={100} bg={project.frontmatter.color} p={20}>
-    <Flex flexDirection="column" mr={20} mixBlendMode="difference">
+    <Flex flexDirection="column" mr={20}>
       <Text children={project.frontmatter.client} />
       <Text children={project.frontmatter.date} mb={20} />
 
@@ -24,19 +24,13 @@ const ProjectDescription = ({ project, ...props }) => (
       />
     </Flex>
 
-    <Markdown html={project.html} mixBlendMode="difference" />
+    <Markdown html={project.html} />
   </Flex>
 )
 
 const ProjectDetails = ({ project, ...props }) => (
   <Content {...props} bg={project.frontmatter.color} overflow="hidden">
-    <Cell
-      gridColumn="1"
-      flexDirection="column"
-      height="66%"
-      mixBlendMode="difference"
-      mr={4}
-    >
+    <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
       <Text children={project.frontmatter.title} />
     </Cell>
 

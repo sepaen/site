@@ -1,5 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
 import Flex from '../system/flex'
+
+const CursorFlex = styled(Flex)`
+  ::before {
+    content: '${p => p.content}'
+  }
+`
 
 class Cursor extends React.Component {
   static defaultProps = {
@@ -33,11 +40,11 @@ class Cursor extends React.Component {
     const content = render({ ...props, x, y })
 
     return !content ? null : (
-      <Flex
+      <CursorFlex
         {...props}
-        children={content}
+        content={content}
         style={{ top: y - 25, left: x - 25 }}
-        color="#fff"
+        color="#fff !important"
         position="fixed"
         width={50}
         height={50}

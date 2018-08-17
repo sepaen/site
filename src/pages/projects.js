@@ -35,24 +35,37 @@ export const query = graphql`
     }
   }
 `
+class ProjectsPage extends React.Component {
+  state = {
+    index: 0,
+  }
 
-const ProjectsPage = ({ data }) => {
-  const title = data.site.siteMetadata.title
-  const projects = data.allMarkdownRemark.edges
+  onSwipe = index => {
+    this.setState({ index })
+  }
 
-  return (
-    <Layout title={title}>
-      <ProjectSwiper>
-        {projects.map(({ node }) => (
-          <ProjectPreview
-            key={extractSlug(node)}
-            project={node}
-            className="project-preview"
-          />
-        ))}
-      </ProjectSwiper>
-    </Layout>
-  )
+  render() {
+    const { data } = this.props
+    const { index } = this.state
+
+    const title = data.site.siteMetadata.title
+    const projects = data.allMarkdownRemark.edges
+    const current = projects[index].node
+
+    return (
+      <Layout title={title} bg={current.frontmatter.color}>
+        <ProjectSwiper index={index} onSwipe={this.onSwipe}>
+          {projects.map(({ node }) => (
+            <ProjectPreview
+              key={extractSlug(node)}
+              project={node}
+              className="project-preview"
+            />
+          ))}
+        </ProjectSwiper>
+      </Layout>
+    )
+  }
 }
 
 export default ProjectsPage

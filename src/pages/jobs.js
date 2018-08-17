@@ -45,7 +45,6 @@ const JobPreview = ({ job, ...props }) => {
       flexDirection="column"
       gridColumn="2/6"
       borderBottom="1px solid white"
-      mixBlendMode="difference"
       pb={5}
       px={2}
     >

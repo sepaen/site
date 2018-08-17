@@ -15,7 +15,6 @@ const Navbar = ({ title, ...props }) => {
       right={0}
       left={0}
       justify="space-between"
-      mixBlendMode="difference"
       p={20}
       {...props}
     >

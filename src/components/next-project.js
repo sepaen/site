@@ -21,7 +21,6 @@ const NextProject = ({ current, projects, hash, ...props }) => (
     zIndex={2}
     bottom={20}
     right={20}
-    mixBlendMode="difference"
   />
 )
 

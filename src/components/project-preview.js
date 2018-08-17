@@ -13,13 +13,7 @@ const ProjectPreview = ({ project, ...props }) => (
     id={'anchor-' + extractSlug(project)}
     bg={project.frontmatter.color}
   >
-    <Cell
-      gridColumn="1"
-      flexDirection="column"
-      height="66%"
-      mixBlendMode="difference"
-      mr={4}
-    >
+    <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />
     </Cell>

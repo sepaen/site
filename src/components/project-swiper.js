@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Swiper from './swiper'
+import invoke from '../utils/invoke'
 import withProps from '../utils/with-props'
+import Swiper from './swiper'
 
 const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
   > * {
@@ -12,19 +13,15 @@ const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
 `
 
 class ProjectSwiper extends React.Component {
-  state = {
-    index: 0,
-  }
-
   select = index => {
     const size = this.props.children.length
     const newIndex = Math.max(0, Math.min(index, size - 1))
 
-    this.setState({ index: newIndex })
+    invoke(this.props, 'onSwipe', newIndex)
   }
 
   onSwipe = directions => {
-    const { index } = this.state
+    const { index } = this.props
 
     if (directions.includes(Swiper.UP)) {
       this.select(index + 1)
@@ -37,7 +34,6 @@ class ProjectSwiper extends React.Component {
     return (
       <VerticalSwiper
         {...this.props}
-        index={this.state.index}
         onSwipe={this.onSwipe}
         height="100vh"
         overflow="hidden"

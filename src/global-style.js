@@ -11,10 +11,12 @@ injectGlobal`
   html, body {
     margin: 0;
     padding: 0;
+    background: white;
   }
 
   html * {
     box-sizing: border-box;
+    background: transparent;
     font-family: NeueHaasGrotesk;
     letter-spacing: 1px;
   }
