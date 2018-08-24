@@ -1,18 +1,17 @@
 ---
 type: project
-title: Example project 3
-slug: example-project-3
+date: 2018-07-08T00:00:00.000Z
+title: 'Benga, A Kenyan Kaleidoscope - Exhibition'
 description: A third project
-date: 2018-07-08
 client: Client Name
+url: 'http://www.example.com'
 extra: Extra information
-url: http://www.example.com
-color: "#d3b5b5"
+color: '#d3b5b5'
 images:
-  - image: "/assets/image-1.jpeg"
-  - image: "/assets/image-2.jpeg"
-  - image: "/assets/image-3.jpeg"
-  - image: "/assets/image-4.jpeg"
+  - image: /assets/image-1.jpeg
+  - image: /assets/image-2.jpeg
+  - image: /assets/image-3.jpeg
+  - image: /assets/image-4.jpeg
 ---
 
 This is a sample project to demonstrate how to generate content from simple files
