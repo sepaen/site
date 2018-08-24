@@ -2,7 +2,7 @@
 type: project
 date: 2018-03-12T00:00:00.000Z
 title: 'FLEE001 - Benga Music, A Signature Genre From Kenya'
-description: A short description of the project
+description: '2018'
 client: FLEE Project
 url: www.fleeproject.com
 extra: Extra information
