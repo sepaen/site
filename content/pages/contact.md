@@ -1,6 +1,6 @@
 ---
 type: contact
-title: Bureau Sepaen
+title: Bureau Sepän
 email: hi@sepaen.com
 phone:
   - number: '+4915732648583'
