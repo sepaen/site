@@ -8,10 +8,12 @@ url: 'http://www.example.com'
 extra: Extra information
 color: '#d3b5b5'
 images:
-  - image: /assets/image-1.jpeg
-  - image: /assets/image-2.jpeg
-  - image: /assets/image-3.jpeg
-  - image: /assets/image-4.jpeg
+  - image: /assets/affiche-nyon-1.png
+  - image: /assets/dsc00626.jpg
+  - image: /assets/dsc00979.jpg
+  - image: /assets/exposition1.jpg
+  - image: /assets/exposition2.jpg
 ---
+Last July, the Eeeeh and Hapax21 collectives based in Nyon, Switzerland commissioned an exhibition around the first issue of FLEE's project.
 
-This is a sample project to demonstrate how to generate content from simple files
+Bureau Sepän overtook the scenography and organisation of a permanent space for two weeks covering different creative ground with the organization of a conferences cycle and different creative workshops held around music production and riso printing.
