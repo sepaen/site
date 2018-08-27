@@ -16,6 +16,8 @@ images:
   - image: /assets/produitfini2.jpg
   - image: /assets/produitfini1.jpg
 ---
-FLEE's first project focused on the misknown Kenyan musical genre of Benga.
+For this very first issue of the FLEE publication we wanted to deliver a unique and complementary object. 
 
-Approaching this musical genre with a new and innovative perspective, the first release of FLEE features a vinyl compilation and a printed journal. Faithful to the local essence of the genre while transcending unproductive nostalgia, the two objects ensure that the vibrant traditional roots of the benga movement interact with a contemporary approach.
+The packaging and graphic concept for the silkscreen printed magazine were done in collaboration with Atelier U-Zehn while the cover of the vinyl is an original composition from Olka Osadzinska. 
+
+We've curated the written and audial material bringing together artists, journalists, thinkers and musicians to give a precise and respectful picture of the Kenyan musical genre that is Benga.
