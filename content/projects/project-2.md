@@ -8,10 +8,9 @@ url: 'http://www.example.com'
 extra: Extra information
 color: '#e2e6e7'
 images:
-  - image: /assets/image-1.jpeg
-  - image: /assets/image-2.jpeg
-  - image: /assets/image-3.jpeg
-  - image: /assets/image-4.jpeg
+  - image: /assets/capture-d’écran-2018-08-27-à-09.19.28.png
+  - image: /assets/capture-d’écran-2018-08-27-à-09.42.32.png
+  - image: /assets/capture-d’écran-2018-08-27-à-09.43.10.png
+  - image: ''
 ---
-
-This is a sample project to demonstrate how to generate content from simple files
+Editorial project mandated by Red Bull Music Academy for their Daily platform.
