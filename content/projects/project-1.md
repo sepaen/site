@@ -12,9 +12,9 @@ images:
   - image: /assets/produitfini4.jpg
   - image: /assets/produitfini5.jpg
   - image: /assets/produitfini7.jpg
-  - image: /assets/produitfini3.jpg
+  - image: ''
   - image: /assets/produitfini2.jpg
-  - image: /assets/produitfini1.jpg
+  - image: ''
 ---
 For this very first issue of the FLEE publication we wanted to deliver a unique and complementary object. 
 
