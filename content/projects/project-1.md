@@ -5,7 +5,7 @@ title: 'FLEE001 '
 description: 'Benga Music, A Signature Genre From Kenya'
 client: FLEE Project
 url: www.fleeproject.com
-extra: Extra information
+extra: '2018'
 color: '#4d4d4d'
 images:
   - image: /assets/produitfini6.jpg
