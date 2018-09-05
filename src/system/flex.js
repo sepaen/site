@@ -8,7 +8,8 @@ import {
   alignContent,
   alignSelf,
   order,
-  responsiveStyle
+  fontSize,
+  responsiveStyle,
 } from 'styled-system'
 
 import withProps from '../utils/with-props'
@@ -17,9 +18,7 @@ import Base from './base'
 const flexShrink = responsiveStyle({ prop: 'flexShrink' })
 const overflow = responsiveStyle({ prop: 'overflow' })
 
-const Flex = styled(
-  withProps(Base, { display: 'flex' })
-)`
+const Flex = styled(withProps(Base, { display: 'flex' }))`
   ${flex}
   ${flexDirection}
   ${flexShrink}
@@ -29,7 +28,7 @@ const Flex = styled(
   ${alignSelf}
   ${order}
   ${overflow}
+  ${fontSize}
 `
 
 export default Flex
-

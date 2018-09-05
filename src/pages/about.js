@@ -40,11 +40,11 @@ class AboutPage extends React.Component {
 
     return (
       <Layout title={data.site.siteMetadata.title}>
-        <Content bg={gold} alignItems="flex-start" pt="10%">
-          <Cell gridColumn="2/6" flexDirection="column">
-            <Markdown html={data.markdownRemark.html} fontSize={24} mb={4} />
+        <Content bg={gold} alignItems={['flex-start', 'center']} pt={[60, 0]}>
+          <Cell flexDirection="column" fontSize={[18, 24]}>
+            <Markdown html={data.markdownRemark.html} mb={4} />
 
-            <Text display="inline" fontSize={24}>
+            <Text display="inline">
               Keep up to date by
               <Text
                 children="subscribing to our newsletter"

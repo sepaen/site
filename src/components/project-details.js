@@ -12,7 +12,8 @@ import Link from '../system/link'
 const ProjectDescription = ({ project, ...props }) => (
   <Flex
     {...props}
-    zIndex={100}
+    flexDirection={['column', 'row']}
+    zIndex={[1, 100]}
     bg={project.frontmatter.color}
     cursor="initial"
     p={20}
@@ -35,12 +36,24 @@ const ProjectDescription = ({ project, ...props }) => (
 )
 
 const ProjectDetails = ({ project, ...props }) => (
-  <Content {...props} bg={project.frontmatter.color} overflow="hidden">
-    <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
+  <Content
+    {...props}
+    display={['flex', 'grid']}
+    flexDirection="column"
+    bg={project.frontmatter.color}
+    overflow="hidden"
+    py={100}
+  >
+    <Cell
+      gridColumn="1"
+      flexDirection="column"
+      height={['initial', '66%']}
+      mr={[0, 4]}
+    >
       <Text children={project.frontmatter.title} />
     </Cell>
 
-    <Gallery is={Cell} gridColumn="2/6" py={50}>
+    <Gallery is={Cell} py={50}>
       {project.frontmatter.images.map(({ image }) => (
         <Image key={image} src={image} maxWidth="100%" maxHeight="100%" />
       ))}

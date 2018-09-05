@@ -26,7 +26,7 @@ const Navbar = ({ title, ...props }) => {
         textDecoration="none !important"
       />
 
-      <Flex alignSelf="flex-start">
+      <Flex display={['none', 'flex']} alignSelf="flex-start">
         <Link to="/projects" children="Projects" mr={3} />
         <Link to="/about" children="About" mr={3} />
         <Link to="/contact" children="Contact" />

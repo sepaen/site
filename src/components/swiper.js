@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import bowser from 'bowser'
 import debounce from 'lodash/debounce'
 import Flex from '../system/flex'

@@ -10,15 +10,20 @@ import Link from '../system/link'
 const ProjectPreview = ({ project, ...props }) => (
   <Content
     {...props}
-    id={'anchor-' + extractSlug(project)}
+    gridTemplateRows={['1fr 2fr', 'initial']}
     bg={project.frontmatter.color}
   >
-    <Cell gridColumn="1" flexDirection="column" height="66%" mr={4}>
+    <Cell
+      gridColumn="1"
+      flexDirection="column"
+      height={['initial', '66%']}
+      mr={[0, 4]}
+    >
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />
     </Cell>
 
-    <Cell gridColumn="2/6" position="relative" height="100%">
+    <Cell gridColumn="1" flex={1} position="relative" height="100%">
       <Link
         to={`/projects/${extractSlug(project)}`}
         position="absolute"
@@ -27,8 +32,8 @@ const ProjectPreview = ({ project, ...props }) => (
         width="100%"
         height="100%"
         justifyContent="center"
-        alignItems="center"
-        p={30}
+        alignItems={['flex-start', 'center']}
+        p={[0, 30]}
       >
         <Image
           src={project.frontmatter.images[0].image}

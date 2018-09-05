@@ -19,7 +19,7 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <Layout title={data.site.siteMetadata.title}>
     <Content>
-      <Cell gridColumn="2/6" justifyContent="center">
+      <Cell justifyContent="center">
         <Logo width="100%" height="50%" />
       </Cell>
     </Content>

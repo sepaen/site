@@ -43,7 +43,7 @@ const ContactPage = ({ data }) => {
   return (
     <Layout title={siteTitle}>
       <Content bg={gold}>
-        <Cell gridColumn="2/6" flexDirection="column" style={{ fontSize: 32 }}>
+        <Cell flexDirection="column" fontSize={[24, 32]}>
           <Col>
             <Text children={contact.title} />
             <Link href={`mailto:${contact.email}`} children={contact.email} />

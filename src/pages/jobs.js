@@ -46,10 +46,10 @@ const JobsPage = ({ data }) => {
     <Layout title={title}>
       <Content height="auto" minHeight="100vh" pt={6} bg={gold}>
         {!jobs && (
-          <Cell gridColumn="2/6" alignSelf="flex-start">
+          <Cell alignSelf="flex-start">
             <Text
               children="Sorry, there are no vacancies opened at the moment."
-              fontSize={32}
+              fontSize={[24, 32]}
             />
           </Cell>
         )}
