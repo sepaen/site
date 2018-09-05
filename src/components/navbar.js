@@ -18,7 +18,13 @@ const Navbar = ({ title, ...props }) => {
       justifyContent="space-between"
       p={20}
     >
-      <Link to="/" children={titleTop} textTransform="uppercase" />
+      <Link
+        to="/"
+        children={titleTop}
+        textTransform="uppercase"
+        letterSpacing={10}
+        textDecoration="none !important"
+      />
 
       <Flex alignSelf="flex-start">
         <Link to="/projects" children="Projects" mr={3} />

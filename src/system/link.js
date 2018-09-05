@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
 import Text from './text'
 
@@ -16,4 +17,8 @@ const Link = props => {
   )
 }
 
-export default Link
+export default styled(Link)`
+  :hover {
+    text-decoration: underline;
+  }
+`

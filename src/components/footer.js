@@ -16,7 +16,13 @@ const Footer = ({ title, ...props }) => {
       p={20}
       {...props}
     >
-      <Link to="/" children={titleBottom} textTransform="uppercase" />
+      <Link
+        to="/"
+        children={titleBottom}
+        textTransform="uppercase"
+        letterSpacing={10}
+        textDecoration="none !important"
+      />
     </Flex>
   )
 }

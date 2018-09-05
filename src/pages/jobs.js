@@ -8,6 +8,7 @@ import Text from '../system/text'
 import Layout from '../components/layout'
 import Content from '../components/content'
 import JobPreview from '../components/job-preview'
+import { gold } from '../system/colors'
 
 export const query = graphql`
   query JobsQuery {
@@ -43,9 +44,9 @@ const JobsPage = ({ data }) => {
 
   return (
     <Layout title={title}>
-      <Content height="auto" minHeight="100vh" pt={6} bg="#b19964">
+      <Content height="auto" minHeight="100vh" pt={6} bg={gold}>
         {!jobs && (
-          <Cell gridColumn="2/6" alignSelf="flex-start" mt={20}>
+          <Cell gridColumn="2/6" alignSelf="flex-start">
             <Text
               children="Sorry, there are no vacancies opened at the moment."
               fontSize={32}

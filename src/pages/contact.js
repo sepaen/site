@@ -8,6 +8,7 @@ import Text from '../system/text'
 import Link from '../system/link'
 import Flex from '../system/flex'
 import withProps from '../utils/with-props'
+import { gold } from '../system/colors'
 
 export const query = graphql`
   query ContactQuery {
@@ -41,8 +42,8 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <Content>
-        <Cell gridColumn="2/6" flexDirection="column">
+      <Content bg={gold}>
+        <Cell gridColumn="2/6" flexDirection="column" style={{ fontSize: 32 }}>
           <Col>
             <Text children={contact.title} />
             <Link href={`mailto:${contact.email}`} children={contact.email} />
