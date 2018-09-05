@@ -12,6 +12,6 @@ images:
   - image: /assets/capture-d’écran-2018-08-27-à-09.19.28.png
   - image: /assets/capture-d’écran-2018-08-27-à-09.42.32.png
   - image: /assets/capture-d’écran-2018-08-27-à-09.43.10.png
-  - image: ''
 ---
+
 Editorial project mandated by Red Bull Music Academy for their Daily platform.
