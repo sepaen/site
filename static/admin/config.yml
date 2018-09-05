@@ -20,7 +20,7 @@ collections:
       - { label: Client, name: client, widget: string }
       - { label: 'Client website', name: url, widget: string }
       - { label: Extra information, name: extra, widget: string }
-      - { label: Color, name: color, widget: string }
+      - { label: Color, name: color, widget: color }
       - label: Images
         name: images
         widget: list
