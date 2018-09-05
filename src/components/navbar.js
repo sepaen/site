@@ -8,15 +8,15 @@ const Navbar = ({ title, ...props }) => {
 
   return (
     <Flex
+      {...props}
       is="nav"
       position="fixed"
       zIndex={2}
       top={0}
       right={0}
       left={0}
-      justify="space-between"
+      justifyContent="space-between"
       p={20}
-      {...props}
     >
       <Link to="/" children={titleTop} textTransform="uppercase" />
 
