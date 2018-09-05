@@ -1,11 +1,12 @@
 ---
 type: project
 date: 2018-07-08T00:00:00.000Z
+short: benga
 title: 'Benga, A Kenyan Kaleidoscope - Exhibition'
-description: A third project
-client: Client Name
+description: ''
+client: ''
 url: ''
-extra: Extra information
+extra: ''
 color: '#d3b5b5'
 images:
   - image: /assets/affiche-nyon-1.png
