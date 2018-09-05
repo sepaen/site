@@ -1,6 +1,7 @@
 ---
 type: project
 date: 2018-06-21T00:00:00.000Z
+short: redbull
 title: 'Red Bull Music Academy Daily - Editorial '
 description: A description of the second project
 client: Client Name
