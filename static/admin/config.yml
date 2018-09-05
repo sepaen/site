@@ -17,10 +17,21 @@ collections:
       - { label: Date, name: date, widget: datetime }
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string }
-      - { label: Client, name: client, widget: string }
-      - { label: 'Client website', name: url, widget: string }
-      - { label: Extra information, name: extra, widget: string }
-      - { label: Color, name: color, widget: color }
+      - { label: Client, name: client, required: false, widget: string }
+      - { label: 'Client website', name: url, required: false, widget: string }
+      - {
+          label: Extra information,
+          name: extra,
+          required: false,
+          widget: string,
+        }
+      - {
+          label: Color,
+          name: color,
+          required: false,
+          default: '#fff',
+          widget: color,
+        }
       - label: Images
         name: images
         widget: list
@@ -38,8 +49,13 @@ collections:
       - { label: Date, name: date, widget: datetime }
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: text }
-      - { label: Requirements, name: requirements, widget: text }
-      - { label: 'How to apply', name: howto, widget: text }
+      - {
+          label: Requirements,
+          name: requirements,
+          required: false,
+          widget: text,
+        }
+      - { label: 'How to apply', name: howto, required: false, widget: text }
 
   - name: pages
     label: Pages

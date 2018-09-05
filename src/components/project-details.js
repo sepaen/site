@@ -14,8 +14,8 @@ const ProjectDescription = ({ project, ...props }) => (
     {...props}
     zIndex={100}
     bg={project.frontmatter.color}
-    p={20}
     cursor="initial"
+    p={20}
   >
     <Flex flexDirection="column" mr={20}>
       <Text children={project.frontmatter.client} />

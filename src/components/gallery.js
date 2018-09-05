@@ -126,6 +126,8 @@ class Gallery extends React.Component {
         <Flex
           children={last}
           position="absolute"
+          justifyContent="center"
+          alignItems="center"
           transform={this.translate(size - 1)}
           transition={(up || index) && 'transform 0.3s ease-in-out'}
           p={40}

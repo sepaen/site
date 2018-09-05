@@ -16,7 +16,6 @@ injectGlobal`
 
   html * {
     box-sizing: border-box;
-    background: transparent;
     font-family: NeueHaasGrotesk;
     letter-spacing: 1px;
   }
