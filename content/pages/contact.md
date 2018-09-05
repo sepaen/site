@@ -8,7 +8,6 @@ phone:
 social:
   - platform: Facebook
     url: 'https://facebook.com/sepaen'
-  - platform: 'Instagram '
+  - platform: Instagram
     url: 'https://www.instagram.com/sepaen/'
 ---
-
