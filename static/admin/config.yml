@@ -15,21 +15,12 @@ collections:
     fields:
       - { label: Type, name: type, widget: hidden, default: project }
       - { label: Date, name: date, widget: datetime }
-      - { label: Title, name: title, widget: string }
-      - {
-          label: Description,
-          name: description,
-          required: false,
-          widget: string,
-        }
-      - { label: Client, name: client, required: false, widget: string }
+      - { label: 'Short title (for cms)', name: short, widget: string }
+      - { label: Title, name: title, widget: text }
+      - { label: Description, name: description, required: false, widget: text }
+      - { label: Client, name: client, required: false, widget: text }
       - { label: 'Client website', name: url, required: false, widget: string }
-      - {
-          label: Extra information,
-          name: extra,
-          required: false,
-          widget: string,
-        }
+      - { label: Extra information, name: extra, required: false, widget: text }
       - {
           label: Color,
           name: color,
@@ -52,7 +43,7 @@ collections:
     fields:
       - { label: Type, name: type, widget: hidden, default: job }
       - { label: Date, name: date, widget: datetime }
-      - { label: Title, name: title, widget: string }
+      - { label: Title, name: title, widget: text }
       - { label: Description, name: description, widget: text }
       - {
           label: Requirements,
