@@ -4,7 +4,7 @@ date: 2018-07-08T00:00:00.000Z
 title: 'Benga, A Kenyan Kaleidoscope - Exhibition'
 description: A third project
 client: Client Name
-url: 'http://www.example.com'
+url: ''
 extra: Extra information
 color: '#d3b5b5'
 images:
