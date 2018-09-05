@@ -1,5 +1,5 @@
 export default function isDesktop() {
-  return window
+  return typeof window !== 'undefined'
     ? window.matchMedia('screen and (min-width: 40em)').matches
     : true
 }

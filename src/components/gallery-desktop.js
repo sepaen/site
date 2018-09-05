@@ -12,7 +12,7 @@ function margin(i, size) {
 }
 
 function winheight() {
-  return window ? window.innerHeight : 0
+  return typeof window !== 'undefined' ? window.innerHeight : 0
 }
 
 class DesktopGallery extends React.Component {
