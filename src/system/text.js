@@ -17,7 +17,12 @@ const textTransform = responsiveStyle({ prop: 'textTransform' })
 const textDecoration = responsiveStyle({ prop: 'textDecoration' })
 
 const Text = styled(
-  withProps(Flex, { is: 'p', display: 'inline-flex', color: 'white', m: 0 })
+  withProps(Flex, {
+    is: 'span',
+    display: 'inline-flex',
+    color: 'white',
+    m: 0,
+  })
 )`
   ${fontSize}
   ${fontFamily}

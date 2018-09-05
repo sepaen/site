@@ -5,7 +5,7 @@ const Content = withProps(Grid, {
   gridTemplateColumns: 'repeat(6, 1fr)',
   alignItems: 'center',
   flex: '1 0 100%',
-  height: '100vh',
+  minHeight: '100vh',
   p: 20,
 })
 

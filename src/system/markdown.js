@@ -1,10 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Base from '../system/base'
+import Text from '../system/text'
 
 const Markdown = ({ html, ...props }) => (
-  <Base {...props} is="section" dangerouslySetInnerHTML={{ __html: html }} />
+  <Text
+    {...props}
+    is="section"
+    flexDirection="column"
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
 )
 
 export default styled(Markdown)`

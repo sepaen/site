@@ -6,8 +6,9 @@ import Content from '../components/content'
 import Cell from '../system/cell'
 import Markdown from '../system/markdown'
 import Text from '../system/text'
-import Link from '../system/link'
 import { gold } from '../system/colors'
+import Flex from '../system/flex'
+import Input from '../system/input'
 
 export const query = graphql`
   query AboutQuery {
@@ -23,25 +24,59 @@ export const query = graphql`
   }
 `
 
-const NEWSLETTER_EMAIL = ''
+class AboutPage extends React.Component {
+  state = {
+    subscribing: false,
+    email: '',
+  }
 
-const AboutPage = ({ data }) => (
-  <Layout title={data.site.siteMetadata.title}>
-    <Content bg={gold} style={{ fontSize: 24 }}>
-      <Cell gridColumn="2/6" flexDirection="column">
-        <Markdown html={data.markdownRemark.html} mb={4} />
+  subscribe = () => {
+    const { email } = this.state
+  }
 
-        <Text>
-          Keep up to date by
-          <Text
-            children="subscribing to our newsletter"
-            textDecoration="underline"
-            ml={1}
-          />
-        </Text>
-      </Cell>
-    </Content>
-  </Layout>
-)
+  render() {
+    const { data } = this.props
+    const { subscribing, email } = this.state
+
+    return (
+      <Layout title={data.site.siteMetadata.title}>
+        <Content bg={gold} alignItems="flex-start" pt="10%">
+          <Cell gridColumn="2/6" flexDirection="column">
+            <Markdown html={data.markdownRemark.html} fontSize={24} mb={4} />
+
+            <Text display="inline" fontSize={24}>
+              Keep up to date by
+              <Text
+                children="subscribing to our newsletter"
+                onClick={() => this.setState({ subscribing: !subscribing })}
+                display="inline"
+                textDecoration="underline"
+                cursor="pointer"
+                ml={1}
+              />
+            </Text>
+
+            {subscribing && (
+              <Flex alignItems="center" mt={32}>
+                <Input
+                  value={email}
+                  placeholder="Enter your email here"
+                  onChange={e => this.setState({ email: e.target.value })}
+                  mr={10}
+                />
+                <Text
+                  children="Subscribe"
+                  onClick={this.subscribe}
+                  fontSize={16}
+                  cursor="pointer"
+                />
+              </Flex>
+            )}
+          </Cell>
+        </Content>
+      </Layout>
+    )
+  }
+}
 
 export default AboutPage
