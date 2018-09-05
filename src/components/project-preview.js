@@ -23,7 +23,7 @@ const ProjectPreview = ({ project, ...props }) => (
       <Text children={project.frontmatter.description} />
     </Cell>
 
-    <Cell gridColumn="1" flex={1} position="relative" height="100%">
+    <Cell gridColumn={['1', '2/6']} flex={1} position="relative" height="100%">
       <Link
         to={`/projects/${extractSlug(project)}`}
         position="absolute"
