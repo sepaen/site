@@ -2,24 +2,11 @@ import React from 'react'
 
 import MobileGallery from './gallery-mobile'
 import DesktopGallery from './gallery-desktop'
-import isDesktop from '../utils/is-desktop'
+import withMediaQuery from './with-media-query'
 
-class Gallery extends React.Component {
-  state = {
-    isDesktop: true,
-  }
-
-  componentDidMount() {
-    this.setState({ isDesktop: isDesktop() })
-  }
-
-  render() {
-    const GalleryComponent = this.state.isDesktop
-      ? DesktopGallery
-      : MobileGallery
-
-    return <GalleryComponent {...this.props} />
-  }
+const Gallery = ({ isDesktop, ...props }) => {
+  const GalleryComponent = isDesktop ? DesktopGallery : MobileGallery
+  return <GalleryComponent {...props} />
 }
 
-export default Gallery
+export default withMediaQuery(Gallery)

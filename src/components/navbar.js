@@ -1,14 +1,18 @@
 import React from 'react'
+import readableColor from 'polished/lib/color/readableColor'
 
-import Flex from '../system/flex'
-import Link from '../system/link'
+import MobileNavbar from './navbar-mobile'
+import DesktopNavbar from './navbar-desktop'
+import withMediaQuery from './with-media-query'
 
-const Navbar = ({ title, ...props }) => {
+const Navbar = ({ title, isDesktop, bg, ...props }) => {
   const [titleTop] = title.split(' ')
+  const NavbarComponent = isDesktop ? DesktopNavbar : MobileNavbar
 
   return (
-    <Flex
+    <NavbarComponent
       {...props}
+      title={titleTop}
       is="nav"
       position="fixed"
       zIndex={2}
@@ -16,23 +20,9 @@ const Navbar = ({ title, ...props }) => {
       right={0}
       left={0}
       justifyContent="space-between"
+      color={readableColor(bg)}
       p={20}
-    >
-      <Link
-        to="/"
-        children={titleTop}
-        textTransform="uppercase"
-        letterSpacing={10}
-        textDecoration="none !important"
-      />
-
-      <Flex display={['none', 'flex']} alignSelf="flex-start">
-        <Link to="/projects" children="Projects" mr={3} />
-        <Link to="/about" children="About" mr={3} />
-        <Link to="/contact" children="Contact" />
-      </Flex>
-    </Flex>
+    />
   )
 }
-
-export default Navbar
+export default withMediaQuery(Navbar)

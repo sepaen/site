@@ -25,7 +25,7 @@ const Layout = ({ title, bg = 'white', children }) => (
       ]}
     />
 
-    <Navbar title={title} />
+    <Navbar title={title} bg={bg} />
     {children}
     <Footer title={title} />
   </LayoutFlex>
