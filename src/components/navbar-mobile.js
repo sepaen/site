@@ -20,7 +20,11 @@ class NavbarMobile extends React.Component {
     const { opened } = this.state
 
     return (
-      <Flex {...props} borderBottom={opened ? '1px solid #999' : 'none'}>
+      <Flex
+        {...props}
+        borderBottom={opened ? '1px solid' : 'none'}
+        borderColor={color}
+      >
         {!opened && (
           <Link
             to="/"

@@ -40,7 +40,7 @@ class AboutPage extends React.Component {
 
     return (
       <Layout title={data.site.siteMetadata.title}>
-        <Content bg={gold} alignItems={['flex-start', 'center']} pt={[60, 0]}>
+        <Content bg={gold} alignItems={['flex-start', 'center']} pt={[80, 0]}>
           <Cell flexDirection="column" fontSize={[18, 24]}>
             <Markdown html={data.markdownRemark.html} mb={4} />
 
