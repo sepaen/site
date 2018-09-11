@@ -5,7 +5,7 @@ title: Benga Music
 description: 'A Signature Genre From Kenya '
 client: 'Client : Flee Project'
 url: www.fleeproject.com
-extra: '1'
+extra: 'Medium : Audio, Publication'
 color: '#4d4d4d'
 images:
   - image: /assets/produitfini6.jpg
