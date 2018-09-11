@@ -1,9 +1,9 @@
 ---
 type: project
 date: 2018-03-12T00:00:00.000Z
-title: FLEE001
-description: Vinyl and Silkscreen printed publication
-client: FLEE Project
+title: 'Title : Benga Music, A Signature Genre From Kenya'
+description: 'Client '
+client: 'Client : Flee Project'
 url: www.fleeproject.com
 extra: '2018'
 color: '#4d4d4d'
