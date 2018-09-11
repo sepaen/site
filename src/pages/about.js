@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import addToMailChimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/layout'
 import Content from '../components/content'
@@ -32,6 +33,11 @@ class AboutPage extends React.Component {
 
   subscribe = () => {
     const { email } = this.state
+    if (email) {
+      addToMailChimp(email).then(() =>
+        this.setState({ email: '', subscribing: false })
+      )
+    }
   }
 
   render() {
@@ -56,22 +62,26 @@ class AboutPage extends React.Component {
               />
             </Text>
 
-            {subscribing && (
-              <Flex alignItems="center" mt={32}>
-                <Input
-                  value={email}
-                  placeholder="Enter your email here"
-                  onChange={e => this.setState({ email: e.target.value })}
-                  mr={10}
-                />
-                <Text
-                  children="Subscribe"
-                  onClick={this.subscribe}
-                  fontSize={16}
-                  cursor="pointer"
-                />
-              </Flex>
-            )}
+            <Flex
+              alignItems="center"
+              opacity={subscribing ? 1 : 0}
+              transition="opacity 0.3s ease-in-out"
+              mt={32}
+            >
+              <Input
+                type="email"
+                value={email}
+                placeholder="Enter your email here"
+                onChange={e => this.setState({ email: e.target.value })}
+                mr={10}
+              />
+              <Text
+                children="Subscribe"
+                onClick={this.subscribe}
+                fontSize={16}
+                cursor="pointer"
+              />
+            </Flex>
           </Cell>
         </Content>
       </Layout>

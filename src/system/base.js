@@ -20,6 +20,7 @@ import {
   borders,
   borderRadius,
   borderColor,
+  opacity,
   color,
   style,
   responsiveStyle,
@@ -96,4 +97,5 @@ export default styled(Base)`
 
   ${userSelect}
   ${outline}
+  ${opacity}
 `

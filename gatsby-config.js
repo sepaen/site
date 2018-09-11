@@ -20,5 +20,12 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://sepaen.us19.list-manage.com/subscribe/post?u=54fc48fc9d2ce1f45f4df99fd&amp;id=6bdb48c285', // see instructions section below
+      },
+    },
   ],
 }
