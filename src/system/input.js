@@ -6,6 +6,7 @@ const Input = withProps(Text, {
   domProps: ['placeholder', 'value'],
   border: '1px solid black',
   bg: 'transparent',
+  outline: 'none',
   px: 3,
   py: 2,
 })
