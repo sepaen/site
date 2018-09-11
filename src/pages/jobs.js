@@ -18,7 +18,7 @@ export const query = graphql`
       }
     }
 
-    allMarkdownRemark(
+    jobs: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "job" } } }
       sort: { fields: frontmatter___date }
     ) {
@@ -35,22 +35,24 @@ export const query = graphql`
         }
       }
     }
+
+    nojobs: markdownRemark(frontmatter: { type: { eq: "nojobs" } }) {
+      rawMarkdownBody
+    }
   }
 `
 
 const JobsPage = ({ data }) => {
   const title = data.site.siteMetadata.title
-  const jobs = get(data, 'allMarkdownRemark.edges')
+  const jobs = get(data, 'jobs.edges')
+  const nojobs = data.nojobs.rawMarkdownBody
 
   return (
     <Layout title={title}>
       <Content height="auto" minHeight="100vh" pt={6} bg={gold}>
         {!jobs && (
           <Cell alignSelf="flex-start">
-            <Text
-              children="Sorry, there are no vacancies opened at the moment."
-              fontSize={[24, 32]}
-            />
+            <Text children={nojobs} fontSize={[24, 32]} />
           </Cell>
         )}
 

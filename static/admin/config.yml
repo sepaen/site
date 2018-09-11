@@ -81,3 +81,10 @@ collections:
         fields:
           - { label: type, name: type, widget: hidden, default: about }
           - { label: Body, name: body, widget: markdown }
+
+      - label: 'No jobs available'
+        name: nojobs
+        file: content/pages/no-jobs.md
+        fields:
+          - { label: type, name: type, widget: hidden, default: nojobs }
+          - { label: Body, name: body, widget: markdown }
