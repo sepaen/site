@@ -1,8 +1,8 @@
 ---
 type: project
 date: 2018-03-12T00:00:00.000Z
-title: 'Title : Benga Music, A Signature Genre From Kenya'
-description: 'Medium : Print Publication and Vinyl'
+title: Benga Music
+description: 'A Signature Genre From Kenya '
 client: 'Client : Flee Project'
 url: www.fleeproject.com
 extra: '2018'
