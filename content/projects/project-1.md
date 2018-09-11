@@ -1,6 +1,6 @@
 ---
 type: project
-date: 2018-03-12T00:00:00.000Z
+date: Invalid date
 title: Benga Music
 description: 'A Signature Genre From Kenya '
 client: 'Client : Flee Project'
