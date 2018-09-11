@@ -1,6 +1,7 @@
 import React from 'react'
 import bowser from 'bowser'
 import debounce from 'lodash/debounce'
+import omit from 'lodash/omit'
 import Flex from '../system/flex'
 
 const UP = 'SWIPE_UP'
@@ -74,13 +75,17 @@ class Swiper extends React.Component {
     this.detectSwipe(deltaX, deltaY)
   }
 
-  onSwipe = debounce(directions => this.props.onSwipe(directions), 100, {
-    leading: true,
-    trailing: false,
-  })
+  onSwipe = debounce(
+    directions => this.props.onSwipe(directions),
+    this.props.delay || 100,
+    {
+      leading: true,
+      trailing: false,
+    }
+  )
 
   render() {
-    const { onSwipe, ...props } = this.props
+    const props = omit(this.props, ['onSwipe'])
 
     return (
       <Flex

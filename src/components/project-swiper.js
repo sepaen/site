@@ -5,10 +5,12 @@ import invoke from '../utils/invoke'
 import withProps from '../utils/with-props'
 import Swiper from './swiper'
 
+const timingFn = 'transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)'
+
 const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
   > * {
     transform: translate3d(0, ${p => -p.index * 100}vh, 0);
-    transition: transform ease-in-out 0.3s;
+    transition: ${timingFn};
   }
 `
 
@@ -35,6 +37,7 @@ class ProjectSwiper extends React.Component {
       <VerticalSwiper
         {...this.props}
         onSwipe={this.onSwipe}
+        delay={1000}
         height="100vh"
         overflow="hidden"
       />
