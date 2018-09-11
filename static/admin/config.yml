@@ -87,4 +87,4 @@ collections:
         file: content/pages/no-jobs.md
         fields:
           - { label: type, name: type, widget: hidden, default: nojobs }
-          - { label: Body, name: body, widget: markdown }
+          - { label: Text, name: text, widget: text }

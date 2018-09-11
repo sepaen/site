@@ -37,7 +37,9 @@ export const query = graphql`
     }
 
     nojobs: markdownRemark(frontmatter: { type: { eq: "nojobs" } }) {
-      rawMarkdownBody
+      frontmatter {
+        text
+      }
     }
   }
 `
@@ -45,7 +47,7 @@ export const query = graphql`
 const JobsPage = ({ data }) => {
   const title = data.site.siteMetadata.title
   const jobs = get(data, 'jobs.edges')
-  const nojobs = data.nojobs.rawMarkdownBody
+  const nojobs = data.nojobs.frontmatter.text
 
   return (
     <Layout title={title}>
