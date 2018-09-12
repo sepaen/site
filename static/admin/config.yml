@@ -15,9 +15,9 @@ collections:
     fields:
       - { label: Type, name: type, widget: hidden, default: project }
       - { label: Draft, name: draft, widget: boolean, default: true }
-      - { label: Date, name: date, widget: datetime }
+      - { label: Date, name: date, required: false, widget: datetime }
       - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: text }
+      - { label: Subtitle, name: subtitle, required: false, widget: text }
       - {
           label: Color,
           name: color,
@@ -30,7 +30,7 @@ collections:
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
-      - { label: Details, name: details, widget: markdown }
+      - { label: Details, name: details, required: false, widget: markdown }
       - { label: Body, name: body, widget: markdown }
 
   - name: jobs
