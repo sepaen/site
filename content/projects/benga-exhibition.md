@@ -33,7 +33,7 @@ Medium : Exhibition
 
 www.eeeeh.ch
 
-\---
+---
 
 Last July, the [Eeeeh](http://www.eeeeh.ch/) and [Hapax21](http://c-h-21.tumblr.com/) collectives based in Nyon, Switzerland commissioned an exhibition around the first issue of [FLEE](https://fleeproject.com/)'s project.
 
