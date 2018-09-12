@@ -4,11 +4,8 @@ import Text from '../system/text'
 import Cursor from './cursor'
 import Swiper from './swiper'
 
-function margin(i, size) {
-  const isFirst = i === 0
-  const isLast = i === size - 1
-
-  return isFirst || isLast ? 0 : ((i % 3) - 1) * 20
+function margin(i) {
+  return i === 0 ? 0 : (i % 3) * 20
 }
 
 function winheight() {
@@ -111,8 +108,8 @@ class DesktopGallery extends React.Component {
             transform={this.translate(i)}
             transition={(up || index) && 'transform 0.3s ease-in-out'}
             p={30}
-            mt={margin(i, size)}
-            ml={margin(i, size)}
+            mt={margin(i)}
+            ml={margin(i)}
           />
         ))}
 
