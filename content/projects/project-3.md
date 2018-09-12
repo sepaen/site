@@ -14,6 +14,10 @@ images:
   - image: /assets/dsc00979.jpg
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
+  - image: /assets/000008.jpg
+  - image: /assets/dsc00977-1-853x1280.jpg
+  - image: /assets/dsc00630.jpg
+  - image: /assets/dsc00998-2-1-1920x1280.jpg
 ---
 Last July, the [Eeeeh](http://www.eeeeh.ch/) and [Hapax21](http://c-h-21.tumblr.com/) collectives based in Nyon, Switzerland commissioned an exhibition around the first issue of [FLEE](https://fleeproject.com/)'s project.
 
