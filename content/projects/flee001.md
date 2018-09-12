@@ -1,5 +1,6 @@
 ---
 type: project
+draft: false
 date: 2018-09-11T22:00:00.000Z
 short: FLEE001
 title: Benga Music
@@ -15,6 +16,7 @@ images:
   - image: /assets/produitfini7.jpg
   - image: /assets/produitfini2.jpg
 ---
+
 For this very first issue of the [FLEE](www.fleeproject.com) publication we wanted to deliver a unique and complementary object.
 
 </br>

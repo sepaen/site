@@ -14,13 +14,9 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Type, name: type, widget: hidden, default: project }
+      - { label: Draft, name: draft, widget: boolean, default: true }
       - { label: Date, name: date, widget: datetime }
-      - { label: 'Short title (for cms)', name: short, widget: string }
-      - { label: Title, name: title, widget: text }
-      - { label: Description, name: description, required: false, widget: text }
-      - { label: Client, name: client, required: false, widget: text }
-      - { label: 'Client website', name: url, required: false, widget: string }
-      - { label: Extra information, name: extra, required: false, widget: text }
+      - { label: Title, name: title, widget: string }
       - {
           label: Color,
           name: color,
@@ -33,6 +29,7 @@ collections:
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
+      - { label: Details, name: details, widget: markdown }
       - { label: Body, name: body, widget: markdown }
 
   - name: jobs
@@ -42,6 +39,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Type, name: type, widget: hidden, default: job }
+      - { label: Draft, name: draft, widget: boolean, default: true }
       - { label: Date, name: date, widget: datetime }
       - { label: Title, name: title, widget: text }
       - { label: Description, name: description, widget: text }

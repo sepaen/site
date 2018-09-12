@@ -1,4 +1,5 @@
 import React from 'react'
+import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -49,19 +50,22 @@ class ProjectsPage extends React.Component {
     const { index } = this.state
 
     const title = data.site.siteMetadata.title
-    const projects = data.allMarkdownRemark.edges
+    const projects = get(data, 'allMarkdownRemark.edges', [])
     const current = projects[index].node
 
     return (
       <Layout title={title} bg={current.frontmatter.color}>
         <ProjectSwiper index={index} onSwipe={this.onSwipe}>
-          {projects.map(({ node }) => (
-            <ProjectPreview
-              key={extractSlug(node)}
-              project={node}
-              className="project-preview"
-            />
-          ))}
+          {projects.map(
+            ({ node }) =>
+              !node.draft && (
+                <ProjectPreview
+                  key={extractSlug(node)}
+                  project={node}
+                  className="project-preview"
+                />
+              )
+          )}
         </ProjectSwiper>
       </Layout>
     )
