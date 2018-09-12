@@ -37,7 +37,6 @@ class ProjectSwiper extends React.Component {
       <VerticalSwiper
         {...this.props}
         onSwipe={this.onSwipe}
-        delay={500}
         width="100vw"
         height="100vh"
         overflow="hidden"
