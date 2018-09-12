@@ -8,8 +8,19 @@ import Text from '../system/text'
 import Image from '../system/image'
 import Markdown from '../system/markdown'
 
+function getDescription(project) {
+  let [details, description] = project.html.split('<hr>')
+
+  if (!description) {
+    description = details
+    details = null
+  }
+
+  return [details, description]
+}
+
 const ProjectDescription = ({ project, ...props }) => {
-  const [details, description] = project.html.split('<hr>')
+  const [details, description] = getDescription(project)
 
   return (
     <Flex
@@ -18,10 +29,10 @@ const ProjectDescription = ({ project, ...props }) => {
       zIndex={[1, 100]}
       bg={project.frontmatter.color}
       cursor="initial"
-      p={20}
+      p={[0, 20]}
     >
-      <Markdown html={details} mr={[0, 20]} mb={[20, 0]} />
-      <Markdown html={description} textAlign="justify" />
+      {details && <Markdown html={details} mr={[0, 20]} mb={[20, 0]} />}
+      <Markdown html={description} maxWidth={500} textAlign="justify" />
     </Flex>
   )
 }
