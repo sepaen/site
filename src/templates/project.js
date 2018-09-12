@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import publishedProjects from '../utils/published-projects'
 import Layout from '../components/layout'
 import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
@@ -32,6 +33,9 @@ export const query = graphql`
       edges {
         node {
           fileAbsolutePath
+          frontmatter {
+            draft
+          }
         }
       }
     }
@@ -41,7 +45,7 @@ export const query = graphql`
 const ProjectDetailsPage = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title
   const project = data.markdownRemark
-  const projects = data.allMarkdownRemark.edges
+  const projects = publishedProjects(data)
 
   return (
     <Layout title={title} bg={project.frontmatter.color}>

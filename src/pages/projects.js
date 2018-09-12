@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
+import publishedProjects from '../utils/published-projects'
 import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
 import extractSlug from '../utils/extract-slug'
@@ -50,10 +51,7 @@ class ProjectsPage extends React.Component {
     const { index } = this.state
 
     const title = data.site.siteMetadata.title
-    const projects = get(data, 'allMarkdownRemark.edges', []).filter(
-      ({ node }) => !node.frontmatter.draft
-    )
-
+    const projects = publishedProjects(data)
     const bg = projects[index].node.frontmatter.color
 
     return (
