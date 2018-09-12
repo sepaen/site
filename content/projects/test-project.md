@@ -3,22 +3,26 @@ type: project
 draft: true
 date: 2018-09-12T16:10:55.508Z
 title: test project
-color: '#ff0000'
+subtitle: a short lived project
+color: '#e2e6e7'
 images:
   - image: /assets/000017.jpg
-details: |-
-  Client : Flee Project
-
-  2018
-
-  <br/>
-
-  Medium : Audio, Publication
-
-  <br/>
-
-  [www.fleeproject.com](www.fleeproject.com)
 ---
+
+Client : Flee Project
+
+2018
+
+<br/>
+
+Medium : Audio, Publication
+
+<br/>
+
+[www.fleeproject.com](www.fleeproject.com)
+
+---
+
 For this very first issue of the FLEE publication we wanted to deliver a unique and complementary object.
 
 <br/>

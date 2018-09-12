@@ -4,7 +4,7 @@ draft: false
 date: 2018-09-11T22:00:00.000Z
 short: FLEE001
 title: Benga Music
-description: 'A Signature Genre From Kenya '
+subtitle: 'A Signature Genre From Kenya '
 client: 'Client : Flee Project'
 url: www.fleeproject.com
 extra: 'Medium : Audio, Publication'
@@ -15,6 +15,20 @@ images:
   - image: /assets/produitfini5.jpg
   - image: /assets/produitfini7.jpg
   - image: /assets/produitfini2.jpg
+---
+
+Client : Flee Project
+
+2018
+
+<br/>
+
+Medium : Audio, Publication
+
+<br/>
+
+[www.fleeproject.com](www.fleeproject.com)
+
 ---
 
 For this very first issue of the [FLEE](www.fleeproject.com) publication we wanted to deliver a unique and complementary object.

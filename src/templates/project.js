@@ -18,11 +18,7 @@ export const query = graphql`
 
       frontmatter {
         title
-        description
-        client
-        date(formatString: "YYYY")
-        extra
-        url
+        subtitle
         color
         images {
           image

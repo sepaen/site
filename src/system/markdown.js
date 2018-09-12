@@ -13,8 +13,6 @@ const Markdown = ({ html, ...props }) => (
 )
 
 export default styled(Markdown)`
-  text-align: justify;
-
   * {
     color: white;
   }

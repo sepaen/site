@@ -7,33 +7,24 @@ import Flex from '../system/flex'
 import Text from '../system/text'
 import Image from '../system/image'
 import Markdown from '../system/markdown'
-import Link from '../system/link'
 
-const ProjectDescription = ({ project, ...props }) => (
-  <Flex
-    {...props}
-    flexDirection={['column', 'row']}
-    zIndex={[1, 100]}
-    bg={project.frontmatter.color}
-    cursor="initial"
-    p={20}
-  >
-    <Flex flexDirection="column" mr={20}>
-      <Text children={project.frontmatter.client} />
-      <Text children={project.frontmatter.date} mb={20} />
+const ProjectDescription = ({ project, ...props }) => {
+  const [details, description] = project.html.split('<hr>')
 
-      <Text children={project.frontmatter.extra} mb={20} />
-
-      <Link
-        href={project.frontmatter.url}
-        target="blank"
-        children={project.frontmatter.url}
-      />
+  return (
+    <Flex
+      {...props}
+      flexDirection={['column', 'row']}
+      zIndex={[1, 100]}
+      bg={project.frontmatter.color}
+      cursor="initial"
+      p={20}
+    >
+      <Markdown html={details} mr={[0, 20]} mb={[20, 0]} />
+      <Markdown html={description} textAlign="justify" />
     </Flex>
-
-    <Markdown html={project.html} />
-  </Flex>
-)
+  )
+}
 
 const ProjectDetails = ({ project, ...props }) => (
   <Content
@@ -44,13 +35,9 @@ const ProjectDetails = ({ project, ...props }) => (
     overflow="hidden"
     pt={[80, 20]}
   >
-    <Cell
-      gridColumn="1"
-      flexDirection="column"
-      height={['initial', '66%']}
-      mr={[0, 4]}
-    >
+    <Cell gridColumn="1" flexDirection="column" mt={[0, 180]} mr={[0, 4]}>
       <Text children={project.frontmatter.title} />
+      <Text children={project.frontmatter.subtitle} />
     </Cell>
 
     <Gallery is={Cell} py={50}>

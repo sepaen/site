@@ -22,8 +22,8 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
+            draft
             title
-            description
             color
             images {
               image
@@ -50,11 +50,14 @@ class ProjectsPage extends React.Component {
     const { index } = this.state
 
     const title = data.site.siteMetadata.title
-    const projects = get(data, 'allMarkdownRemark.edges', [])
-    const current = projects[index].node
+    const projects = get(data, 'allMarkdownRemark.edges', []).filter(
+      ({ node }) => !node.frontmatter.draft
+    )
+
+    const bg = projects[index].node.frontmatter.color
 
     return (
-      <Layout title={title} bg={current.frontmatter.color}>
+      <Layout title={title} bg={bg}>
         <ProjectSwiper index={index} onSwipe={this.onSwipe}>
           {projects.map(
             ({ node }) =>

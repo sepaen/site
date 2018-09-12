@@ -16,7 +16,6 @@ const ProjectPreview = ({ project, ...props }) => (
   >
     <Cell gridColumn="1" flexDirection="column" mt={[0, 180]} mr={[0, 4]}>
       <Text children={project.frontmatter.title} />
-      <Text children={project.frontmatter.description} />
     </Cell>
 
     <Cell gridColumn={['1', '2/6']} flex={1} position="relative" height="100%">

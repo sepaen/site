@@ -2,12 +2,7 @@
 type: project
 draft: false
 date: 2018-07-08T00:00:00.000Z
-short: 'Swiss Exhibition '
 title: 'Benga, A Kenyan Kaleidoscope - Exhibition'
-description: ''
-client: ''
-url: ''
-extra: ''
 color: '#d3b5b5'
 images:
   - image: /assets/affiche-nyon-1.png
