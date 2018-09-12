@@ -1,5 +1,4 @@
 import React from 'react'
-import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
 import publishedProjects from '../utils/published-projects'

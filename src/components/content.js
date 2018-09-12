@@ -8,7 +8,7 @@ const Content = withProps(Grid, {
   maxWidth: '100vw',
   minHeight: '100vh',
   p: [30, 20],
-  pt: [80, 200],
+  pt: [80, 150],
 })
 
 export default Content

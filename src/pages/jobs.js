@@ -46,22 +46,21 @@ export const query = graphql`
 
 const JobsPage = ({ data }) => {
   const title = data.site.siteMetadata.title
-  const jobs = get(data, 'jobs.edges')
+  const jobs = get(data, 'jobs.edges', [])
   const nojobs = data.nojobs.frontmatter.text
 
   return (
     <Layout title={title} bg={gold}>
       <Content>
-        {!jobs && (
+        {jobs.length === 0 && (
           <Cell alignSelf="flex-start">
             <Text children={nojobs} fontSize={[24, 32]} />
           </Cell>
         )}
 
-        {jobs &&
-          jobs.map(({ node }) => (
-            <JobPreview key={extractSlug(node)} job={node} mb={5} />
-          ))}
+        {jobs.map(({ node }) => (
+          <JobPreview key={extractSlug(node)} job={node} mb={5} />
+        ))}
       </Content>
     </Layout>
   )

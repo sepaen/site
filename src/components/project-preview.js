@@ -14,7 +14,7 @@ const ProjectPreview = ({ project, ...props }) => (
     bg={project.frontmatter.color}
     pt={[80, 20]}
   >
-    <Cell gridColumn="1" flexDirection="column" mt={[0, 180]} mr={[0, 4]}>
+    <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
       <Text children={project.frontmatter.title} />
     </Cell>
 
