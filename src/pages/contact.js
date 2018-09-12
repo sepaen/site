@@ -41,8 +41,8 @@ const ContactPage = ({ data }) => {
   const contact = data.markdownRemark.frontmatter
 
   return (
-    <Layout title={siteTitle}>
-      <Content bg={gold}>
+    <Layout title={siteTitle} bg={gold}>
+      <Content>
         <Cell flexDirection="column" fontSize={[24, 32]}>
           <Col>
             <Text children={contact.title} />

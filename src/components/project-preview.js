@@ -12,13 +12,9 @@ const ProjectPreview = ({ project, ...props }) => (
     {...props}
     gridTemplateRows={['1fr 2fr', 'initial']}
     bg={project.frontmatter.color}
+    pt={[80, 20]}
   >
-    <Cell
-      gridColumn="1"
-      flexDirection="column"
-      height={['initial', '66%']}
-      mr={[0, 4]}
-    >
+    <Cell gridColumn="1" flexDirection="column" mt={[0, 180]} mr={[0, 4]}>
       <Text children={project.frontmatter.title} />
       <Text children={project.frontmatter.description} />
     </Cell>

@@ -3,7 +3,7 @@ import React from 'react'
 import Flex from '../system/flex'
 import Link from '../system/link'
 
-const NavbarDesktop = ({ title, ...props }) => (
+const NavbarDesktop = ({ title, bg, ...props }) => (
   <Flex {...props}>
     <Link
       to="/"

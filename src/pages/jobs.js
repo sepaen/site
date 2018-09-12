@@ -50,8 +50,8 @@ const JobsPage = ({ data }) => {
   const nojobs = data.nojobs.frontmatter.text
 
   return (
-    <Layout title={title}>
-      <Content height="auto" minHeight="100vh" pt={6} bg={gold}>
+    <Layout title={title} bg={gold}>
+      <Content>
         {!jobs && (
           <Cell alignSelf="flex-start">
             <Text children={nojobs} fontSize={[24, 32]} />

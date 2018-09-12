@@ -5,7 +5,7 @@ import MobileNavbar from './navbar-mobile'
 import DesktopNavbar from './navbar-desktop'
 import withMediaQuery from './with-media-query'
 
-const Navbar = ({ title, isDesktop, bg, ...props }) => {
+const Navbar = ({ title, isDesktop, ...props }) => {
   const [titleTop] = title.split(' ')
   const NavbarComponent = isDesktop ? DesktopNavbar : MobileNavbar
 
@@ -20,7 +20,6 @@ const Navbar = ({ title, isDesktop, bg, ...props }) => {
       right={0}
       left={0}
       justifyContent="space-between"
-      color={readableColor(bg)}
       p={20}
     />
   )

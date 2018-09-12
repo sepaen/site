@@ -42,7 +42,7 @@ const ProjectDetails = ({ project, ...props }) => (
     flexDirection="column"
     bg={project.frontmatter.color}
     overflow="hidden"
-    py={100}
+    pt={[80, 20]}
   >
     <Cell
       gridColumn="1"

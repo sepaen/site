@@ -45,8 +45,8 @@ class AboutPage extends React.Component {
     const { subscribing, email } = this.state
 
     return (
-      <Layout title={data.site.siteMetadata.title}>
-        <Content bg={gold} alignItems={['flex-start', 'center']} pt={[80, 0]}>
+      <Layout title={data.site.siteMetadata.title} bg={gold}>
+        <Content pb={80}>
           <Cell flexDirection="column" fontSize={[18, 24]}>
             <Markdown html={data.markdownRemark.html} mb={4} />
 
