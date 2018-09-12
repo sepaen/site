@@ -30,7 +30,6 @@ collections:
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
-      - { label: Details, name: details, required: false, widget: markdown }
       - { label: Body, name: body, widget: markdown }
 
   - name: jobs
