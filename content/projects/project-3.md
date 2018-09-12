@@ -9,7 +9,6 @@ url: ''
 extra: ''
 color: '#d3b5b5'
 images:
-  - image: /assets/affiche-nyon-1.png
   - image: /assets/dsc00626.jpg
   - image: /assets/dsc00979.jpg
   - image: /assets/exposition1.jpg
