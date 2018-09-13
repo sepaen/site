@@ -12,7 +12,7 @@ const ProjectPreview = ({ project, ...props }) => (
     {...props}
     gridTemplateRows={['1fr 2fr', 'initial']}
     bg={project.frontmatter.color}
-    pt={[80, 20]}
+    py={[80, 20]}
   >
     <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
       <Text children={project.frontmatter.title} />
