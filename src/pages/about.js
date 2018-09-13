@@ -73,13 +73,14 @@ class AboutPage extends React.Component {
                 value={email}
                 placeholder="Enter your email here"
                 onChange={e => this.setState({ email: e.target.value })}
+                cursor={subscribing ? 'initial' : 'default'}
                 mr={10}
               />
               <Text
                 children="Subscribe"
                 onClick={this.subscribe}
                 fontSize={16}
-                cursor="pointer"
+                cursor={subscribing ? 'pointer' : 'default'}
               />
             </Flex>
           </Cell>
