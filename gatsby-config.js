@@ -20,6 +20,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/static/assets`,
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -39,5 +46,7 @@ module.exports = {
           'https://sepaen.us19.list-manage.com/subscribe/post?u=54fc48fc9d2ce1f45f4df99fd&amp;id=6bdb48c285',
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 }
