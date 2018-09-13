@@ -5,6 +5,7 @@ import publishedProjects from '../utils/published-projects'
 import Layout from '../components/layout'
 import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
+import { keyframes } from 'styled-components'
 
 export const query = graphql`
   query ProjectDetailsQuery($fileRx: String!) {
@@ -52,13 +53,23 @@ export const query = graphql`
   }
 `
 
+const fadein = keyframes`
+  from { opacity: 0.3; }
+  to   { opacity: 1; }
+`
+
 const ProjectDetailsPage = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title
   const project = data.markdownRemark
   const projects = publishedProjects(data)
 
   return (
-    <Layout title={title} bg={project.frontmatter.color}>
+    <Layout
+      key={Math.random()}
+      title={title}
+      bg={project.frontmatter.color}
+      animation={`${fadein} 1s`}
+    >
       <ProjectDetails project={project} />
 
       <NextProject current={pageContext.slug} projects={projects} />

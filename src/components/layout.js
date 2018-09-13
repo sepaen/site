@@ -15,8 +15,8 @@ const LayoutFlex = styled(Flex)`
   }
 `
 
-const Layout = ({ title, bg = 'white', children }) => (
-  <LayoutFlex bg={bg}>
+const Layout = ({ title, bg = 'white', children, ...props }) => (
+  <LayoutFlex {...props} bg={bg}>
     <Helmet
       title={title}
       meta={[

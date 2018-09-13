@@ -14,8 +14,12 @@ function winheight() {
 
 class DesktopGallery extends React.Component {
   state = {
-    index: 0,
+    index: -1,
     up: false,
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ index: 0 }), 250)
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -76,7 +80,6 @@ class DesktopGallery extends React.Component {
 
   render() {
     const { children, ...props } = this.props
-    const { index, up } = this.state
 
     const childArr = React.Children.toArray(children)
     const size = childArr.length
@@ -106,7 +109,7 @@ class DesktopGallery extends React.Component {
             justifyContent="center"
             alignItems="center"
             transform={this.translate(i)}
-            transition={(up || index) && 'transform 0.3s ease-in-out'}
+            transition={'transform 0.4s ease-in-out'}
             p={30}
             mt={margin(i)}
             ml={margin(i)}
@@ -126,7 +129,7 @@ class DesktopGallery extends React.Component {
           justifyContent="center"
           alignItems="center"
           transform={this.translate(size - 1)}
-          transition={(up || index) && 'transform 0.3s ease-in-out'}
+          transition={'transform 0.4s ease-in-out'}
           p={40}
         />
       </Swiper>

@@ -59,6 +59,7 @@ const transform = responsiveStyle({ prop: 'transform' })
 const transition = responsiveStyle({ prop: 'transition' })
 const cursor = responsiveStyle({ prop: 'cursor' })
 const outline = style({ prop: 'outline' })
+const animation = style({ prop: 'animation' })
 const mixBlendMode = style({
   prop: 'mixBlendMode',
   cssProperty: 'mix-blend-mode',
@@ -94,6 +95,7 @@ export default styled(Base)`
 
   ${transform}
   ${transition}
+  ${animation}
 
   ${userSelect}
   ${outline}
