@@ -6,7 +6,7 @@ title: none
 subtitle: none
 color: none
 images:
-  - image: none
+  - image: assets/pixel.png
 ---
 
 This is a project template for programming purposes. PLEASE DO NOT DELETE OR MODIFY IT.
