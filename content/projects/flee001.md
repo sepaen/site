@@ -32,11 +32,11 @@ Medium : Audio, Publication
 
 <br/>
 
-[www.fleeproject.com](www.fleeproject.com)
+[www.fleeproject.com](http://www.fleeproject.com)
 
 - - -
 
-For this very first issue of the [FLEE](www.fleeproject.com) publication we wanted to deliver a unique and complementary object.
+For this very first issue of the [FLEE](http://www.fleeproject.com) publication we wanted to deliver a unique and complementary object.
 
 </br>
 

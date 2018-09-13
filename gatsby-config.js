@@ -19,12 +19,24 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
-          'https://sepaen.us19.list-manage.com/subscribe/post?u=54fc48fc9d2ce1f45f4df99fd&amp;id=6bdb48c285', // see instructions section below
+          'https://sepaen.us19.list-manage.com/subscribe/post?u=54fc48fc9d2ce1f45f4df99fd&amp;id=6bdb48c285',
       },
     },
   ],
