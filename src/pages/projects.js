@@ -25,8 +25,15 @@ export const query = graphql`
             draft
             title
             color
+          }
+
+          fields {
             images {
-              image
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
 

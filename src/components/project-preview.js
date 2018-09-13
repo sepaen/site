@@ -31,7 +31,7 @@ const ProjectPreview = ({ project, ...props }) => (
         p={[0, 30]}
       >
         <Image
-          src={project.frontmatter.images[0].image}
+          src={project.fields.images[0].childImageSharp.fluid.src}
           maxWidth="100%"
           maxHeight="100%"
         />

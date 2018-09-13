@@ -52,8 +52,13 @@ const ProjectDetails = ({ project, ...props }) => (
     </Cell>
 
     <Gallery is={Cell} py={50}>
-      {project.frontmatter.images.map(({ image }) => (
-        <Image key={image} src={image} maxWidth="100%" maxHeight="100%" />
+      {project.fields.images.map(({ childImageSharp: image }) => (
+        <Image
+          key={image.fluid.src}
+          src={image.fluid.src}
+          maxWidth="100%"
+          maxHeight="100%"
+        />
       ))}
 
       <ProjectDescription project={project} />

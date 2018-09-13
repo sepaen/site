@@ -26,6 +26,16 @@ export const query = graphql`
         }
       }
 
+      fields {
+        images {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+
       fileAbsolutePath
     }
 

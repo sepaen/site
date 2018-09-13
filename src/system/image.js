@@ -5,8 +5,7 @@ const Image = withProps(Flex, {
   is: 'img',
   domProps: ['src'],
   flexShrink: 0,
-  border: 'none'
+  border: 'none',
 })
 
 export default Image
-
