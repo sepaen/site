@@ -9,17 +9,13 @@ function relativeImages(node, createNodeField) {
   createNodeField({ node, name: 'images', value: images })
 }
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-
+exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === 'MarkdownRemark' && node.frontmatter.images) {
-    relativeImages(node, createNodeField, getNode)
+    relativeImages(node, actions.createNodeField, getNode)
   }
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-
   const projectTemplate = path.resolve('src/templates/project.js')
 
   return graphql(`
@@ -40,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const slug = extractSlug(node)
 
-      createPage({
+      actions.createPage({
         path: `projects/${slug}`,
         component: projectTemplate,
         context: {
