@@ -31,7 +31,7 @@ const ProjectDescription = ({ project, ...props }) => {
       cursor="initial"
       p={[0, 20]}
     >
-      {details && <Markdown html={details} mr={[0, 20]} mb={[20, 0]} />}
+      {details && <Markdown html={details} mr={[0, 20]} mb={[40, 0]} />}
       <Markdown html={description} maxWidth={500} textAlign="justify" />
     </Flex>
   )
