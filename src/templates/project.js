@@ -54,7 +54,7 @@ export const query = graphql`
 `
 
 const fadein = keyframes`
-  from { opacity: 0.3; }
+  from { opacity: 0.1; }
   to   { opacity: 1; }
 `
 
@@ -68,7 +68,7 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
       key={Math.random()}
       title={title}
       bg={project.frontmatter.color}
-      animation={`${fadein} 1s`}
+      animation={`${fadein} 2s`}
     >
       <ProjectDetails project={project} />
 
