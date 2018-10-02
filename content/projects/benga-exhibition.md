@@ -3,7 +3,10 @@ type: project
 draft: false
 date: 2018-07-08T00:00:00.000Z
 title: 'Benga, A Kenyan Kaleidoscope Exhibition'
-subtitle: ''
+subtitle: |-
+  fefefefefefe
+  R3R3R3
+  3r3r3r3
 color: '#d3b5b5'
 images:
   - image: /assets/affiche-nyon-1.png
