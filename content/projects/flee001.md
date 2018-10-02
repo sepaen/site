@@ -21,10 +21,6 @@ Title : Benga Music, A Signature Genre From Kenya
 
 <br/>
 
-Client : FLEE Project
-
-<br/>
-
 Year : 2017
 
 </br>
@@ -41,7 +37,7 @@ For this very first issue of the [FLEE](http://www.fleeproject.com) publication 
 
 </br>
 
-The packaging and graphic concept for the silkscreen printed magazine were done in collaboration with [Atelier U-Zehn](http://u-zehn.ch/) while the cover of the vinyl is an original composition from [Olka Osadzinska](http://www.aleosa.com/).
+<div style="text-align: left"> The packaging and graphic concept for the silkscreen printed magazine were done in collaboration with [Atelier U-Zehn](http://u-zehn.ch/) while the cover of the vinyl is an original composition from [Olka Osadzinska](http://www.aleosa.com/). </div>
 
 </br>
 
