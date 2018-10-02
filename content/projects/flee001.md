@@ -6,11 +6,12 @@ title: Benga Music
 subtitle: 'A Signature Genre From Kenya '
 color: '#4d4d4d'
 images:
-  - image: /assets/produitfini6.jpg
-  - image: /assets/produitfini4.jpg
-  - image: /assets/produitfini5.jpg
-  - image: /assets/produitfini7.jpg
-  - image: /assets/produitfini2.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0005_at8w0767.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0000_at8w0776.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0002_at8w0774.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0003_at8w0770.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0008_at8w0762.jpg
+  - image: /assets/flee_benga_issue_the-vinyl-factory_0006_at8w0766.jpg
 ---
 Client : Flee Project
 
