@@ -21,6 +21,7 @@ import {
   borderRadius,
   borderColor,
   opacity,
+  boxShadow,
   color,
   style,
   responsiveStyle,
@@ -88,6 +89,8 @@ export default styled(Base)`
   ${borders}
   ${borderRadius}
   ${borderColor}
+
+  ${boxShadow}
 
   ${color}
   ${cursor}

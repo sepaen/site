@@ -86,10 +86,11 @@ class ProjectDetails extends React.Component {
               src={image.fluid.src}
               maxWidth="100%"
               maxHeight="100%"
+              boxShadow="2px 2px 6px #333"
             />
           ))}
 
-          <ProjectDescription project={project} />
+          <ProjectDescription project={project} boxShadow="2px 2px 6px #333" />
         </Gallery>
       </Content>
     )
