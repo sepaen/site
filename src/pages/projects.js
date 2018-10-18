@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
 import extractSlug from '../utils/extract-slug'
 import ProjectSwiper from '../components/project-swiper'
+import NextProject from '../components/next-project'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -51,6 +52,14 @@ class ProjectsPage extends React.Component {
     index: 0,
   }
 
+  next = () => {
+    const projects = publishedProjects(this.props.data)
+
+    this.setState({
+      index: (this.state.index + 1) % projects.length,
+    })
+  }
+
   onSwipe = index => {
     this.setState({ index })
   }
@@ -77,6 +86,8 @@ class ProjectsPage extends React.Component {
               )
           )}
         </ProjectSwiper>
+
+        <NextProject onClick={this.next} />
       </Layout>
     )
   }

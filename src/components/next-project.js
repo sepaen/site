@@ -3,6 +3,10 @@ import extractSlug from '../utils/extract-slug'
 import Link from '../system/link'
 
 function nextProject(current = '', projects = [], hash) {
+  if (projects.length === 0) {
+    return { href: '#' }
+  }
+
   const index = current.length
     ? projects.findIndex(({ node }) => extractSlug(node) === current)
     : 0
