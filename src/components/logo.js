@@ -11,11 +11,12 @@ const LogoImage = withProps(Image, {
 
 const LogoVideo = props => (
   <Flex
-    {...props}
     is="video"
-    autoPlay={true}
+    {...props}
+    autoPlay
+    muted
     src="/videos/logo.webm"
-    domProps={['src', 'autoPlay']}
+    domProps={['src', 'autoPlay', 'muted']}
   >
     <LogoImage {...props} />
   </Flex>
