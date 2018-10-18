@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Logo from '../components/logo'
+import Flex from '../system/flex'
 import Content from '../components/content'
 import Cell from '../system/cell'
 import Link from '../system/link'
