@@ -45,6 +45,7 @@ export const query = graphql`
     }
   }
 `
+
 class ProjectsPage extends React.Component {
   state = {
     index: 0,

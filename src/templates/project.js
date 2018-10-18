@@ -65,13 +65,8 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
   const projects = publishedProjects(data)
 
   return (
-    <Layout
-      key={Math.random()}
-      title={title}
-      bg={project.frontmatter.color}
-      animation={`${fadein} 2s`}
-    >
-      <ProjectDetails project={project} />
+    <Layout key={Math.random()} title={title} bg={project.frontmatter.color}>
+      <ProjectDetails project={project} animation={`${fadein} 0.5s`} />
 
       <NextProject current={pageContext.slug} projects={projects} />
     </Layout>

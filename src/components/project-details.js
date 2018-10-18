@@ -38,40 +38,62 @@ const ProjectDescription = ({ project, ...props }) => {
   )
 }
 
-const ProjectDetails = ({ project, ...props }) => (
-  <Content
-    {...props}
-    display={['flex', 'grid']}
-    flexDirection="column"
-    bg={project.frontmatter.color}
-    overflow="hidden"
-    pt={[80, 20]}
-  >
-    <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
-      {breakLines(
-        project.frontmatter.fulltitle || project.frontmatter.title,
-        line => (
-          <Text key={line} children={line} />
-        )
-      )}
-      {breakLines(project.frontmatter.subtitle, line => (
-        <Text key={line} children={line} />
-      ))}
-    </Cell>
+class ProjectDetails extends React.Component {
+  state = {
+    entered: false,
+  }
 
-    <Gallery is={Cell} py={50}>
-      {project.fields.images.map(({ childImageSharp: image }) => (
-        <Image
-          key={image.fluid.src}
-          src={image.fluid.src}
-          maxWidth="100%"
-          maxHeight="100%"
-        />
-      ))}
+  componentDidMount() {
+    setTimeout(() => this.setState({ entered: true }), 400)
+  }
 
-      <ProjectDescription project={project} />
-    </Gallery>
-  </Content>
-)
+  render() {
+    const { project, ...props } = this.props
+    const { entered } = this.state
+
+    return (
+      <Content
+        {...props}
+        display={['flex', 'grid']}
+        flexDirection="column"
+        bg={project.frontmatter.color}
+        overflow="hidden"
+        pt={[80, 20]}
+      >
+        <Cell
+          gridColumn="1"
+          flexDirection="column"
+          opacity={[1, entered ? 1 : 0]}
+          transition="opacity 500ms ease-in-out"
+          mt={[0, 130]}
+          mr={[0, 4]}
+        >
+          {breakLines(
+            project.frontmatter.fulltitle || project.frontmatter.title,
+            line => (
+              <Text key={line} children={line} />
+            )
+          )}
+          {breakLines(project.frontmatter.subtitle, line => (
+            <Text key={line} children={line} />
+          ))}
+        </Cell>
+
+        <Gallery is={Cell} py={50}>
+          {project.fields.images.map(({ childImageSharp: image }) => (
+            <Image
+              key={image.fluid.src}
+              src={image.fluid.src}
+              maxWidth="100%"
+              maxHeight="100%"
+            />
+          ))}
+
+          <ProjectDescription project={project} />
+        </Gallery>
+      </Content>
+    )
+  }
+}
 
 export default ProjectDetails

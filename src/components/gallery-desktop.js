@@ -19,7 +19,7 @@ class DesktopGallery extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ index: 0 }), 500)
+    setTimeout(() => this.setState({ index: 0 }), 1)
   }
 
   componentDidUpdate(prevProps, prevState) {
