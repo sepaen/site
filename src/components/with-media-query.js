@@ -13,7 +13,7 @@ function withMediaQuery(Component) {
     }
 
     state = {
-      isDesktop: false,
+      isDesktop: null,
     }
 
     componentDidMount() {
@@ -21,6 +21,10 @@ function withMediaQuery(Component) {
     }
 
     render() {
+      if (this.state.isDesktop === null) {
+        return null
+      }
+
       return <Component {...this.props} isDesktop={this.state.isDesktop} />
     }
   }
