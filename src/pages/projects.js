@@ -24,6 +24,8 @@ export const query = graphql`
           frontmatter {
             draft
             title
+            fulltitle
+            subtitle
             color
           }
 

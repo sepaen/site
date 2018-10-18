@@ -20,6 +20,7 @@ export const query = graphql`
 
       frontmatter {
         title
+        fulltitle
         subtitle
         color
         images {

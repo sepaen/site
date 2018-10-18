@@ -3,6 +3,7 @@ type: none
 draft: true
 date: 2000-01-01T00:00:00.000Z
 title: none
+fulltitle: none
 subtitle: none
 color: none
 images:

@@ -16,7 +16,12 @@ collections:
       - { label: Type, name: type, widget: hidden, default: project }
       - { label: Draft, name: draft, widget: boolean, default: true }
       - { label: Date, name: date, required: false, widget: datetime }
-      - { label: Title, name: title, widget: string }
+      - {
+          label: Short title (as shown in project URL),
+          name: title,
+          widget: string,
+        }
+      - { label: Title, name: fulltitle, widget: text }
       - { label: Subtitle, name: subtitle, required: false, widget: text }
       - {
           label: Color,

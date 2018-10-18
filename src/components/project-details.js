@@ -1,5 +1,6 @@
 import React from 'react'
 
+import breakLines from '../utils/break-line'
 import Gallery from './gallery'
 import Content from './content'
 import Cell from '../system/cell'
@@ -47,8 +48,15 @@ const ProjectDetails = ({ project, ...props }) => (
     pt={[80, 20]}
   >
     <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
-      <Text children={project.frontmatter.title} />
-      <Text children={project.frontmatter.subtitle} />
+      {breakLines(
+        project.frontmatter.fulltitle || project.frontmatter.title,
+        line => (
+          <Text key={line} children={line} />
+        )
+      )}
+      {breakLines(project.frontmatter.subtitle, line => (
+        <Text key={line} children={line} />
+      ))}
     </Cell>
 
     <Gallery is={Cell} py={50}>
