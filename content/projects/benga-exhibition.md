@@ -17,11 +17,11 @@ images:
   - image: /assets/dsc00630.jpg
   - image: /assets/dsc00998-2-1-1920x1280.jpg
 ---
-Title : Benga, A Kenyan Kaleidoscope
+Client : Hapax21 / Eeeeh 
 
 <br/>
 
-Client : Hapax21 / Eeeeh 
+Title : Benga, A Kenyan Kaleidoscope
 
 <br/>
 
