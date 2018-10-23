@@ -3,7 +3,7 @@ type: project
 draft: false
 date: 2018-07-08T00:00:00.000Z
 title: Benga
-fulltitle: A Kenyan Kaleidoscope Exhibition
+fulltitle: 'Benga, A Kenyan Kaleidoscope '
 subtitle: ''
 color: '#d3b5b5'
 images:
