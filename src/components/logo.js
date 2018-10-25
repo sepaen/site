@@ -34,8 +34,8 @@ class LogoVideo extends React.Component {
         preload="auto"
         domProps={['src', 'muted', 'loop', 'playsInline', 'preload']}
       >
-        <source src="/videos/logo.mp4" type="video/mp4" />
         <source src="/videos/logo.webm" type="video/webm" />
+        <source src="/videos/logo.mp4" type="video/mp4" />
         <LogoImage {...this.props} />
       </Flex>
     )
