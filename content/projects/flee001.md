@@ -2,7 +2,8 @@
 type: project
 draft: false
 date: 2018-09-30T22:00:00.000Z
-title: FLEE001 Benga Music - A Signature Genre from Kenya
+title: 'Benga Music - A Signature Genre From Kenya '
+fulltitle: 'Benga Music - A Signature Genre From Kenya '
 subtitle: ''
 color: '#4d4d4d'
 images:

@@ -2,11 +2,9 @@
 type: project
 draft: false
 date: 2018-07-08T00:00:00.000Z
-title: 'Benga, A Kenyan Kaleidoscope Exhibition'
-subtitle: |-
-  fefefefefefe
-  R3R3R3
-  3r3r3r3
+title: 'Benga, A Kenyan Kaleidoscope '
+fulltitle: 'Benga, A Kenyan Kaleidoscope '
+subtitle: ''
 color: '#d3b5b5'
 images:
   - image: /assets/affiche-nyon-1.png
@@ -19,19 +17,15 @@ images:
   - image: /assets/dsc00630.jpg
   - image: /assets/dsc00998-2-1-1920x1280.jpg
 ---
-Title : Benga, A Kenyan Kaleidoscope
-
-<br/>
-
 Client : Hapax21 / Eeeeh 
 
 <br/>
 
-Year : 2018
+Title : Benga, A Kenyan Kaleidoscope
 
 <br/>
 
-Medium : Exhibition
+Year : 2018
 
 <br/>
 
