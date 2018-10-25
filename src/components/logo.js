@@ -9,17 +9,33 @@ const LogoImage = withProps(Image, {
   src: logoImage,
 })
 
-const LogoVideo = props => (
-  <Flex
-    is="video"
-    {...props}
-    autoPlay
-    muted
-    src="/videos/logo.webm"
-    domProps={['src', 'autoPlay', 'muted']}
-  >
-    <LogoImage {...props} />
-  </Flex>
-)
+class LogoVideo extends React.Component {
+  video = React.createRef()
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.video.current.play()
+    }, 5000)
+  }
+
+  render() {
+    return (
+      <Flex
+        {...this.props}
+        is="video"
+        baseRef={this.video}
+        loop
+        muted
+        playsInline
+        preload="auto"
+        domProps={['src', 'muted', 'loop', 'playsInline', 'preload']}
+      >
+        <source src="/videos/logo.mp4" type="video/mp4" />
+        <source src="/videos/logo.webm" type="video/webm" />
+        <LogoImage {...this.props} />
+      </Flex>
+    )
+  }
+}
 
 export default LogoVideo

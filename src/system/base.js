@@ -47,13 +47,13 @@ function filterDOMProps(props, whitelist = []) {
   )
 }
 
-const Base = ({ is: Tag = 'div', domProps, ...props }) => {
+const Base = ({ is: Tag = 'div', baseRef, domProps, ...props }) => {
   const passedProps =
     Boolean(domProps) || typeof Tag === 'string'
       ? filterDOMProps(props, domProps)
       : props
 
-  return <Tag {...passedProps} />
+  return <Tag ref={baseRef} {...passedProps} />
 }
 
 const transform = responsiveStyle({ prop: 'transform' })
