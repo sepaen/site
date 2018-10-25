@@ -1,1 +1,1 @@
-require('./src/global-style')
+require('./src/global-style.css')
