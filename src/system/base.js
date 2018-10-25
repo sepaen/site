@@ -24,7 +24,6 @@ import {
   boxShadow,
   color,
   style,
-  responsiveStyle,
 } from 'styled-system'
 
 const CALLBACK_RX = /^on[A-Z][\w]*/
@@ -56,9 +55,9 @@ const Base = ({ is: Tag = 'div', baseRef, domProps, ...props }) => {
   return <Tag ref={baseRef} {...passedProps} />
 }
 
-const transform = responsiveStyle({ prop: 'transform' })
-const transition = responsiveStyle({ prop: 'transition' })
-const cursor = responsiveStyle({ prop: 'cursor' })
+const transform = style({ prop: 'transform' })
+const transition = style({ prop: 'transition' })
+const cursor = style({ prop: 'cursor' })
 const outline = style({ prop: 'outline' })
 const animation = style({ prop: 'animation' })
 const mixBlendMode = style({

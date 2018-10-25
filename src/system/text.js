@@ -7,14 +7,14 @@ import {
   lineHeight,
   fontWeight,
   letterSpacing,
-  responsiveStyle,
+  style,
 } from 'styled-system'
 
 import withProps from '../utils/with-props'
 import Flex from './flex'
 
-const textTransform = responsiveStyle({ prop: 'textTransform' })
-const textDecoration = responsiveStyle({ prop: 'textDecoration' })
+const textTransform = style({ prop: 'textTransform' })
+const textDecoration = style({ prop: 'textDecoration' })
 
 const Text = styled(
   withProps(Flex, {

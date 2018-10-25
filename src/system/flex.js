@@ -9,14 +9,14 @@ import {
   alignSelf,
   order,
   fontSize,
-  responsiveStyle,
+  style,
 } from 'styled-system'
 
 import withProps from '../utils/with-props'
 import Base from './base'
 
-const flexShrink = responsiveStyle({ prop: 'flexShrink' })
-const overflow = responsiveStyle({ prop: 'overflow' })
+const flexShrink = style({ prop: 'flexShrink' })
+const overflow = style({ prop: 'overflow' })
 
 const Flex = styled(withProps(Base, { display: 'flex' }))`
   ${flex}
