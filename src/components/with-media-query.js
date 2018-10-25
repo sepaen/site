@@ -13,18 +13,10 @@ function withMediaQuery(Component) {
     }
 
     state = {
-      isDesktop: null,
-    }
-
-    componentDidMount() {
-      this.setState({ isDesktop: matchMedia(this.props.breakpoint) })
+      isDesktop: matchMedia(this.props.breakpoint),
     }
 
     render() {
-      if (this.state.isDesktop === null) {
-        return null
-      }
-
       return <Component {...this.props} isDesktop={this.state.isDesktop} />
     }
   }
