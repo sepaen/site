@@ -4,7 +4,6 @@ import logoImage from '../images/logo.svg'
 import Flex from '../system/flex'
 import Image from '../system/image'
 import withProps from '../utils/with-props'
-import { clearTimeout } from 'timers'
 
 const LogoImage = withProps(Image, {
   src: logoImage,
