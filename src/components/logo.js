@@ -4,6 +4,7 @@ import logoImage from '../images/logo.svg'
 import Flex from '../system/flex'
 import Image from '../system/image'
 import withProps from '../utils/with-props'
+import { clearTimeout } from 'timers'
 
 const LogoImage = withProps(Image, {
   src: logoImage,
@@ -13,9 +14,13 @@ class LogoVideo extends React.Component {
   video = React.createRef()
 
   componentDidMount() {
-    setTimeout(() => {
+    this.timeout = setTimeout(() => {
       this.video.current.play()
-    }, 5000)
+    }, 3000)
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout)
   }
 
   render() {
