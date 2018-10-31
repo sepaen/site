@@ -5,7 +5,6 @@ date: 2018-09-30T22:00:00.000Z
 title: 'Benga Music - A Signature Genre From Kenya '
 fulltitle: 'Benga Music - A Signature Genre From Kenya '
 subtitle: ''
-color: '#4d4d4d'
 images:
   - image: /assets/20x25_300dpi_flee_benga_07.jpg
   - image: /assets/20x25_300dpi_flee_benga_06.jpg
@@ -13,6 +12,7 @@ images:
   - image: /assets/20x25_300dpi_flee_benga_05.jpg
   - image: /assets/20x25_300dpi_flee_benga_02.jpg
 ---
+
 Client : Flee Project
 
 <br/>
@@ -31,7 +31,7 @@ Medium : Audio, Publication
 
 [www.fleeproject.com](http://www.fleeproject.com)
 
-- - -
+---
 
 For this very first issue of the [FLEE](http://www.fleeproject.com) publication we wanted to deliver a unique and complementary object.
 

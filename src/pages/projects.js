@@ -7,6 +7,7 @@ import ProjectPreview from '../components/project-preview'
 import extractSlug from '../utils/extract-slug'
 import ProjectSwiper from '../components/project-swiper'
 import NextProject from '../components/next-project'
+import { color } from '../theme'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -18,7 +19,7 @@ export const query = graphql`
 
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "project" } } }
-      sort: { fields: frontmatter___date }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -70,6 +71,13 @@ class ProjectsPage extends React.Component {
 
     const title = data.site.siteMetadata.title
     const projects = publishedProjects(data)
+
+    projects.forEach(({ node }, i) => {
+      if (!node.frontmatter.color) {
+        node.frontmatter.color = color(i)
+      }
+    })
+
     const bg = projects[index].node.frontmatter.color
 
     return (

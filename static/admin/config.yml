@@ -21,13 +21,13 @@ collections:
           name: title,
           widget: string,
         }
-      - { label: Title, name: fulltitle, widget: text }
+      - { label: Title, name: fulltitle, required: false, widget: text }
       - { label: Subtitle, name: subtitle, required: false, widget: text }
       - {
           label: Color,
           name: color,
           required: false,
-          default: '#fff',
+          default: '',
           widget: color,
         }
       - label: Images
