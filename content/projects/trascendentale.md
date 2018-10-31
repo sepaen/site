@@ -7,12 +7,18 @@ fulltitle: Trascendentale
 color: '#e2e6e7'
 images:
   - image: /assets/test-1-.jpg
+  - image: /assets/imgp6330.jpg
+  - image: /assets/imgp6628.jpg
+  - image: /assets/imgp7236.jpg
+  - image: /assets/imgp7377.jpg
+  - image: /assets/imgp7537.jpg
+  - image: /assets/imgp7231.jpg
 ---
 Client : TBA
 
 <br/>
 
-Title : Benga, A Kenyan Kaleidoscope
+Title : Trascendentale
 
 <br/>
 
@@ -20,8 +26,7 @@ Year : 2019
 
 <br/>
 
-
-
 - - -
 
-In Progress
+Long format documentary film shot in Berlin, Apulia and Switzerland. \
+Out April 2019.
