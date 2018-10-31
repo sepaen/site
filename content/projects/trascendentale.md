@@ -4,7 +4,7 @@ draft: false
 date: 2018-10-31T15:08:47.789Z
 title: Trascendentale
 fulltitle: Trascendentale
-color: '#fff'
+color: '#e2e6e7'
 images:
   - image: /assets/test-1-.jpg
 ---
