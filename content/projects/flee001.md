@@ -1,6 +1,6 @@
 ---
 type: project
-draft: false
+published: true
 date: 2018-09-30T22:00:00.000Z
 title: 'Benga Music - A Signature Genre From Kenya '
 fulltitle: 'Benga Music - A Signature Genre From Kenya '

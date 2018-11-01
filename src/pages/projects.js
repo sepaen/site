@@ -24,7 +24,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            draft
+            published
             title
             fulltitle
             subtitle
@@ -83,16 +83,13 @@ class ProjectsPage extends React.Component {
     return (
       <Layout title={title} bg={bg}>
         <ProjectSwiper index={index} onSwipe={this.onSwipe}>
-          {projects.map(
-            ({ node }) =>
-              !node.draft && (
-                <ProjectPreview
-                  key={extractSlug(node)}
-                  project={node}
-                  className="project-preview"
-                />
-              )
-          )}
+          {projects.map(({ node }) => (
+            <ProjectPreview
+              key={extractSlug(node)}
+              project={node}
+              className="project-preview"
+            />
+          ))}
         </ProjectSwiper>
 
         <NextProject onClick={this.next} />

@@ -1,6 +1,6 @@
 ---
 type: project
-draft: false
+published: true
 date: 2018-07-08T00:00:00.000Z
 title: 'Benga, A Kenyan Kaleidoscope '
 fulltitle: 'Benga, A Kenyan Kaleidoscope '
