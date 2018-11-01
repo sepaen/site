@@ -13,13 +13,7 @@ class LogoVideo extends React.Component {
   video = React.createRef()
 
   componentDidMount() {
-    this.timeout = setTimeout(() => {
-      this.video.current.play()
-    }, 3000)
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.timeout)
+    this.video.current.play()
   }
 
   render() {
