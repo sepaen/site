@@ -46,12 +46,20 @@ class ProjectPreview extends React.Component {
       <Flex flex="1 0 100%" bg={project.frontmatter.color} cursor="none">
         <Content
           {...props}
-          gridTemplateRows={['1fr 2fr', 'initial']}
-          py={[80, 20]}
+          display={['flex', 'grid']}
+          flexDirection="column"
           opacity={exiting ? 0 : 1}
           transition={`opacity ${EXIT_DURATION}ms ease-out`}
+          pt={[80, 20]}
+          pb={[120, 20]}
         >
-          <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
+          <Cell
+            gridColumn="1"
+            flexDirection="column"
+            mt={[0, 130]}
+            mr={[0, 4]}
+            mb={4}
+          >
             <Text whiteSpace="pre-wrap">
               {project.frontmatter.fulltitle || project.frontmatter.title}
               {project.frontmatter.subtitle}
@@ -72,20 +80,20 @@ class ProjectPreview extends React.Component {
               width="100%"
               height="100%"
               justifyContent="center"
-              alignItems={['flex-start', 'center']}
+              alignItems="flex-start"
               p={[0, 30]}
             >
               <Image src={this.getCover()} maxWidth="100%" maxHeight="100%" />
-
-              <Cursor
-                is={Text}
-                onClick={this.showProject}
-                render={this.getCursorText}
-                mixBlendMode="difference"
-              />
             </Flex>
           </Cell>
         </Content>
+
+        <Cursor
+          is={Text}
+          onClick={this.showProject}
+          render={this.getCursorText}
+          mixBlendMode="difference"
+        />
       </Flex>
     )
   }
