@@ -43,7 +43,7 @@ class ProjectDetails extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ entered: true }), 400)
+    setTimeout(() => this.setState({ entered: true }), 600)
   }
 
   render() {

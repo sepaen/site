@@ -65,7 +65,7 @@ export const query = graphql`
 `
 
 const fadein = keyframes`
-  from { opacity: 0.1; }
+  from { opacity: 0; }
   to   { opacity: 1; }
 `
 
@@ -84,7 +84,7 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
       <ProjectDetails
         key={Math.random()}
         project={project}
-        animation={`${fadein} 0.5s`}
+        animation={`${fadein} ease-in 1s`}
       />
 
       <NextProject current={pageContext.slug} projects={projects} />

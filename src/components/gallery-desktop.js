@@ -109,7 +109,8 @@ class DesktopGallery extends React.Component {
             justifyContent="center"
             alignItems="center"
             transform={this.translate(i)}
-            transition={'transform 0.4s ease-in-out'}
+            transition={'transform 750ms ease-in-out'}
+            willChange="transform"
             p={30}
             mt={margin(i)}
             ml={margin(i)}
@@ -129,7 +130,8 @@ class DesktopGallery extends React.Component {
           justifyContent="center"
           alignItems="center"
           transform={this.translate(size - 1)}
-          transition={'transform 0.4s ease-in-out'}
+          transition={'transform 750ms ease-in-out'}
+          willChange="transform"
           p={40}
         />
       </Swiper>

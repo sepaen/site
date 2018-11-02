@@ -65,6 +65,7 @@ const mixBlendMode = style({
   cssProperty: 'mix-blend-mode',
 })
 const userSelect = style({ prop: 'userSelect', cssProperty: 'user-select' })
+const willChange = style({ prop: 'willChange', cssProperty: 'will-change' })
 
 export default styled(Base)`
   ${display}
@@ -102,4 +103,6 @@ export default styled(Base)`
   ${userSelect}
   ${outline}
   ${opacity}
+
+  ${willChange}
 `

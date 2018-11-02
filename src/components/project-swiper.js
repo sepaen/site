@@ -11,6 +11,7 @@ const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
   > * {
     transform: translate3d(0, ${p => -p.index * 100}vh, 0);
     transition: ${timingFn};
+    will-change: transform;
   }
 `
 

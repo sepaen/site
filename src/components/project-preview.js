@@ -32,7 +32,7 @@ class ProjectPreview extends React.Component {
           gridTemplateRows={['1fr 2fr', 'initial']}
           py={[80, 20]}
           opacity={exiting ? 0 : 1}
-          transition={`opacity ${EXIT_DURATION}ms ease-in-out`}
+          transition={`opacity ${EXIT_DURATION}ms ease-out`}
         >
           <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
             <Text whiteSpace="pre-wrap">
