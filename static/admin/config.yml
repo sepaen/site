@@ -12,6 +12,8 @@ collections:
     folder: content/projects
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     fields:
       - { label: Type, name: type, widget: hidden, default: project }
       - { label: Published, name: published, widget: boolean, default: false }
@@ -42,6 +44,8 @@ collections:
     folder: content/jobs
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     fields:
       - { label: Type, name: type, widget: hidden, default: job }
       - { label: Published, name: published, widget: boolean, default: false }
@@ -62,6 +66,8 @@ collections:
       - label: Contact Page
         name: contact
         file: content/pages/contact.md
+        editor:
+          preview: false
         fields:
           - { label: type, name: type, widget: hidden, default: contact }
           - { label: Title, name: title, widget: string }
@@ -81,6 +87,8 @@ collections:
       - label: 'About Page'
         name: about
         file: content/pages/about.md
+        editor:
+          preview: false
         fields:
           - { label: type, name: type, widget: hidden, default: about }
           - { label: Body, name: body, widget: markdown }
@@ -88,6 +96,8 @@ collections:
       - label: 'No jobs available'
         name: nojobs
         file: content/pages/no-jobs.md
+        editor:
+          preview: false
         fields:
           - { label: type, name: type, widget: hidden, default: nojobs }
           - { label: Text, name: text, widget: text }
