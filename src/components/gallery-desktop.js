@@ -1,4 +1,5 @@
 import React from 'react'
+import winHeight from '../utils/win-height'
 import Flex from '../system/flex'
 import Text from '../system/text'
 import Cursor from './cursor'
@@ -6,10 +7,6 @@ import Swiper from './swiper'
 
 function margin(i) {
   return i === 0 ? 0 : (i % 3) * 20
-}
-
-function winheight() {
-  return typeof window !== 'undefined' ? window.innerHeight : 0
 }
 
 class DesktopGallery extends React.Component {
@@ -56,14 +53,14 @@ class DesktopGallery extends React.Component {
     const { index } = this.state
     const size = React.Children.count(this.props.children)
 
-    if (y < 60 || y > winheight() - 60) {
+    if (y < 60 || y > winHeight() - 60) {
       return null
     } else if (index === 0) {
       return 'Next'
     } else if (index === size - 1) {
       return 'Previous'
     } else {
-      return y < winheight() / 2 ? 'Previous' : 'Next'
+      return y < winHeight() / 2 ? 'Previous' : 'Next'
     }
   }
 

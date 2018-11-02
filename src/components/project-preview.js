@@ -2,7 +2,9 @@ import React from 'react'
 import { navigate } from 'gatsby'
 
 import extractSlug from '../utils/extract-slug'
+import winHeight from '../utils/win-height'
 import Content from './content'
+import Cursor from './cursor'
 import Flex from '../system/flex'
 import Cell from '../system/cell'
 import Text from '../system/text'
@@ -21,12 +23,20 @@ class ProjectPreview extends React.Component {
     setTimeout(() => navigate(`/projects/${slug}`), EXIT_DURATION)
   }
 
+  getCursorText = ({ y }) => {
+    if (y < 60 || y > winHeight() - 60) {
+      return null
+    } else {
+      return 'Dive'
+    }
+  }
+
   render() {
     const { project, ...props } = this.props
     const { exiting } = this.state
 
     return (
-      <Flex flex="1 0 100%" bg={project.frontmatter.color}>
+      <Flex flex="1 0 100%" bg={project.frontmatter.color} cursor="none">
         <Content
           {...props}
           gridTemplateRows={['1fr 2fr', 'initial']}
@@ -62,6 +72,13 @@ class ProjectPreview extends React.Component {
                 src={project.fields.images[0].childImageSharp.fluid.src}
                 maxWidth="100%"
                 maxHeight="100%"
+              />
+
+              <Cursor
+                is={Text}
+                onClick={this.showProject}
+                render={this.getCursorText}
+                mixBlendMode="difference"
               />
             </Flex>
           </Cell>

@@ -51,6 +51,7 @@ class Cursor extends React.Component {
         justifyContent="center"
         alignItems="center"
         userSelect="none"
+        willChange="top, left"
       />
     )
   }
