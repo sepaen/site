@@ -2,26 +2,11 @@ import React from 'react'
 import { navigate } from 'gatsby'
 
 import extractSlug from '../utils/extract-slug'
-import breakLines from '../utils/break-line'
 import Content from './content'
 import Flex from '../system/flex'
 import Cell from '../system/cell'
 import Text from '../system/text'
 import Image from '../system/image'
-
-class Exitable extends React.Component {
-  static defaultProps = {
-    timeout: 500,
-  }
-
-  state = {
-    exiting: false,
-  }
-
-  render() {
-    return <div />
-  }
-}
 
 const EXIT_DURATION = 500
 
@@ -50,15 +35,10 @@ class ProjectPreview extends React.Component {
           transition={`opacity ${EXIT_DURATION}ms ease-in-out`}
         >
           <Cell gridColumn="1" flexDirection="column" mt={[0, 130]} mr={[0, 4]}>
-            {breakLines(
-              project.frontmatter.fulltitle || project.frontmatter.title,
-              line => (
-                <Text key={line} children={line} />
-              )
-            )}
-            {breakLines(project.frontmatter.subtitle, line => (
-              <Text key={line} children={line} />
-            ))}
+            <Text whiteSpace="pre-wrap">
+              {project.frontmatter.fulltitle || project.frontmatter.title}
+              {project.frontmatter.subtitle}
+            </Text>
           </Cell>
 
           <Cell

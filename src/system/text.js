@@ -15,6 +15,7 @@ import Flex from './flex'
 
 const textTransform = style({ prop: 'textTransform' })
 const textDecoration = style({ prop: 'textDecoration' })
+const whiteSpace = style({ prop: 'whiteSpace', cssProperty: 'white-space' })
 
 const Text = styled(
   withProps(Flex, {
@@ -32,6 +33,7 @@ const Text = styled(
   ${letterSpacing}
   ${textTransform}
   ${textDecoration}
+  ${whiteSpace}
 `
 
 export default Text

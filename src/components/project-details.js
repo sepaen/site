@@ -1,6 +1,5 @@
 import React from 'react'
 
-import breakLines from '../utils/break-line'
 import Gallery from './gallery'
 import Content from './content'
 import Cell from '../system/cell'
@@ -68,15 +67,10 @@ class ProjectDetails extends React.Component {
           mt={[0, 130]}
           mr={[0, 4]}
         >
-          {breakLines(
-            project.frontmatter.fulltitle || project.frontmatter.title,
-            line => (
-              <Text key={line} children={line} />
-            )
-          )}
-          {breakLines(project.frontmatter.subtitle, line => (
-            <Text key={line} children={line} />
-          ))}
+          <Text whiteSpace="pre-wrap">
+            {project.frontmatter.fulltitle || project.frontmatter.title}
+            {project.frontmatter.subtitle}
+          </Text>
         </Cell>
 
         <Gallery is={Cell} py={50}>

@@ -19,13 +19,7 @@ const LayoutFlex = styled(Flex)`
 
 const Layout = ({ title, bg = 'white', children, ...props }) => (
   <LayoutFlex {...props} bg={bg}>
-    <Helmet
-      title={title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
+    <Helmet title={title} />
     <Navbar title={title} bg={bg} />
     {children}
     <Footer title={title} />
