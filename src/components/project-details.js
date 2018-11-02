@@ -49,7 +49,7 @@ class ProjectDetails extends React.Component {
   render() {
     const { project, ...props } = this.props
     const { entered } = this.state
-
+    const { cover } = project.fields
     return (
       <Content
         {...props}
@@ -82,6 +82,15 @@ class ProjectDetails extends React.Component {
               maxHeight="100%"
             />
           ))}
+
+          {cover && (
+            <Image
+              key={cover.childImageSharp.fluid.src}
+              src={cover.childImageSharp.fluid.src}
+              maxWidth="100%"
+              maxHeight="100%"
+            />
+          )}
 
           <ProjectDescription project={project} />
         </Gallery>

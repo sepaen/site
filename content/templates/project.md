@@ -6,6 +6,7 @@ title: none
 fulltitle: none
 subtitle: none
 color: none
+cover: /assets/pixel.png
 images:
   - image: /assets/pixel.png
 ---

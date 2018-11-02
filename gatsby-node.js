@@ -1,11 +1,17 @@
 const path = require('path')
 const extractSlug = require('./src/utils/extract-slug')
 
+function getStaticPath(relativePath) {
+  return relativePath ? path.join('../../static', relativePath) : null
+}
+
 function relativeImages(node, createNodeField) {
-  const images = node.frontmatter.images.map(({ image }) =>
-    path.join('../../static', image)
+  const cover = getStaticPath(node.frontmatter.cover)
+  const images = (node.frontmatter.images || []).map(({ image }) =>
+    getStaticPath(image)
   )
 
+  createNodeField({ node, name: 'cover', value: cover })
   createNodeField({ node, name: 'images', value: images })
 }
 

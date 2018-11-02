@@ -32,6 +32,14 @@ export const query = graphql`
           }
 
           fields {
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  src
+                }
+              }
+            }
+
             images {
               childImageSharp {
                 fluid(maxWidth: 1000) {

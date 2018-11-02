@@ -31,6 +31,13 @@ class ProjectPreview extends React.Component {
     }
   }
 
+  getCover() {
+    const { cover, images } = this.props.project.fields
+    const actualCover = cover || images[0]
+
+    return actualCover.childImageSharp.fluid.src
+  }
+
   render() {
     const { project, ...props } = this.props
     const { exiting } = this.state
@@ -68,11 +75,7 @@ class ProjectPreview extends React.Component {
               alignItems={['flex-start', 'center']}
               p={[0, 30]}
             >
-              <Image
-                src={project.fields.images[0].childImageSharp.fluid.src}
-                maxWidth="100%"
-                maxHeight="100%"
-              />
+              <Image src={this.getCover()} maxWidth="100%" maxHeight="100%" />
 
               <Cursor
                 is={Text}

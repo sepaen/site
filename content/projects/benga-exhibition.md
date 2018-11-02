@@ -5,6 +5,7 @@ date: 2018-07-08T00:00:00.000Z
 title: 'Benga, A Kenyan Kaleidoscope '
 fulltitle: 'Benga, A Kenyan Kaleidoscope '
 subtitle: ''
+cover: /assets/dsc00977-1-853x1280.jpg
 images:
   - image: /assets/affiche-nyon-1.png
   - image: /assets/dsc00626.jpg
@@ -12,7 +13,6 @@ images:
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
   - image: /assets/000008.jpg
-  - image: /assets/dsc00977-1-853x1280.jpg
   - image: /assets/dsc00630.jpg
   - image: /assets/dsc00998-2-1-1920x1280.jpg
 ---
