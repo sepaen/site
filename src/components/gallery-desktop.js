@@ -13,6 +13,7 @@ class DesktopGallery extends React.Component {
   state = {
     index: -1,
     up: false,
+    finished: false,
   }
 
   componentDidMount() {
@@ -32,6 +33,10 @@ class DesktopGallery extends React.Component {
   select(index) {
     const size = React.Children.count(this.props.children)
     this.setState({ index: Math.max(0, Math.min(index, size - 1)) })
+
+    if (!this.state.finished && index === size - 1) {
+      this.setState({ finished: true })
+    }
   }
 
   translate(index) {
@@ -50,12 +55,12 @@ class DesktopGallery extends React.Component {
   }
 
   getCursorText = ({ y }) => {
-    const { index } = this.state
+    const { index, finished } = this.state
     const size = React.Children.count(this.props.children)
 
     if (y < 60 || y > winHeight() - 60) {
       return null
-    } else if (index === 0) {
+    } else if (index === 0 || !finished) {
       return 'Next'
     } else if (index === size - 1) {
       return 'Previous'
