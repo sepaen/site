@@ -73,7 +73,7 @@ class ProjectDetails extends React.Component {
           </Text>
         </Cell>
 
-        <Gallery is={Cell} py={50}>
+        <Gallery is={Cell} pt={4} pb={50}>
           {project.fields.images.map(({ childImageSharp: image }) => (
             <Image
               key={image.fluid.src}

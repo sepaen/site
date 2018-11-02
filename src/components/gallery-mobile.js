@@ -3,7 +3,7 @@ import Flex from '../system/flex'
 
 const MobileGallery = styled(Flex).attrs({ flexDirection: 'column' })`
   > * {
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
 `
 

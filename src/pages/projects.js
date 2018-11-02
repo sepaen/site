@@ -107,6 +107,8 @@ class ProjectsPage extends React.Component {
           onClick={this.next}
           position="fixed"
           zIndex={2}
+          width={20}
+          height={20}
           bottom={20}
           right={20}
         />

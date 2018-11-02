@@ -44,6 +44,7 @@ class Cursor extends React.Component {
         {...props}
         content={content}
         style={{ top: y - 25, left: x - 25 }}
+        display={['none', 'flex']}
         color="#fff !important"
         position="fixed"
         width={50}
