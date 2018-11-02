@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import extractSlug from '../utils/extract-slug'
 import publishedProjects from '../utils/published-projects'
 import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
-import extractSlug from '../utils/extract-slug'
 import ProjectSwiper from '../components/project-swiper'
-import NextProject from '../components/next-project'
+import Down from '../components/down'
 import { color } from '../theme'
+import { readableColor } from 'polished'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -87,6 +88,7 @@ class ProjectsPage extends React.Component {
     })
 
     const bg = projects[index].node.frontmatter.color
+    const arrowColor = readableColor(bg)
 
     return (
       <Layout title={title} bg={bg}>
@@ -100,7 +102,14 @@ class ProjectsPage extends React.Component {
           ))}
         </ProjectSwiper>
 
-        <NextProject onClick={this.next} />
+        <Down
+          color={arrowColor}
+          onClick={this.next}
+          position="fixed"
+          zIndex={2}
+          bottom={20}
+          right={20}
+        />
       </Layout>
     )
   }
