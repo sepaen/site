@@ -80,7 +80,7 @@ class ProjectPreview extends React.Component {
               width="100%"
               height="100%"
               justifyContent="center"
-              alignItems="flex-start"
+              alignItems={['flex-start', 'center']}
               p={[0, 30]}
             >
               <Image src={this.getCover()} maxWidth="100%" maxHeight="100%" />
