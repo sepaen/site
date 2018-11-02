@@ -9,7 +9,7 @@ We are working with a global list of clients and creative talents to deliver uni
 
 </br>
 
-Transmedial and modern, we aim to bring bands, cultural institutions, and creatives closer together.
+Transmedial and modern, we aim to bring brands, cultural institutions, and creatives closer together.
 
 </br>
 
