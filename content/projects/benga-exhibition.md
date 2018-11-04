@@ -5,16 +5,20 @@ date: 2018-07-08T00:00:00.000Z
 title: 'Benga, A Kenyan Kaleidoscope '
 fulltitle: 'Benga, A Kenyan Kaleidoscope '
 subtitle: ''
-cover: /assets/dsc00977-1-853x1280.jpg
+cover: /assets/affiche-nyon-1.png
 images:
-  - image: /assets/affiche-nyon-1.png
-  - image: /assets/dsc00626.jpg
-  - image: /assets/dsc00979.jpg
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
+  - image: /assets/dsc00626.jpg
+  - image: /assets/dsc00979.jpg
   - image: /assets/000008.jpg
   - image: /assets/dsc00630.jpg
   - image: /assets/dsc00998-2-1-1920x1280.jpg
+  - image: /assets/img_20180722_093902.jpg
+  - image: /assets/img_0457.jpg
+  - image: /assets/img_0432.jpg
+  - image: /assets/img_0403.jpg
+  - image: /assets/benga-10.jpg
 ---
 Client : Hapax21 / Eeeeh
 
