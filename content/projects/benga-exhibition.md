@@ -12,7 +12,6 @@ images:
   - image: /assets/dsc00626.jpg
   - image: /assets/dsc00979.jpg
   - image: /assets/000008.jpg
-  - image: /assets/dsc00630.jpg
   - image: /assets/dsc00998-2-1-1920x1280.jpg
   - image: /assets/img_20180722_093902.jpg
   - image: /assets/img_0457.jpg
