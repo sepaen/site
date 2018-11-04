@@ -6,7 +6,6 @@ title: Trascendentale
 fulltitle: Trascendentale
 cover: /assets/test-1-.jpg
 images:
-  - image: ''
   - image: /assets/imgp6330.jpg
   - image: /assets/imgp6628.jpg
   - image: /assets/imgp7236.jpg
