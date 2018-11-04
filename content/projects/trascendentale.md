@@ -6,7 +6,7 @@ title: Trascendentale
 fulltitle: Trascendentale
 cover: /assets/test-1-.jpg
 images:
-  - image: /assets/test-1-.jpg
+  - image: ''
   - image: /assets/imgp6330.jpg
   - image: /assets/imgp6628.jpg
   - image: /assets/imgp7236.jpg
@@ -25,5 +25,5 @@ Year : 2019
 
 - - -
 
-Long format documentary film shot in Berlin, Apulia and Switzerland. \
+Long format documentary film shot in Apulia, Berlin and Switzerland. \
 Out April 2019.
