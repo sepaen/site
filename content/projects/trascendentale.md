@@ -23,6 +23,16 @@ Title : Trascendentale
 
 Year : 2019
 
+<br/>
+
+Medium : Film
+
+<br/>
+
+www.pizzicatrance.com
+
+
+
 - - -
 
 Long format documentary film shot in Apulia, Berlin and Switzerland. 
