@@ -4,6 +4,7 @@ published: true
 date: 2018-10-31T15:08:47.789Z
 title: Trascendentale
 fulltitle: Trascendentale
+cover: /assets/test-1-.jpg
 images:
   - image: /assets/test-1-.jpg
   - image: /assets/imgp6330.jpg
@@ -12,7 +13,6 @@ images:
   - image: /assets/imgp7377.jpg
   - image: /assets/imgp7537.jpg
 ---
-
 Client : TBA
 
 <br/>
@@ -23,9 +23,7 @@ Title : Trascendentale
 
 Year : 2019
 
-<br/>
-
----
+- - -
 
 Long format documentary film shot in Berlin, Apulia and Switzerland. \
 Out April 2019.
