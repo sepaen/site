@@ -49,7 +49,7 @@ class ProjectDetails extends React.Component {
   render() {
     const { project, ...props } = this.props
     const { entered } = this.state
-    const { cover } = project.fields
+
     return (
       <Content
         {...props}
