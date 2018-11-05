@@ -10,15 +10,12 @@ cover: /assets/affiche-nyon-1.png
 images:
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
-  - image: /assets/dsc00626.jpg
-  - image: /assets/dsc00979.jpg
-  - image: /assets/000008.jpg
-  - image: /assets/dsc00998-2-1-1920x1280.jpg
   - image: /assets/img_20180722_093902.jpg
-  - image: /assets/img_0457.jpg
-  - image: /assets/img_0432.jpg
-  - image: /assets/img_0403.jpg
   - image: /assets/benga-10.jpg
+  - image: /assets/img_0403.jpg
+  - image: /assets/000008.jpg
+  - image: /assets/dsc00626.jpg
+  - image: /assets/dsc00998-2-1-1920x1280.jpg
 ---
 Client : Hapax21 / Eeeeh
 
