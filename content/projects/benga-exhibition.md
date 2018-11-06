@@ -19,19 +19,11 @@ images:
 ---
 Client : Hapax21 / Eeeeh
 
-<br/>
-
 Title : Benga, A Kenyan Kaleidoscope
-
-<br/>
 
 Year : 2018
 
-<br/>
-
 Medium : Exhibition
-
-<br/>
 
 [www.eeeeh.ch](http://www.eeeeh.ch)
 
