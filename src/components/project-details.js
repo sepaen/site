@@ -74,14 +74,17 @@ class ProjectDetails extends React.Component {
         </Cell>
 
         <Gallery is={Cell} pt={4} pb={50}>
-          {project.fields.images.map(({ childImageSharp: image }) => (
-            <Image
-              key={image.fluid.src}
-              src={image.fluid.src}
-              maxWidth="100%"
-              maxHeight="100%"
-            />
-          ))}
+          {project.fields.images.map(
+            ({ childImageSharp: image }) =>
+              image && (
+                <Image
+                  key={image.fluid.src}
+                  src={image.fluid.src}
+                  maxWidth="100%"
+                  maxHeight="100%"
+                />
+              )
+          )}
 
           <ProjectDescription project={project} />
         </Gallery>
