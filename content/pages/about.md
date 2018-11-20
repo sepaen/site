@@ -1,7 +1,7 @@
 ---
 type: about
 ---
-Bureau Sepän is an interdisciplinary creative agency based between Lisbon and Paris, that addresses cultural needs on a local and global scale.
+Bureau Sepän is an interdisciplinary creative agency that addresses cultural needs on a local and global scale.
 
 </br>
 
