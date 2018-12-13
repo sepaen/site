@@ -2,7 +2,7 @@ import React from 'react'
 import bowser from 'bowser'
 import debounce from 'lodash/debounce'
 import omit from 'lodash/omit'
-import Flex from '../system/flex'
+import Box from '../system/box'
 
 const UP = 'SWIPE_UP'
 const DOWN = 'SWIPE_DOWN'
@@ -15,7 +15,7 @@ function pos(touch) {
 
 class Swiper extends React.Component {
   static defaultProps = {
-    threshold: 50,
+    threshold: 50
   }
 
   componentDidMount() {
@@ -80,7 +80,7 @@ class Swiper extends React.Component {
     this.props.delay || 100,
     {
       leading: true,
-      trailing: false,
+      trailing: false
     }
   )
 
@@ -88,7 +88,7 @@ class Swiper extends React.Component {
     const props = omit(this.props, ['onSwipe'])
 
     return (
-      <Flex
+      <Box
         {...props}
         onWheel={this.onWheel}
         onTouchStart={this.onTouchStart}

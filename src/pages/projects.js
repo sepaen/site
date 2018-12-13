@@ -9,7 +9,7 @@ import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
 import ProjectSwiper from '../components/project-swiper'
 import Down from '../components/down'
-import { color } from '../theme'
+import { getColor } from '../system/theme'
 import { readableColor } from 'polished'
 
 export const query = graphql`
@@ -53,14 +53,14 @@ export const query = graphql`
 
 class ProjectsPage extends React.Component {
   state = {
-    index: 0,
+    index: 0
   }
 
   next = () => {
     const projects = publishedProjects(this.props.data)
 
     this.setState({
-      index: (this.state.index + 1) % projects.length,
+      index: (this.state.index + 1) % projects.length
     })
   }
 
@@ -77,7 +77,7 @@ class ProjectsPage extends React.Component {
 
     projects.forEach(({ node }, i) => {
       if (!node.frontmatter.color) {
-        node.frontmatter.color = color(i)
+        node.frontmatter.color = getColor(i)
       }
     })
 

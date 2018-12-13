@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
 import Text from './text'
 
@@ -8,17 +7,13 @@ const Link = props => {
 
   return (
     <Text
-      is={Component}
-      domProps={['href', 'to', 'target']}
+      as={Component}
       display="inline-flex"
       textDecoration="none"
+      $hover={{ textDecoration: 'underline' }}
       {...props}
     />
   )
 }
 
-export default styled(Link)`
-  :hover {
-    text-decoration: underline;
-  }
-`
+export default Link

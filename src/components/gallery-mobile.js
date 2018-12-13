@@ -1,10 +1,12 @@
-import styled from 'styled-components'
-import Flex from '../system/flex'
+import Box from '../system/box'
 
-const MobileGallery = styled(Flex).attrs({ flexDirection: 'column' })`
-  > * {
-    margin-bottom: 30px;
+const MobileGallery = Box.with({
+  flexDirection: 'column',
+  $children: {
+    '> *': {
+      mb: 4
+    }
   }
-`
+})
 
 export default MobileGallery

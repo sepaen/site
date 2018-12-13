@@ -4,11 +4,11 @@ import { graphql } from 'gatsby'
 import '../utils/graphql-fragments'
 
 import publishedProjects from '../utils/published-projects'
+import System from '../system/system'
 import Layout from '../components/layout'
 import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
-import { keyframes } from 'styled-components'
-import { color } from '../theme'
+import { getColor } from '../system/theme'
 
 function findIndex(list = [], id) {
   return list.findIndex(el => el.node.id === id)
@@ -66,10 +66,10 @@ export const query = graphql`
   }
 `
 
-const fadein = keyframes`
-  from { opacity: 0; }
-  to   { opacity: 1; }
-`
+const FadeIn = System.animate('1s ease-in', {
+  from: { opacity: 0 },
+  to: { opacity: 1 }
+})
 
 const ProjectDetailsPage = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title
@@ -78,17 +78,12 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
 
   if (!project.frontmatter.color) {
     const index = findIndex(projects, project.id)
-    project.frontmatter.color = color(index)
+    project.frontmatter.color = getColor(index)
   }
 
   return (
     <Layout title={title} bg={project.frontmatter.color}>
-      <ProjectDetails
-        key={Math.random()}
-        project={project}
-        animation={`${fadein} ease-in 1s`}
-      />
-
+      <FadeIn key={Math.random()} as={ProjectDetails} project={project} />
       <NextProject current={pageContext.slug} projects={projects} />
     </Layout>
   )

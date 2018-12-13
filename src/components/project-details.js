@@ -3,7 +3,7 @@ import React from 'react'
 import Gallery from './gallery'
 import Content from './content'
 import Cell from '../system/cell'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Text from '../system/text'
 import Image from '../system/image'
 import Markdown from '../system/markdown'
@@ -23,23 +23,23 @@ const ProjectDescription = ({ project, ...props }) => {
   const [details, description] = getDescription(project)
 
   return (
-    <Flex
+    <Box
       {...props}
       flexDirection={['column', 'row']}
       zIndex={[1, 100]}
       bg={project.frontmatter.color}
       cursor="initial"
-      p={[0, 20]}
+      p={[0, 2]}
     >
-      {details && <Markdown html={details} mr={[0, 20]} mb={[40, 0]} />}
+      {details && <Markdown html={details} mr={[0, 2]} mb={[5, 0]} />}
       <Markdown html={description} maxWidth={500} textAlign="justify" />
-    </Flex>
+    </Box>
   )
 }
 
 class ProjectDetails extends React.Component {
   state = {
-    entered: false,
+    entered: false
   }
 
   componentDidMount() {
@@ -57,14 +57,14 @@ class ProjectDetails extends React.Component {
         flexDirection="column"
         bg={project.frontmatter.color}
         overflow="hidden"
-        pt={[80, 20]}
+        pt={[10, 2]}
       >
         <Cell
           gridColumn="1"
           flexDirection="column"
           opacity={[1, entered ? 1 : 0]}
           transition="opacity 500ms ease-in-out"
-          mt={[0, 130]}
+          mt={[0, 16]}
           mr={[0, 4]}
         >
           <Text whiteSpace="pre-wrap">
@@ -73,7 +73,7 @@ class ProjectDetails extends React.Component {
           </Text>
         </Cell>
 
-        <Gallery is={Cell} pt={4} pb={50}>
+        <Gallery as={Cell} pt={4} pb={6}>
           {project.fields.images.map(
             ({ childImageSharp: image }) =>
               image && (

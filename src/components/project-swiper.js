@@ -1,19 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import invoke from '../utils/invoke'
-import withProps from '../utils/with-props'
+import Box from '../system/box'
 import Swiper from './swiper'
 
 const timingFn = 'transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)'
 
-const VerticalSwiper = styled(withProps(Swiper, { flexDirection: 'column' }))`
-  > * {
-    transform: translate3d(0, ${p => -p.index * 100}vh, 0);
-    transition: ${timingFn};
-    will-change: transform;
-  }
-`
+const VerticalSwiper = Box.with({
+  as: Swiper,
+  flexDirection: 'column',
+
+  $children: p => ({
+    '> *': {
+      transform: `translate3d(0, ${-p.index * 100}vh, 0)`,
+      transition: timingFn,
+      willChange: 'transform'
+    }
+  })
+})
 
 class ProjectSwiper extends React.Component {
   select = index => {
