@@ -6,9 +6,8 @@ import Content from '../components/content'
 import Cell from '../system/cell'
 import Text from '../system/text'
 import Link from '../system/link'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import withProps from '../utils/with-props'
-import { gold } from '../system/colors'
 
 export const query = graphql`
   query ContactQuery {
@@ -34,14 +33,14 @@ export const query = graphql`
   }
 `
 
-const Col = withProps(Flex, { flexDirection: 'column', mb: 4 })
+const Col = withProps(Box, { flexDirection: 'column', mb: 4 })
 
 const ContactPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
   const contact = data.markdownRemark.frontmatter
 
   return (
-    <Layout title={siteTitle} bg={gold}>
+    <Layout title={siteTitle} bg="gold">
       <Content>
         <Cell flexDirection="column" fontSize={[24, 32]}>
           <Col>

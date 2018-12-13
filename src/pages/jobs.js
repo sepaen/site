@@ -8,7 +8,6 @@ import Text from '../system/text'
 import Layout from '../components/layout'
 import Content from '../components/content'
 import JobPreview from '../components/job-preview'
-import { gold } from '../system/colors'
 
 export const query = graphql`
   query JobsQuery {
@@ -50,11 +49,11 @@ const JobsPage = ({ data }) => {
   const nojobs = data.nojobs.frontmatter.text
 
   return (
-    <Layout title={title} bg={gold}>
+    <Layout title={title} bg="gold">
       <Content>
         {jobs.length === 0 && (
           <Cell alignSelf="flex-start">
-            <Text children={nojobs} fontSize={[24, 32]} />
+            <Text children={nojobs} fontSize={[18, 24]} />
           </Cell>
         )}
 

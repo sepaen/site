@@ -13,14 +13,14 @@ const Navbar = ({ title, isDesktop, ...props }) => {
     <NavbarComponent
       {...props}
       title={titleTop}
-      is="nav"
+      as="nav"
       position="fixed"
       zIndex={2}
       top={0}
       right={0}
       left={0}
       justifyContent="space-between"
-      p={20}
+      p={2}
     />
   )
 }

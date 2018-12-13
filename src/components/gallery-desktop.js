@@ -1,19 +1,19 @@
 import React from 'react'
 import winHeight from '../utils/win-height'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Text from '../system/text'
 import Cursor from './cursor'
 import Swiper from './swiper'
 
 function margin(i) {
-  return i === 0 ? 0 : (i % 3) * 20
+  return i === 0 ? 0 : (i % 3) * 2
 }
 
 class DesktopGallery extends React.Component {
   state = {
     index: -1,
     up: false,
-    finished: false,
+    finished: false
   }
 
   componentDidMount() {
@@ -100,7 +100,7 @@ class DesktopGallery extends React.Component {
         cursor="none"
       >
         {firsts.map((child, i) => (
-          <Flex
+          <Box
             key={i}
             children={child}
             position="absolute"
@@ -113,20 +113,20 @@ class DesktopGallery extends React.Component {
             transform={this.translate(i)}
             transition={'transform 750ms ease-in-out'}
             willChange="transform"
-            p={30}
+            p={4}
             mt={margin(i)}
             ml={margin(i)}
           />
         ))}
 
         <Cursor
-          is={Text}
+          as={Text}
           onClick={this.onCursorClick}
           render={this.getCursorText}
           mixBlendMode="difference"
         />
 
-        <Flex
+        <Box
           children={last}
           position="absolute"
           justifyContent="center"
@@ -134,7 +134,7 @@ class DesktopGallery extends React.Component {
           transform={this.translate(size - 1)}
           transition={'transform 750ms ease-in-out'}
           willChange="transform"
-          p={40}
+          p={4}
         />
       </Swiper>
     )

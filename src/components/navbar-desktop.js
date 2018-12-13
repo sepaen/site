@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Link from '../system/link'
 
 const NavbarDesktop = ({ title, bg, ...props }) => (
-  <Flex {...props}>
+  <Box {...props}>
     <Link
       to="/"
       children={title}
@@ -13,12 +13,12 @@ const NavbarDesktop = ({ title, bg, ...props }) => (
       textDecoration="none !important"
     />
 
-    <Flex>
+    <Box>
       <Link to="/projects" children="Projects" mr={3} />
       <Link to="/about" children="About" mr={3} />
       <Link to="/contact" children="Contact" />
-    </Flex>
-  </Flex>
+    </Box>
+  </Box>
 )
 
 export default NavbarDesktop

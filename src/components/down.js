@@ -1,8 +1,8 @@
 import React from 'react'
-import Flex from '../system/flex'
+import Box from '../system/box'
 
 const Down = ({ color, ...props }) => (
-  <Flex cursor="pointer" width={30} {...props}>
+  <Box cursor="pointer" width={30} {...props}>
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Down = ({ color, ...props }) => (
         />
       </g>
     </svg>
-  </Flex>
+  </Box>
 )
 
 export default Down

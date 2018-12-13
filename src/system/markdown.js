@@ -1,27 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import Text from '../system/text'
 
-const Markdown = ({ html, ...props }) => (
-  <Text
-    {...props}
-    is="section"
-    flexDirection="column"
-    dangerouslySetInnerHTML={{ __html: html }}
-  />
-)
+const Markdown = Text.with({
+  as: 'section',
+  dangerouslySetInnerHTML: p => ({ __html: p.html }),
+  flexDirection: 'column',
 
-export default styled(Markdown)`
-  * {
-    color: white;
+  $children: {
+    '*': { color: 'white' },
+    'p, h1': { m: 0 }
   }
+})
 
-  h1 {
-    margin: 0;
-  }
-
-  p {
-    margin: 0;
-  }
-`
+export default Markdown

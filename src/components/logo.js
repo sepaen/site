@@ -1,12 +1,11 @@
 import React from 'react'
 
 import logoImage from '../images/logo.svg'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Image from '../system/image'
-import withProps from '../utils/with-props'
 
-const LogoImage = withProps(Image, {
-  src: logoImage,
+const LogoImage = Image.with({
+  src: logoImage
 })
 
 class LogoVideo extends React.Component {
@@ -18,20 +17,19 @@ class LogoVideo extends React.Component {
 
   render() {
     return (
-      <Flex
+      <Box
         {...this.props}
-        is="video"
-        baseRef={this.video}
+        as="video"
+        innerRef={this.video}
         loop
         muted
         playsInline
         preload="auto"
-        domProps={['src', 'muted', 'loop', 'playsInline', 'preload']}
       >
         <source src="/videos/logo.webm" type="video/webm" />
         <source src="/videos/logo.mp4" type="video/mp4" />
         <LogoImage {...this.props} />
-      </Flex>
+      </Box>
     )
   }
 }

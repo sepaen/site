@@ -1,22 +1,5 @@
-import styled from 'styled-components'
+import Box from './box'
 
-import {
-  gridTemplateColumns,
-  gridTemplateRows,
-  gridGap,
-  gridAutoFlow
-} from 'styled-system'
-
-import withProps from '../utils/with-props'
-import Flex from './flex'
-
-const Grid = styled(
-  withProps(Flex, { display: 'grid' })
-)`
-  ${gridTemplateColumns}
-  ${gridTemplateRows}
-  ${gridGap}
-  ${gridAutoFlow}
-`
+const Grid = Box.with({ display: 'grid' })
 
 export default Grid

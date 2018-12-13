@@ -5,7 +5,7 @@ import extractSlug from '../utils/extract-slug'
 import winHeight from '../utils/win-height'
 import Content from './content'
 import Cursor from './cursor'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Cell from '../system/cell'
 import Text from '../system/text'
 import Image from '../system/image'
@@ -14,7 +14,7 @@ const EXIT_DURATION = 500
 
 class ProjectPreview extends React.Component {
   state = {
-    exiting: false,
+    exiting: false
   }
 
   showProject = () => {
@@ -43,20 +43,20 @@ class ProjectPreview extends React.Component {
     const { exiting } = this.state
 
     return (
-      <Flex flex="1 0 100%" bg={project.frontmatter.color} cursor="none">
+      <Box flex="1 0 100%" bg={project.frontmatter.color} cursor="none">
         <Content
           {...props}
           display={['flex', 'grid']}
           flexDirection="column"
           opacity={exiting ? 0 : 1}
           transition={`opacity ${EXIT_DURATION}ms ease-out`}
-          pt={[80, 20]}
-          pb={[120, 20]}
+          pt={[1, 2]}
+          pb={[2, 2]}
         >
           <Cell
             gridColumn="1"
             flexDirection="column"
-            mt={[0, 130]}
+            mt={[0, 16]}
             mr={[0, 4]}
             mb={4}
           >
@@ -72,7 +72,7 @@ class ProjectPreview extends React.Component {
             position="relative"
             height="100%"
           >
-            <Flex
+            <Box
               onClick={this.showProject}
               position="absolute"
               top={0}
@@ -81,20 +81,20 @@ class ProjectPreview extends React.Component {
               height="100%"
               justifyContent="center"
               alignItems={['flex-start', 'center']}
-              p={[0, 30]}
+              p={[0, 4]}
             >
               <Image src={this.getCover()} maxWidth="100%" maxHeight="100%" />
-            </Flex>
+            </Box>
           </Cell>
         </Content>
 
         <Cursor
-          is={Text}
+          as={Text}
           onClick={this.showProject}
           render={this.getCursorText}
           mixBlendMode="difference"
         />
-      </Flex>
+      </Box>
     )
   }
 }

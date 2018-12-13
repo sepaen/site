@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Link from '../system/link'
 import MenuIcon from './menu-icon'
 import { readableColor } from 'polished'
@@ -22,7 +22,7 @@ class NavbarMobile extends React.Component {
     const color = readableColor(bg)
 
     return (
-      <Flex
+      <Box
         {...props}
         bg={opened ? bg : 'transparent'}
         borderBottom={opened ? '1px solid' : 'none'}
@@ -39,11 +39,11 @@ class NavbarMobile extends React.Component {
         )}
 
         {opened && (
-          <Flex alignSelf="center">
+          <Box alignSelf="center">
             <Link to="/projects" children="Projects" mr={3} />
             <Link to="/about" children="About" mr={3} />
             <Link to="/contact" children="Contact" />
-          </Flex>
+          </Box>
         )}
 
         <MenuIcon
@@ -51,7 +51,7 @@ class NavbarMobile extends React.Component {
           onClick={() => this.toggleMenu()}
           color={color}
         />
-      </Flex>
+      </Box>
     )
   }
 }

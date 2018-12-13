@@ -1,9 +1,7 @@
-import withProps from '../utils/with-props'
-import Flex from './flex'
+import Box from './box'
 
-const Image = withProps(Flex, {
-  is: 'img',
-  domProps: ['src'],
+const Image = Box.with({
+  as: 'img',
   flexShrink: 0,
   border: 'none',
 })

@@ -1,21 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
-import Flex from '../system/flex'
+import Box from '../system/box'
 
-const CursorFlex = styled(Flex)`
-  ::before {
-    content: '${p => p.content}'
+const CursorBox = Box.with({
+  $pseudo: {
+    ':before': {
+      content: p => p.content,
+      bg: 'red'
+    }
   }
-`
+})
 
 class Cursor extends React.Component {
   static defaultProps = {
-    render: () => null,
+    render: () => null
   }
 
   state = {
     x: 0,
-    y: 0,
+    y: 0
   }
 
   componentDidMount() {
@@ -29,7 +31,7 @@ class Cursor extends React.Component {
   updatePosition = e => {
     this.setState({
       x: e.pageX,
-      y: e.pageY,
+      y: e.pageY
     })
   }
 
@@ -40,9 +42,10 @@ class Cursor extends React.Component {
     const content = render({ ...props, x, y })
 
     return !content ? null : (
-      <CursorFlex
+      <CursorBox
         {...props}
-        content={content}
+        zIndex={1000}
+        children={content}
         style={{ top: y - 25, left: x - 25 }}
         display={['none', 'flex']}
         color="#fff !important"

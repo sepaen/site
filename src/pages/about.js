@@ -7,8 +7,7 @@ import Content from '../components/content'
 import Cell from '../system/cell'
 import Markdown from '../system/markdown'
 import Text from '../system/text'
-import { gold } from '../system/colors'
-import Flex from '../system/flex'
+import Box from '../system/box'
 import Input from '../system/input'
 
 export const query = graphql`
@@ -28,7 +27,7 @@ export const query = graphql`
 class AboutPage extends React.Component {
   state = {
     subscribing: false,
-    email: '',
+    email: ''
   }
 
   subscribe = () => {
@@ -45,8 +44,8 @@ class AboutPage extends React.Component {
     const { subscribing, email } = this.state
 
     return (
-      <Layout title={data.site.siteMetadata.title} bg={gold}>
-        <Content pb={80}>
+      <Layout title={data.site.siteMetadata.title} bg="gold">
+        <Content pb={1}>
           <Cell flexDirection="column" fontSize={[18, 24]}>
             <Markdown html={data.markdownRemark.html} mb={4} />
 
@@ -62,11 +61,11 @@ class AboutPage extends React.Component {
               />
             </Text>
 
-            <Flex
+            <Box
               alignItems="center"
               opacity={subscribing ? 1 : 0}
               transition="opacity 0.3s ease-in-out"
-              mt={32}
+              mt={4}
             >
               <Input
                 type="email"
@@ -74,7 +73,7 @@ class AboutPage extends React.Component {
                 placeholder="Enter your email here"
                 onChange={e => this.setState({ email: e.target.value })}
                 cursor={subscribing ? 'initial' : 'default'}
-                mr={10}
+                mr={1}
               />
               <Text
                 children="Subscribe"
@@ -82,7 +81,7 @@ class AboutPage extends React.Component {
                 fontSize={16}
                 cursor={subscribing ? 'pointer' : 'default'}
               />
-            </Flex>
+            </Box>
           </Cell>
         </Content>
       </Layout>
