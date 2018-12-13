@@ -7,12 +7,12 @@ import { readableColor } from 'polished'
 
 class NavbarMobile extends React.Component {
   state = {
-    opened: false,
+    opened: false
   }
 
   toggleMenu = toggle => {
     this.setState({
-      opened: typeof toggle === 'undefined' ? !this.state.opened : toggle,
+      opened: typeof toggle === 'undefined' ? !this.state.opened : toggle
     })
   }
 

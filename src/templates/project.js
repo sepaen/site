@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import publishedProjects from '../utils/published-projects'
+import defaultBG from '../utils/default-bg'
 import System from '../system/system'
 import Layout from '../components/layout'
 import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
-import { getColor } from '../system/theme'
 
 function findIndex(list = [], id) {
   return list.findIndex(el => el.node.id === id)
@@ -84,7 +84,7 @@ const ProjectDetailsPage = ({ data, pageContext }) => {
 
   if (!project.frontmatter.color) {
     const index = findIndex(projects, project.id)
-    project.frontmatter.color = getColor(index)
+    project.frontmatter.color = defaultBG(index)
   }
 
   return (
