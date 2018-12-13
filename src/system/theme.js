@@ -6,3 +6,5 @@ export const spacing = 8
 export const colors = {
   gold: '#b19964'
 }
+
+export const breakpoints = [0, 500]
