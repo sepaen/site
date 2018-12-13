@@ -50,7 +50,7 @@ class ProjectPreview extends React.Component {
           flexDirection="column"
           opacity={exiting ? 0 : 1}
           transition={`opacity ${EXIT_DURATION}ms ease-out`}
-          pt={[1, 2]}
+          pt={[10, 2]}
           pb={[2, 2]}
         >
           <Cell
