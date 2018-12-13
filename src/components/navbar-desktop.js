@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '../system/box'
 import Link from '../system/link'
 
-const NavbarDesktop = ({ title, ...props }) => (
+const NavbarDesktop = ({ title, bg, ...props }) => (
   <Box {...props}>
     <Link
       to="/"

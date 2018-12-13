@@ -5,11 +5,11 @@ import '../utils/graphql-fragments'
 
 import extractSlug from '../utils/extract-slug'
 import publishedProjects from '../utils/published-projects'
+import defaultBG from '../utils/default-bg'
 import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
 import ProjectSwiper from '../components/project-swiper'
 import Down from '../components/down'
-import { getColor } from '../system/theme'
 import { readableColor } from 'polished'
 
 export const query = graphql`
@@ -77,7 +77,7 @@ class ProjectsPage extends React.Component {
 
     projects.forEach(({ node }, i) => {
       if (!node.frontmatter.color) {
-        node.frontmatter.color = getColor(i)
+        node.frontmatter.color = defaultBG(i)
       }
     })
 

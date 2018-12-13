@@ -1,5 +1,4 @@
 import React from 'react'
-import readableColor from 'polished/lib/color/readableColor'
 
 import MobileNavbar from './navbar-mobile'
 import DesktopNavbar from './navbar-desktop'
