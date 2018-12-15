@@ -24,14 +24,49 @@ export const query = graphql`
   }
 `
 
+const AboutCell = Cell.extend({
+  flexDirection: 'column',
+  fontSize: [18, 24]
+})
+
+const Subscribe = Text.extend({
+  display: 'inline',
+  textDecoration: 'underline',
+  cursor: 'pointer'
+})
+
+const SubscribeBox = Box.extend({
+  alignItems: 'center',
+  transition: 'opacity 0.3s ease-in-out'
+})
+
+const SubscribeInput = Input.extend({
+  type: 'email',
+  placeholder: 'Enteryour email here'
+})
+
+const SubscribeSubmit = Text.extend({
+  children: 'Subscribe',
+  fontSize: 16
+})
+
 class AboutPage extends React.Component {
   state = {
     subscribing: false,
     email: ''
   }
 
+  changeEmail = e => {
+    this.setState({ email: e.target.value })
+  }
+
+  toggleSubscribe = () => {
+    this.setState({ subscribing: !this.state.subscribing })
+  }
+
   subscribe = () => {
     const { email } = this.state
+
     if (email) {
       addToMailChimp(email).then(() =>
         this.setState({ email: '', subscribing: false })
@@ -46,43 +81,31 @@ class AboutPage extends React.Component {
     return (
       <Layout title={data.site.siteMetadata.title} bg="gold">
         <Content pb={1}>
-          <Cell flexDirection="column" fontSize={[18, 24]}>
+          <AboutCell>
             <Markdown html={data.markdownRemark.html} mb={4} />
 
             <Text display="inline">
               Keep up to date by
-              <Text
+              <Subscribe
                 children="subscribing to our newsletter"
-                onClick={() => this.setState({ subscribing: !subscribing })}
-                display="inline"
-                textDecoration="underline"
-                cursor="pointer"
+                onClick={this.toggleSubscribe}
                 ml={1}
               />
             </Text>
 
-            <Box
-              alignItems="center"
-              opacity={subscribing ? 1 : 0}
-              transition="opacity 0.3s ease-in-out"
-              mt={4}
-            >
-              <Input
-                type="email"
+            <SubscribeBox opacity={subscribing ? 1 : 0} mt={4}>
+              <SubscribeInput
                 value={email}
-                placeholder="Enter your email here"
-                onChange={e => this.setState({ email: e.target.value })}
+                onChange={this.changeEmail}
                 cursor={subscribing ? 'initial' : 'default'}
                 mr={1}
               />
-              <Text
-                children="Subscribe"
+              <SubscribeSubmit
                 onClick={this.subscribe}
-                fontSize={16}
                 cursor={subscribing ? 'pointer' : 'default'}
               />
-            </Box>
-          </Cell>
+            </SubscribeBox>
+          </AboutCell>
         </Content>
       </Layout>
     )

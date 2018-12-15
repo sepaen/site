@@ -1,12 +1,12 @@
 import Text from './text'
 
-const Input = Text.with({
+const Input = Text.extend({
   as: 'input',
   border: '1px solid black',
   bg: 'transparent',
   outline: 'none',
-  px: 3,
-  py: 2,
+  px: 2,
+  py: 1
 })
 
 export default Input

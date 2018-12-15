@@ -1,6 +1,6 @@
 import System from './system'
 
-const Text = System.with({
+const Text = System.extend({
   as: 'span',
   display: 'inline-flex',
   color: 'white',

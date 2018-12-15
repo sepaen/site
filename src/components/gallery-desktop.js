@@ -1,13 +1,39 @@
 import React from 'react'
 import winHeight from '../utils/win-height'
 import Box from '../system/box'
-import Text from '../system/text'
 import Cursor from './cursor'
 import Swiper from './swiper'
+import Cell from '../system/cell'
 
 function margin(i) {
   return i === 0 ? 0 : (i % 3) * 2
 }
+
+const GallerySwiper = Swiper.extend({
+  as: Cell,
+  position: 'relative',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+  cursor: 'none'
+})
+
+const SwipeContainer = Box.extend({
+  position: 'absolute',
+  justifyContent: 'center',
+  alignItems: 'center',
+  transition: 'transform 750ms ease-in-out',
+  willChange: 'transform',
+  p: 4
+})
+
+const FullSwipeContainer = SwipeContainer.extend({
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%'
+})
 
 class DesktopGallery extends React.Component {
   state = {
@@ -47,6 +73,7 @@ class DesktopGallery extends React.Component {
 
   onSwipe = directions => {
     const { index } = this.state
+
     if (directions.includes(Swiper.UP)) {
       this.select(index + 1)
     } else if (directions.includes(Swiper.DOWN)) {
@@ -89,54 +116,21 @@ class DesktopGallery extends React.Component {
     const last = childArr[size - 1]
 
     return (
-      <Swiper
-        {...props}
-        onSwipe={this.onSwipe}
-        position="relative"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-        cursor="none"
-      >
+      <GallerySwiper {...props} onSwipe={this.onSwipe}>
         {firsts.map((child, i) => (
-          <Box
+          <FullSwipeContainer
             key={i}
             children={child}
-            position="absolute"
-            top={0}
-            left={0}
-            width="100%"
-            height="100%"
-            justifyContent="center"
-            alignItems="center"
             transform={this.translate(i)}
-            transition={'transform 750ms ease-in-out'}
-            willChange="transform"
-            p={4}
             mt={margin(i)}
             ml={margin(i)}
           />
         ))}
 
-        <Cursor
-          as={Text}
-          onClick={this.onCursorClick}
-          render={this.getCursorText}
-          mixBlendMode="difference"
-        />
+        <Cursor onClick={this.onCursorClick} render={this.getCursorText} />
 
-        <Box
-          children={last}
-          position="absolute"
-          justifyContent="center"
-          alignItems="center"
-          transform={this.translate(size - 1)}
-          transition={'transform 750ms ease-in-out'}
-          willChange="transform"
-          p={4}
-        />
-      </Swiper>
+        <SwipeContainer children={last} transform={this.translate(size - 1)} />
+      </GallerySwiper>
     )
   }
 }

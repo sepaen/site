@@ -1,8 +1,8 @@
 import React from 'react'
 import bowser from 'bowser'
 import debounce from 'lodash/debounce'
-import omit from 'lodash/omit'
 import Box from '../system/box'
+import System from '../system/system'
 
 const UP = 'SWIPE_UP'
 const DOWN = 'SWIPE_DOWN'
@@ -85,22 +85,23 @@ class Swiper extends React.Component {
   )
 
   render() {
-    const props = omit(this.props, ['onSwipe'])
-
     return (
       <Box
-        {...props}
+        {...this.props}
         onWheel={this.onWheel}
         onTouchStart={this.onTouchStart}
         onTouchMove={this.onTouchMove}
+        omit={['threshold', 'onSwipe']}
       />
     )
   }
 }
 
-Swiper.UP = UP
-Swiper.DOWN = DOWN
-Swiper.RIGHT = RIGHT
-Swiper.LEFT = LEFT
+const SystemSwiper = System.with(Swiper)
 
-export default Swiper
+SystemSwiper.UP = UP
+SystemSwiper.DOWN = DOWN
+SystemSwiper.RIGHT = RIGHT
+SystemSwiper.LEFT = LEFT
+
+export default SystemSwiper

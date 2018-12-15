@@ -1,19 +1,24 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import readableColor from '../utils/readable-color'
 import Navbar from './navbar'
 import Footer from './footer'
 import Box from '../system/box'
 import Text from '../system/text'
-import readableColor from 'polished/lib/color/readableColor'
 
-const LayoutBox = Box.with({
+const LayoutBox = Box.extend({
   transition: 'background-color ease-in-out 0.5s',
 
   $children: p => ({
     [`${Text}, span, p, a`]: {
-      color: readableColor(p.bg),
+      color: readableColor(p),
       transition: 'color ease-in-out 0.3s'
+    },
+
+    'svg *': {
+      fill: readableColor(p),
+      stroke: readableColor(p)
     }
   })
 })

@@ -1,6 +1,6 @@
 import Text from '../system/text'
 
-const Markdown = Text.with({
+const Markdown = Text.extend({
   as: 'section',
   dangerouslySetInnerHTML: p => ({ __html: p.html }),
   flexDirection: 'column',

@@ -2,16 +2,11 @@ import React from 'react'
 
 import Box from '../system/box'
 import Link from '../system/link'
+import SiteTitle from './site-title'
 
-const NavbarDesktop = ({ title, bg, ...props }) => (
-  <Box {...props}>
-    <Link
-      to="/"
-      children={title}
-      textTransform="uppercase"
-      letterSpacing={10}
-      textDecoration="none !important"
-    />
+const NavbarDesktop = ({ title, ...props }) => (
+  <Box {...props} bg={null}>
+    <SiteTitle children={title} />
 
     <Box>
       <Link to="/projects" children="Projects" mr={3} />

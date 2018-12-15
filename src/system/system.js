@@ -1,7 +1,12 @@
 import React from 'react'
-import { ReactSystem } from 'systyle/lib/helpers'
+import ReactSystem from 'systyle/lib/presets/react'
 import * as theme from './theme'
 
-export default ReactSystem.system({ mixBlendMode: true, theme: true })
+export default ReactSystem.extend({ theme })
   .compose(React.memo)
-  .with({ theme })
+  .system({
+    mixBlendMode: true,
+    theme: true,
+    stroke: true,
+    fill: true
+  })
