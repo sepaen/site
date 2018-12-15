@@ -7,7 +7,6 @@ import Cell from '../system/cell'
 import Text from '../system/text'
 import Link from '../system/link'
 import Box from '../system/box'
-import withProps from '../utils/with-props'
 
 export const query = graphql`
   query ContactQuery {
@@ -33,7 +32,7 @@ export const query = graphql`
   }
 `
 
-const Col = withProps(Box, { flexDirection: 'column', mb: 4 })
+const Column = Box.extend({ flexDirection: 'column', mb: 4 })
 
 const ContactPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -43,22 +42,22 @@ const ContactPage = ({ data }) => {
     <Layout title={siteTitle} bg="gold">
       <Content>
         <Cell flexDirection="column" fontSize={[24, 32]}>
-          <Col>
+          <Column>
             <Text children={contact.title} />
             <Link href={`mailto:${contact.email}`} children={contact.email} />
-          </Col>
+          </Column>
 
-          <Col>
+          <Column>
             {contact.phone.map(({ number }, i) => (
               <Text key={i} children={number} />
             ))}
-          </Col>
+          </Column>
 
-          <Col>
+          <Column>
             {contact.social.map(({ platform, url }, i) => (
               <Link key={i} href={url} target="blank" children={platform} />
             ))}
-          </Col>
+          </Column>
 
           <Link to="/jobs" children="Jobs" />
         </Cell>

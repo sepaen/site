@@ -12,6 +12,47 @@ import Image from '../system/image'
 
 const EXIT_DURATION = 500
 
+const ProjectBox = Box.extend({
+  flex: '1 0 100%',
+  cursor: 'none'
+})
+
+const ProjectContent = Content.extend({
+  display: ['flex', 'grid'],
+  flexDirection: 'column',
+  transition: `opacity ${EXIT_DURATION}ms ease-out`,
+  pt: [10, 2],
+  pb: [2, 2]
+})
+
+const ProjectSummary = Cell.extend({
+  gridColumn: 1,
+  flexDirection: 'column'
+})
+
+const ProjectCoverCell = Cell.extend({
+  gridColumn: [1, '2/6'],
+  flex: 1,
+  position: 'relative',
+  height: '100%'
+})
+
+const ProjectCoverBox = Box.extend({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  justifyContent: 'center',
+  alignItems: ['flex-start', 'center'],
+  p: [0, 4]
+})
+
+const ProjectCover = Image.extend({
+  maxWidth: '100%',
+  maxHeight: '100%'
+})
+
 class ProjectPreview extends React.Component {
   state = {
     exiting: false
@@ -43,58 +84,24 @@ class ProjectPreview extends React.Component {
     const { exiting } = this.state
 
     return (
-      <Box flex="1 0 100%" bg={project.frontmatter.color} cursor="none">
-        <Content
-          {...props}
-          display={['flex', 'grid']}
-          flexDirection="column"
-          opacity={exiting ? 0 : 1}
-          transition={`opacity ${EXIT_DURATION}ms ease-out`}
-          pt={[10, 2]}
-          pb={[2, 2]}
-        >
-          <Cell
-            gridColumn="1"
-            flexDirection="column"
-            mt={[0, 16]}
-            mr={[0, 4]}
-            mb={4}
-          >
+      <ProjectBox bg={project.frontmatter.color}>
+        <ProjectContent {...props} opacity={exiting ? 0 : 1}>
+          <ProjectSummary mt={[0, 16]} mr={[0, 4]} mb={4}>
             <Text whiteSpace="pre-wrap">
               {project.frontmatter.fulltitle || project.frontmatter.title}
               {project.frontmatter.subtitle}
             </Text>
-          </Cell>
+          </ProjectSummary>
 
-          <Cell
-            gridColumn={['1', '2/6']}
-            flex={1}
-            position="relative"
-            height="100%"
-          >
-            <Box
-              onClick={this.showProject}
-              position="absolute"
-              top={0}
-              left={0}
-              width="100%"
-              height="100%"
-              justifyContent="center"
-              alignItems={['flex-start', 'center']}
-              p={[0, 4]}
-            >
-              <Image src={this.getCover()} maxWidth="100%" maxHeight="100%" />
-            </Box>
-          </Cell>
-        </Content>
+          <ProjectCoverCell>
+            <ProjectCoverBox onClick={this.showProject}>
+              <ProjectCover src={this.getCover()} />
+            </ProjectCoverBox>
+          </ProjectCoverCell>
+        </ProjectContent>
 
-        <Cursor
-          as={Text}
-          onClick={this.showProject}
-          render={this.getCursorText}
-          mixBlendMode="difference"
-        />
-      </Box>
+        <Cursor onClick={this.showProject} render={this.getCursorText} />
+      </ProjectBox>
     )
   }
 }

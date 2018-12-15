@@ -1,12 +1,10 @@
 import React from 'react'
-import Box from '../system/box'
+import Text from '../system/text'
 
-const CursorBox = Box.with({
-  $pseudo: {
-    ':before': {
-      content: p => p.content,
-      bg: 'red'
-    }
+const CursorText = Text.extend({
+  $before: {
+    content: p => p.content,
+    bg: 'red'
   }
 })
 
@@ -42,7 +40,7 @@ class Cursor extends React.Component {
     const content = render({ ...props, x, y })
 
     return !content ? null : (
-      <CursorBox
+      <CursorText
         {...props}
         zIndex={1000}
         children={content}
@@ -56,6 +54,7 @@ class Cursor extends React.Component {
         alignItems="center"
         userSelect="none"
         willChange="top, left"
+        mixBlendMode="difference"
       />
     )
   }

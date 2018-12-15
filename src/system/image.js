@@ -1,6 +1,6 @@
 import Box from './box'
 
-const Image = Box.with({
+const Image = Box.extend({
   as: 'img',
   flexShrink: 0,
   border: 'none',

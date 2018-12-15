@@ -3,40 +3,31 @@ import React from 'react'
 import Box from '../system/box'
 import Link from '../system/link'
 import MenuIcon from './menu-icon'
+import SiteTitle from './site-title'
 import { readableColor } from 'polished'
+
+const NavbarBox = Box.extend({
+  bg: p => (p.opened ? p.bg : 'transparent'),
+  bb: p => (p.opened ? '1px solid' : 'none'),
+  borderColor: p => readableColor(p.bg)
+})
 
 class NavbarMobile extends React.Component {
   state = {
     opened: false
   }
 
-  toggleMenu = toggle => {
-    this.setState({
-      opened: typeof toggle === 'undefined' ? !this.state.opened : toggle
-    })
+  toggleMenu = () => {
+    this.setState({ opened: !this.state.opened })
   }
 
   render() {
-    const { title, bg, ...props } = this.props
+    const { title, ...props } = this.props
     const { opened } = this.state
-    const color = readableColor(bg)
 
     return (
-      <Box
-        {...props}
-        bg={opened ? bg : 'transparent'}
-        borderBottom={opened ? '1px solid' : 'none'}
-        borderColor={color}
-      >
-        {!opened && (
-          <Link
-            to="/"
-            children={title}
-            textTransform="uppercase"
-            letterSpacing={10}
-            textDecoration="none !important"
-          />
-        )}
+      <NavbarBox {...props} opened={opened}>
+        {!opened && <SiteTitle children={title} />}
 
         {opened && (
           <Box alignSelf="center">
@@ -46,12 +37,8 @@ class NavbarMobile extends React.Component {
           </Box>
         )}
 
-        <MenuIcon
-          opened={opened}
-          onClick={() => this.toggleMenu()}
-          color={color}
-        />
-      </Box>
+        <MenuIcon opened={opened} onClick={() => this.toggleMenu()} />
+      </NavbarBox>
     )
   }
 }

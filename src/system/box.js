@@ -1,5 +1,5 @@
 import System from './system'
 
-const Box = System.with({ display: 'flex' })
+const Box = System.extend({ display: 'flex' })
 
 export default Box

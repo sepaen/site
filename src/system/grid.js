@@ -1,5 +1,5 @@
 import Box from './box'
 
-const Grid = Box.with({ display: 'grid' })
+const Grid = Box.extend({ display: 'grid' })
 
 export default Grid

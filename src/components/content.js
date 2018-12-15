@@ -1,6 +1,6 @@
 import Grid from '../system/grid'
 
-const Content = Grid.with({
+const Content = Grid.extend({
   gridAutoFlow: ['column', 'row'],
   gridTemplateColumns: ['1fr', 'repeat(6, 1fr)'],
   flex: '1 0 100%',

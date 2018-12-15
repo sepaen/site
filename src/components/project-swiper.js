@@ -1,14 +1,15 @@
 import React from 'react'
 
 import invoke from '../utils/invoke'
-import Box from '../system/box'
 import Swiper from './swiper'
 
 const timingFn = 'transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)'
 
-const VerticalSwiper = Box.with({
-  as: Swiper,
+const VerticalSwiper = Swiper.extend({
   flexDirection: 'column',
+  width: '100vw',
+  height: '100vh',
+  overflow: 'hidden',
 
   $children: p => ({
     '> *': {
@@ -23,7 +24,6 @@ class ProjectSwiper extends React.Component {
   select = index => {
     const size = this.props.children.length
     const newIndex = Math.max(0, Math.min(index, size - 1))
-
     invoke(this.props, 'onSwipe', newIndex)
   }
 
@@ -38,15 +38,7 @@ class ProjectSwiper extends React.Component {
   }
 
   render() {
-    return (
-      <VerticalSwiper
-        {...this.props}
-        onSwipe={this.onSwipe}
-        width="100vw"
-        height="100vh"
-        overflow="hidden"
-      />
-    )
+    return <VerticalSwiper {...this.props} onSwipe={this.onSwipe} />
   }
 }
 

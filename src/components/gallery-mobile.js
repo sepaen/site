@@ -1,6 +1,6 @@
 import Box from '../system/box'
 
-const MobileGallery = Box.with({
+const MobileGallery = Box.extend({
   flexDirection: 'column',
   $children: {
     '> *': {

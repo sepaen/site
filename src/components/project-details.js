@@ -19,78 +19,62 @@ function getDescription(project) {
   return [details, description]
 }
 
+const ProjectDescriptionBox = Box.extend({
+  flexDirection: ['column', 'row'],
+  zIndex: [1, 100],
+  cursor: 'initial',
+  p: [0, 2]
+})
+
 const ProjectDescription = ({ project, ...props }) => {
   const [details, description] = getDescription(project)
 
   return (
-    <Box
-      {...props}
-      flexDirection={['column', 'row']}
-      zIndex={[1, 100]}
-      bg={project.frontmatter.color}
-      cursor="initial"
-      p={[0, 2]}
-    >
+    <ProjectDescriptionBox {...props} bg={project.frontmatter.color}>
       {details && <Markdown html={details} mr={[0, 2]} mb={[5, 0]} />}
       <Markdown html={description} maxWidth={500} textAlign="justify" />
-    </Box>
+    </ProjectDescriptionBox>
   )
 }
 
-class ProjectDetails extends React.Component {
-  state = {
-    entered: false
-  }
+const ProjectContent = Content.extend({
+  display: ['flex', 'grid'],
+  flexDirection: 'column',
+  overflow: 'hidden',
+  pt: [10, 2]
+})
 
-  componentDidMount() {
-    setTimeout(() => this.setState({ entered: true }), 600)
-  }
+const ProjectSummary = Cell.extend({
+  gridColumn: 1,
+  flexDirection: 'column'
+}).animate('500ms ease-in-out', {
+  from: { opacity: 0 },
+  to: { opacity: 1 }
+})
 
-  render() {
-    const { project, ...props } = this.props
-    const { entered } = this.state
+const ProjectImage = Image.extend({
+  maxWidth: '100%',
+  maxHeight: '100%'
+})
 
-    return (
-      <Content
-        {...props}
-        display={['flex', 'grid']}
-        flexDirection="column"
-        bg={project.frontmatter.color}
-        overflow="hidden"
-        pt={[10, 2]}
-      >
-        <Cell
-          gridColumn="1"
-          flexDirection="column"
-          opacity={[1, entered ? 1 : 0]}
-          transition="opacity 500ms ease-in-out"
-          mt={[0, 16]}
-          mr={[0, 4]}
-        >
-          <Text whiteSpace="pre-wrap">
-            {project.frontmatter.fulltitle || project.frontmatter.title}
-            {project.frontmatter.subtitle}
-          </Text>
-        </Cell>
+const ProjectDetails = ({ project, ...props }) => (
+  <ProjectContent {...props} bg={project.frontmatter.color}>
+    <ProjectSummary mt={[0, 16]} mr={[0, 4]}>
+      <Text whiteSpace="pre-wrap">
+        {project.frontmatter.fulltitle || project.frontmatter.title}
+        {project.frontmatter.subtitle}
+      </Text>
+    </ProjectSummary>
 
-        <Gallery as={Cell} pt={4} pb={6}>
-          {project.fields.images.map(
-            ({ childImageSharp: image }) =>
-              image && (
-                <Image
-                  key={image.fluid.src}
-                  src={image.fluid.src}
-                  maxWidth="100%"
-                  maxHeight="100%"
-                />
-              )
-          )}
+    <Gallery pt={4} pb={6}>
+      {project.fields.images.map(
+        ({ childImageSharp: image }) =>
+          image && <ProjectImage key={image.fluid.src} src={image.fluid.src} />
+      )}
 
-          <ProjectDescription project={project} />
-        </Gallery>
-      </Content>
-    )
-  }
-}
+      <ProjectDescription project={project} />
+    </Gallery>
+  </ProjectContent>
+)
 
 export default ProjectDetails

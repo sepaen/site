@@ -10,7 +10,6 @@ import Layout from '../components/layout'
 import ProjectPreview from '../components/project-preview'
 import ProjectSwiper from '../components/project-swiper'
 import Down from '../components/down'
-import { readableColor } from 'polished'
 
 export const query = graphql`
   query ProjectsQuery {
@@ -51,6 +50,15 @@ export const query = graphql`
   }
 `
 
+const NextProject = Down.extend({
+  position: 'fixed',
+  zIndex: 2,
+  width: 20,
+  height: 20,
+  bottom: 20,
+  right: 20
+})
+
 class ProjectsPage extends React.Component {
   state = {
     index: 0
@@ -82,30 +90,16 @@ class ProjectsPage extends React.Component {
     })
 
     const bg = projects[index].node.frontmatter.color
-    const arrowColor = readableColor(bg)
 
     return (
       <Layout title={title} bg={bg}>
         <ProjectSwiper index={index} onSwipe={this.onSwipe}>
           {projects.map(({ node }) => (
-            <ProjectPreview
-              key={extractSlug(node)}
-              project={node}
-              className="project-preview"
-            />
+            <ProjectPreview key={extractSlug(node)} project={node} />
           ))}
         </ProjectSwiper>
 
-        <Down
-          color={arrowColor}
-          onClick={this.next}
-          position="fixed"
-          zIndex={2}
-          width={20}
-          height={20}
-          bottom={20}
-          right={20}
-        />
+        <NextProject onClick={this.next} />
       </Layout>
     )
   }
