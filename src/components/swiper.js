@@ -2,7 +2,6 @@ import React from 'react'
 import bowser from 'bowser'
 import debounce from 'lodash/debounce'
 import Box from '../system/box'
-import System from '../system/system'
 
 const UP = 'SWIPE_UP'
 const DOWN = 'SWIPE_DOWN'
@@ -97,11 +96,9 @@ class Swiper extends React.Component {
   }
 }
 
-const SystemSwiper = System.with(Swiper)
+Swiper.UP = UP
+Swiper.DOWN = DOWN
+Swiper.RIGHT = RIGHT
+Swiper.LEFT = LEFT
 
-SystemSwiper.UP = UP
-SystemSwiper.DOWN = DOWN
-SystemSwiper.RIGHT = RIGHT
-SystemSwiper.LEFT = LEFT
-
-export default SystemSwiper
+export default Swiper

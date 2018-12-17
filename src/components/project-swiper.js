@@ -1,11 +1,13 @@
 import React from 'react'
 
 import invoke from '../utils/invoke'
+import Box from '../system/box'
 import Swiper from './swiper'
 
 const timingFn = 'transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)'
 
-const VerticalSwiper = Swiper.extend({
+const VerticalSwiper = Box.extend({
+  as: Swiper,
   flexDirection: 'column',
   width: '100vw',
   height: '100vh',

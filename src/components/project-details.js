@@ -52,6 +52,12 @@ const ProjectSummary = Cell.extend({
   to: { opacity: 1 }
 })
 
+const ProjectGallery = Cell.extend({
+  as: Gallery,
+  pt: 4,
+  pb: 6
+})
+
 const ProjectImage = Image.extend({
   maxWidth: '100%',
   maxHeight: '100%'
@@ -66,14 +72,14 @@ const ProjectDetails = ({ project, ...props }) => (
       </Text>
     </ProjectSummary>
 
-    <Gallery pt={4} pb={6}>
+    <ProjectGallery>
       {project.fields.images.map(
         ({ childImageSharp: image }) =>
           image && <ProjectImage key={image.fluid.src} src={image.fluid.src} />
       )}
 
       <ProjectDescription project={project} />
-    </Gallery>
+    </ProjectGallery>
   </ProjectContent>
 )
 
