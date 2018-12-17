@@ -3,14 +3,13 @@ import winHeight from '../utils/win-height'
 import Box from '../system/box'
 import Cursor from './cursor'
 import Swiper from './swiper'
-import Cell from '../system/cell'
 
 function margin(i) {
   return i === 0 ? 0 : (i % 3) * 2
 }
 
-const GallerySwiper = Swiper.extend({
-  as: Cell,
+const GallerySwiper = Box.extend({
+  as: Swiper,
   position: 'relative',
   flexDirection: 'column',
   justifyContent: 'center',
