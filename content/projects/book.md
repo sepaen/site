@@ -7,8 +7,8 @@ fulltitle: 'Benga, A Kenyan Kaleidscope - Book'
 color: '#ffffff'
 cover: /assets/exte48.jpg
 images:
-  - image: /assets/exte41.jpg
-  - image: /assets/exte40.jpg
+  - image: /assets/imgp0998.jpg
+  - image: /assets/imgp1004.jpg
 ---
 Bureau Sepän's first book as a publishing house focuses on the works done by FLEE around their first issue focusing on Benga music.
 
