@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import '../utils/graphql-fragments'
+
 import extractSlug from '../utils/extract-slug'
 import publishedProjects from '../utils/published-projects'
 import Layout from '../components/layout'
@@ -34,19 +36,11 @@ export const query = graphql`
 
           fields {
             cover {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  src
-                }
-              }
+              ...ProjectImage
             }
 
             images {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  src
-                }
-              }
+              ...ProjectImage
             }
           }
 
