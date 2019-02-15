@@ -5,13 +5,22 @@ date: 2019-02-08T13:39:38.299Z
 title: 'Benga, A Kenyan Kaleidscope - Book '
 fulltitle: 'Benga, A Kenyan Kaleidscope - Book'
 color: '#ffffff'
-cover: /assets/exte48.jpg
+cover: /assets/imgp0974.jpg
 images:
-  - image: /assets/imgp0998.jpg
-  - image: /assets/imgp1004.jpg
+  - image: /assets/imgp0934.jpg
+  - image: /assets/imgp0886.jpg
+  - image: /assets/imgp0887.jpg
+  - image: /assets/imgp0947.jpg
+  - image: /assets/imgp1242.jpg
 ---
-Bureau Sepän's first book as a publishing house focuses on the works done by FLEE around their first issue focusing on Benga music.
+With the exceptional contributions of artists, academics and musicians such as Mbithi Masya (Just a Band), Andrew Eisenberg (NYU); Atelier U-Zehn and many more, “Benga, A Kenyan Kaleidoscope” investigates the future of East African music and avant gardes in the limelight of a digitalization of artistic practises. Tackling provocative questions through a multidisciplinary approach, the book is edited and published by Bureau Sepän.
 
-A result of months of exchanges, discussions and encouters, this publication tackles different controversial topics such as cultural appropriation or the digitalisation of artistic practices in today's age. 
+Client : Flee Project
 
-With the exceptionnal contributions of artists, academics and professionals such as Mbithi Masya, KMRU, Atelier UZehn, Andrew Eisenberg and many more, "Benga, A Kenyan Kaleidoscope" represents a collection on insights and ideas about cleaving themes approached in a new light.
+Title : Benga , A Kenyan Kaleidoscope
+
+Year : 2019
+
+Medium : Publication
+
+www.fleeproject.com
