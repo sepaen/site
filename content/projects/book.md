@@ -12,6 +12,7 @@ images:
   - image: /assets/imgp0887.jpg
   - image: /assets/imgp0947.jpg
   - image: /assets/imgp1242.jpg
+  - image: /assets/exte9.jpg
 ---
 Client : Flee Project
 
