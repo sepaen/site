@@ -12,7 +12,6 @@ images:
   - image: /assets/imgp0887.jpg
   - image: /assets/imgp0947.jpg
   - image: /assets/imgp1242.jpg
-  - image: /assets/exte9.jpg
 ---
 Client : Flee Project
 
@@ -35,5 +34,7 @@ Medium : Publication
 - - -
 
 With the exceptional contributions of artists, academics and musicians such as Mbithi Masya (Just a Band), Andrew Eisenberg (NYU); Atelier U-Zehn and many more, “Benga, A Kenyan Kaleidoscope” investigates the future of East African music and avant gardes in the limelight of a digitalization of artistic practises. 
+
+<br/>
 
 Tackling provocative questions through a multidisciplinary approach, the book is edited and published by Bureau Sepän.
