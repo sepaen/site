@@ -24,28 +24,32 @@ export const query = graphql`
   }
 `
 
-const AboutCell = Cell.extend({
+const AboutCell = Cell.with({
   flexDirection: 'column',
-  fontSize: [18, 24]
+  fontSize: 18,
+
+  desktop: {
+    fontSize: 24
+  }
 })
 
-const Subscribe = Text.extend({
+const Subscribe = Text.with({
   display: 'inline',
   textDecoration: 'underline',
   cursor: 'pointer'
 })
 
-const SubscribeBox = Box.extend({
+const SubscribeBox = Box.with({
   alignItems: 'center',
   transition: 'opacity 0.3s ease-in-out'
 })
 
-const SubscribeInput = Input.extend({
+const SubscribeInput = Input.with({
   type: 'email',
   placeholder: 'Enteryour email here'
 })
 
-const SubscribeSubmit = Text.extend({
+const SubscribeSubmit = Text.with({
   children: 'Subscribe',
   fontSize: 16
 })

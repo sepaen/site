@@ -15,7 +15,7 @@ const arrow = (
   </svg>
 )
 
-const Down = Box.extend({
+const Down = Box.with({
   children: arrow,
   width: 30,
   cursor: 'pointer'

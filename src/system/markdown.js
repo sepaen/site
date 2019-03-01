@@ -1,14 +1,18 @@
 import Text from '../system/text'
 
-const Markdown = Text.extend({
-  as: 'section',
-  dangerouslySetInnerHTML: p => ({ __html: p.html }),
-  flexDirection: 'column',
+const Markdown = Text.with(
+  {
+    as: 'section',
+    flexDirection: 'column',
 
-  $children: {
-    '*': { color: 'white' },
-    'p, h1': { m: 0 }
-  }
-})
+    '& *': { color: 'white' },
+    '& p, h1': { m: 1 }
+  },
+
+  props => ({
+    ...props,
+    dangerouslySetInnerHTML: { __html: props.html }
+  })
+)
 
 export default Markdown

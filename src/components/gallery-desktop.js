@@ -8,7 +8,7 @@ function margin(i) {
   return i === 0 ? 0 : (i % 3) * 2
 }
 
-const GallerySwiper = Box.extend({
+const GallerySwiper = Box.with({
   as: Swiper,
   position: 'relative',
   flexDirection: 'column',
@@ -18,7 +18,7 @@ const GallerySwiper = Box.extend({
   cursor: 'none'
 })
 
-const SwipeContainer = Box.extend({
+const SwipeContainer = Box.with({
   position: 'absolute',
   justifyContent: 'center',
   alignItems: 'center',
@@ -27,7 +27,7 @@ const SwipeContainer = Box.extend({
   p: 4
 })
 
-const FullSwipeContainer = SwipeContainer.extend({
+const FullSwipeContainer = SwipeContainer.with({
   top: 0,
   left: 0,
   width: '100%',

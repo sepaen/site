@@ -6,21 +6,25 @@ import Swiper from './swiper'
 
 const timingFn = 'transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)'
 
-const VerticalSwiper = Box.extend({
-  as: Swiper,
-  flexDirection: 'column',
-  width: '100vw',
-  height: '100vh',
-  overflow: 'hidden',
+const VerticalSwiper = Box.with(
+  {
+    as: Swiper,
+    flexDirection: 'column',
+    width: '100vw',
+    height: '100vh',
+    overflow: 'hidden'
+  },
 
-  $children: p => ({
-    '> *': {
-      transform: `translate3d(0, ${-p.index * 100}vh, 0)`,
+  props => ({
+    ...props,
+
+    '& > *': {
+      transform: `translate3d(0, ${-props.index * 100}vh, 0)`,
       transition: timingFn,
       willChange: 'transform'
     }
   })
-})
+)
 
 class ProjectSwiper extends React.Component {
   select = index => {

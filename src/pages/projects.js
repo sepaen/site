@@ -50,7 +50,7 @@ export const query = graphql`
   }
 `
 
-const NextProject = Down.extend({
+const NextProject = Down.with({
   position: 'fixed',
   zIndex: 2,
   width: 20,

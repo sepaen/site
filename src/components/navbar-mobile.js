@@ -6,11 +6,12 @@ import MenuIcon from './menu-icon'
 import SiteTitle from './site-title'
 import { readableColor } from 'polished'
 
-const NavbarBox = Box.extend({
-  bg: p => (p.opened ? p.bg : 'transparent'),
-  bb: p => (p.opened ? '1px solid' : 'none'),
-  borderColor: p => readableColor(p.bg)
-})
+const NavbarBox = Box.with(({ opened, bg, ...props }) => ({
+  ...props,
+  bg: opened ? bg : 'transparent',
+  bb: opened ? '1px solid' : 'none',
+  borderColor: readableColor(bg)
+}))
 
 class NavbarMobile extends React.Component {
   state = {

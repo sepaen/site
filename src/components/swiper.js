@@ -1,5 +1,6 @@
 import React from 'react'
 import bowser from 'bowser'
+import omit from 'lodash/omit'
 import debounce from 'lodash/debounce'
 import Box from '../system/box'
 
@@ -86,11 +87,10 @@ class Swiper extends React.Component {
   render() {
     return (
       <Box
-        {...this.props}
+        {...omit(this.props, 'threshold', 'onSwipe')}
         onWheel={this.onWheel}
         onTouchStart={this.onTouchStart}
         onTouchMove={this.onTouchMove}
-        omit={['threshold', 'onSwipe']}
       />
     )
   }

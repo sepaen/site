@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '../system/box'
 import SiteTitle from './site-title'
 
-const FooterBox = Box.extend({
+const FooterBox = Box.with({
   as: 'footer',
   position: 'fixed',
   zIndex: 2,

@@ -12,43 +12,64 @@ import Image from '../system/image'
 
 const EXIT_DURATION = 500
 
-const ProjectBox = Box.extend({
+const ProjectBox = Box.with({
   flex: '1 0 100%',
   cursor: 'none'
 })
 
-const ProjectContent = Content.extend({
-  display: ['flex', 'grid'],
+const ProjectContent = Content.with({
+  display: 'flex',
   flexDirection: 'column',
   transition: `opacity ${EXIT_DURATION}ms ease-out`,
-  pt: [10, 2],
-  pb: [2, 2]
+  pt: 10,
+  pb: 2,
+
+  desktop: {
+    display: 'grid',
+    pt: 2
+  }
 })
 
-const ProjectSummary = Cell.extend({
+const ProjectSummary = Cell.with({
+  flexDirection: 'column',
+  mt: 0,
+  mr: 0,
+
+  desktop: {
+    gridColumn: 1,
+    mt: 16,
+    mr: 4
+  }
+})
+
+const ProjectCoverCell = Cell.with({
   gridColumn: 1,
-  flexDirection: 'column'
-})
-
-const ProjectCoverCell = Cell.extend({
-  gridColumn: [1, '2/6'],
   flex: 1,
   position: 'relative',
-  height: '100%'
+  height: '100%',
+
+  desktop: {
+    gridColumn: '2/6'
+  }
 })
 
-const ProjectCoverBox = Box.extend({
+const ProjectCoverBox = Box.with({
   position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
   height: '100%',
   justifyContent: 'center',
-  alignItems: ['flex-start', 'center'],
-  p: [0, 4]
+  alignItems: 'flex-start',
+  p: 0,
+
+  desktop: {
+    alignItems: 'center',
+    p: 4
+  }
 })
 
-const ProjectCover = Image.extend({
+const ProjectCover = Image.with({
   maxWidth: '100%',
   maxHeight: '100%'
 })
@@ -86,7 +107,7 @@ class ProjectPreview extends React.Component {
     return (
       <ProjectBox bg={project.frontmatter.color}>
         <ProjectContent {...props} opacity={exiting ? 0 : 1}>
-          <ProjectSummary mt={[0, 16]} mr={[0, 4]} mb={4}>
+          <ProjectSummary mb={4}>
             <Text whiteSpace="pre-wrap">
               {project.frontmatter.fulltitle || project.frontmatter.title}
               {project.frontmatter.subtitle}
@@ -95,7 +116,7 @@ class ProjectPreview extends React.Component {
 
           <ProjectCoverCell>
             <ProjectCoverBox onClick={this.showProject}>
-              <ProjectCover src={this.getCover()} />
+              <ProjectCover img={this.getCover()} />
             </ProjectCoverBox>
           </ProjectCoverCell>
         </ProjectContent>

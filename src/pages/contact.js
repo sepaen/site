@@ -32,7 +32,9 @@ export const query = graphql`
   }
 `
 
-const Column = Box.extend({ flexDirection: 'column', mb: 4 })
+const Column = Box.with({ flexDirection: 'column', mb: 4 })
+
+const fontSize = { fontSize: 24, desktop: { fontSize: 32 } }
 
 const ContactPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -41,7 +43,7 @@ const ContactPage = ({ data }) => {
   return (
     <Layout title={siteTitle} bg="gold">
       <Content>
-        <Cell flexDirection="column" fontSize={[24, 32]}>
+        <Cell flexDirection="column" {...fontSize}>
           <Column>
             <Text children={contact.title} />
             <Link href={`mailto:${contact.email}`} children={contact.email} />

@@ -7,7 +7,7 @@ function matchMedia(breakpoint) {
     : true
 }
 
-function withMediaQuery(Component) {
+function withMediaQuery(Responsive) {
   return class MediaQuery extends React.Component {
     static defaultProps = {
       breakpoint: '40em'
@@ -19,7 +19,7 @@ function withMediaQuery(Component) {
 
     render() {
       return (
-        <Component
+        <Responsive
           {...omit(this.props, 'breakpoint')}
           isDesktop={this.state.isDesktop}
         />

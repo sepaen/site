@@ -7,21 +7,22 @@ import Footer from './footer'
 import Box from '../system/box'
 import Text from '../system/text'
 
-const LayoutBox = Box.extend({
+const LayoutBox = Box.with(({ bg, ...props }) => ({
+  bg,
+  ...props,
+
   transition: 'background-color ease-in-out 0.5s',
 
-  $children: p => ({
-    [`${Text}, span, p, a`]: {
-      color: readableColor(p),
-      transition: 'color ease-in-out 0.3s'
-    },
+  [`${Text.toString()}, span, p, a`]: {
+    color: readableColor(bg),
+    transition: 'color ease-in-out 0.3s'
+  },
 
-    'svg *': {
-      fill: readableColor(p),
-      stroke: readableColor(p)
-    }
-  })
-})
+  '& svg *': {
+    fill: readableColor(bg),
+    stroke: readableColor(bg)
+  }
+}))
 
 const Layout = ({ title, bg = 'white', children, ...props }) => (
   <LayoutBox {...props} bg={bg}>

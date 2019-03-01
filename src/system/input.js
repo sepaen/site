@@ -1,6 +1,6 @@
 import Text from './text'
 
-const Input = Text.extend({
+const Input = Text.with({
   as: 'input',
   border: '1px solid black',
   bg: 'transparent',

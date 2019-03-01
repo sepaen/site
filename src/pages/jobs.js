@@ -43,6 +43,8 @@ export const query = graphql`
   }
 `
 
+const fontSize = { fontSize: 18, desktop: { fontSize: 24 } }
+
 const JobsPage = ({ data }) => {
   const title = data.site.siteMetadata.title
   const jobs = get(data, 'jobs.edges', [])
@@ -53,7 +55,7 @@ const JobsPage = ({ data }) => {
       <Content>
         {jobs.length === 0 && (
           <Cell alignSelf="flex-start">
-            <Text children={nojobs} fontSize={[18, 24]} />
+            <Text children={nojobs} {...fontSize} />
           </Cell>
         )}
 

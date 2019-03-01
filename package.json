@@ -14,30 +14,34 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.7",
     "@pake/react-color": "^3.0.0",
-    "bowser": "^2.0.0-beta.3",
-    "gatsby": "^2.0.31",
+    "bowser": "^2.1.0",
+    "emotion": "^10.0.7",
+    "gatsby": "^2.1.19",
+    "gatsby-plugin-emotion": "^4.0.4",
     "gatsby-plugin-mailchimp": "https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",
-    "gatsby-plugin-netlify-cms": "^3.0.4",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.8",
+    "gatsby-plugin-netlify-cms": "^3.0.12",
+    "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-sharp": "^2.0.23",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-source-filesystem": "^2.0.5",
-    "gatsby-transformer-remark": "^2.1.9",
-    "gatsby-transformer-sharp": "^2.1.5",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-remark": "^2.3.0",
+    "gatsby-transformer-sharp": "^2.1.15",
     "lodash": "^4.17.11",
-    "netlify-cms": "^2.1.3",
+    "netlify-cms": "^2.5.1",
     "netlify-cms-widget-color": "^3.0.1",
-    "polished": "^2.3.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "polished": "^3.0.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
-    "systyle": "^1.0.4"
+    "react-systyle": "^0.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3"
+    "eslint": "^5.14.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jsdom": "^13.2.0",
+    "prettier": "^1.16.4"
   }
 }

@@ -1,12 +1,14 @@
 import React from 'react'
 import Text from '../system/text'
 
-const CursorText = Text.extend({
-  $before: {
-    content: p => p.content,
+const CursorText = Text.with(({ content = '', ...props }) => ({
+  ...props,
+
+  ':before': {
+    content: `"${content}"`,
     bg: 'red'
   }
-})
+}))
 
 class Cursor extends React.Component {
   static defaultProps = {

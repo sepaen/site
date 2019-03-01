@@ -1,10 +1,11 @@
 import React from 'react'
+import { findDOMNode } from 'react-dom'
 
 import logoImage from '../images/logo.svg'
 import Box from '../system/box'
 import Image from '../system/image'
 
-const Video = Box.extend({
+const Video = Box.with({
   as: 'video',
   loop: true,
   muted: true,
@@ -12,20 +13,18 @@ const Video = Box.extend({
   preload: 'auto'
 })
 
-const LogoImage = Image.extend({
-  src: logoImage
+const LogoImage = Image.with({
+  img: logoImage
 })
 
 class LogoVideo extends React.Component {
-  video = React.createRef()
-
   componentDidMount() {
-    this.video.current.play()
+    findDOMNode(this).play()
   }
 
   render() {
     return (
-      <Video {...this.props} innerRef={this.video}>
+      <Video {...this.props}>
         <source src="/videos/logo.webm" type="video/webm" />
         <source src="/videos/logo.mp4" type="video/mp4" />
         <LogoImage {...this.props} />

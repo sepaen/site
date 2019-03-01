@@ -4,22 +4,44 @@ import Cell from '../system/cell'
 import Text from '../system/text'
 import Box from '../system/box'
 
-const JobContainer = Cell.extend({
+const JobContainer = Cell.with({
   flexDirection: 'column',
   bb: '1px solid balck',
   pb: 5,
   px: 2
 })
 
-const JobTitle = Text.extend({
+const JobTitle = Text.with({
   alignSelf: 'center',
   fontSize: '2em'
 })
 
-const JobColumn = Box.extend({
-  width: p => [1, p.big ? 1 / 2 : 1 / 4],
-  flexDirection: 'column'
-})
+const JobColumn = Box.with(({ big, ...props }) => ({
+  ...props,
+  width: 1,
+  flexDirection: 'column',
+
+  desktop: {
+    width: big ? 1 / 2 : 1 / 4
+  }
+}))
+
+const margins = {
+  col: {
+    mr: 0,
+    mb: 4,
+
+    desktop: {
+      mr: 3,
+      mb: 0
+    }
+  },
+
+  header: {
+    mb: 2,
+    desktop: { mb: 4 }
+  }
+}
 
 const JobPreview = ({ job, ...props }) => {
   const info = job.frontmatter
@@ -29,16 +51,16 @@ const JobPreview = ({ job, ...props }) => {
       <JobTitle children={info.title} mb={5} />
 
       <Box flexDirection={['column', 'row']}>
-        <JobColumn big mr={[0, 3]} mb={[4, 0]}>
-          <Text children="Description of position" mb={[2, 4]} />
+        <JobColumn big {...margins.col}>
+          <Text children="Description of position" {...margins.header} />
           <Text children={info.description} />
         </JobColumn>
-        <JobColumn mr={[0, 3]} mb={[4, 0]}>
-          <Text children="Requirements" mb={[2, 4]} />
+        <JobColumn {...margins.col}>
+          <Text children="Requirements" {...margins.header} />
           <Text children={info.requirements} />
         </JobColumn>
         <JobColumn>
-          <Text children="How to apply" mb={[2, 4]} />
+          <Text children="How to apply" {...margins.header} />
           <Text children={info.howto} />
         </JobColumn>
       </Box>

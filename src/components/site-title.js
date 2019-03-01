@@ -1,6 +1,6 @@
 import Link from '../system/link'
 
-const SiteTitle = Link.extend({
+const SiteTitle = Link.with({
   to: '/',
   textTransform: 'uppercase',
   letterSpacing: 10,
