@@ -9,6 +9,7 @@ import System from '../system/system'
 import Layout from '../components/layout'
 import ProjectDetails from '../components/project-details'
 import NextProject from '../components/next-project'
+import { keyframes } from '@emotion/core'
 
 function findIndex(list = [], id) {
   return list.findIndex(el => el.node.id === id)
@@ -66,10 +67,13 @@ export const query = graphql`
   }
 `
 
-const FadeIn = System.animate('1s ease-in', {
-  from: { opacity: 0 },
-  to: { opacity: 1 }
-})
+const FadeIn = System.animate(
+  '1s ease-in',
+  keyframes({
+    from: { opacity: 0 },
+    to: { opacity: 1 }
+  })
+)
 
 const ProjectDetailsPage = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title
