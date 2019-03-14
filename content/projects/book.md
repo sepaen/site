@@ -5,13 +5,14 @@ date: 2019-02-08T13:39:38.299Z
 title: 'Benga, A Kenyan Kaleidscope - Book '
 fulltitle: 'Benga, A Kenyan Kaleidscope - Book'
 color: '#ffffff'
-cover: /assets/imgp0974.jpg
+cover: /assets/imgp1985.jpg
 images:
-  - image: /assets/imgp0934.jpg
-  - image: /assets/imgp0886.jpg
-  - image: /assets/imgp0887.jpg
-  - image: /assets/imgp0947.jpg
-  - image: /assets/imgp1242.jpg
+  - image: /assets/imgp1982.jpg
+  - image: /assets/imgp1983.jpg
+  - image: /assets/imgp1997.jpg
+  - image: /assets/imgp2099.jpg
+  - image: /assets/imgp2111.jpg
+  - image: /assets/imgp2110.jpg
 ---
 Client : Flee Project
 
