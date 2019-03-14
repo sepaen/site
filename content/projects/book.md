@@ -1,6 +1,6 @@
 ---
 type: project
-published: false
+published: true
 date: 2019-02-08T13:39:38.299Z
 title: 'Benga, A Kenyan Kaleidscope - Book '
 fulltitle: 'Benga, A Kenyan Kaleidscope - Book'
