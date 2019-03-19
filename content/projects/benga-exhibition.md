@@ -10,7 +10,6 @@ cover: /assets/affiche-nyon-1.png
 images:
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
-  - image: /assets/benga-10.jpg
   - image: /assets/img_0403.jpg
   - image: /assets/dsc00626.jpg
 ---
