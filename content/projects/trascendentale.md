@@ -32,7 +32,7 @@ www.pizzicatrance.com
 
 - - -
 
-Long format documentary film shot in Apulia, Berlin and Switzerland. 
+Long format documentary film about the saga of Tarantism and Pizzica shot in Apulia, Berlin and Switzerland. 
 
 <br/>
 
