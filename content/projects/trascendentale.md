@@ -30,8 +30,6 @@ Medium : Film
 
 www.pizzicatrance.com
 
-
-
 - - -
 
 Long format documentary film shot in Apulia, Berlin and Switzerland. 
@@ -39,4 +37,4 @@ Long format documentary film shot in Apulia, Berlin and Switzerland.
 <br/>
 
 \
-Out April 2019.
+Out Fall 2019.
