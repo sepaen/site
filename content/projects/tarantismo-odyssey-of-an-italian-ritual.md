@@ -6,6 +6,8 @@ title: 'Tarantismo: Odyssey of an Italian Ritual'
 fulltitle: 'Tarantismo: Odyssey of an Italian Ritual'
 color: ''
 cover: /assets/1fle002-product.jpg
+images:
+  - image: /assets/3fle002-product.jpg
 ---
 Client : Flee Project
 
