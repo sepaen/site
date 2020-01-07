@@ -5,10 +5,14 @@ date: 2020-01-06T16:01:47.910Z
 title: 'Tarantismo: Odyssey of an Italian Ritual'
 fulltitle: 'Tarantismo: Odyssey of an Italian Ritual'
 color: '#b19964'
-cover: /assets/10fle002-product.jpg
+cover: /assets/82302414_687733018423965_1992083201425670144_n.jpg
 images:
-  - image: /assets/3fle002-product.jpg
+  - image: /assets/81341073_1046637132338872_6317419712959479808_n.jpg
   - image: /assets/8fle002-product.jpg
+  - image: /assets/81638074_485141152141599_8169102915970007040_n.jpg
+  - image: /assets/flee002-book-extract4.jpg
+  - image: /assets/81618177_458148801518345_8641062419562496000_n.jpg
+  - image: /assets/flee002_record_labels_disc2_sidea-page-001-1-.jpg
 ---
 Client : Flee Project
 
