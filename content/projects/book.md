@@ -34,7 +34,7 @@ Medium : Publication
 
 - - -
 
-With the exceptional contributions of artists, academics and musicians such as Mbithi Masya (Just a Band), Andrew Eisenberg (NYU); Atelier U-Zehn and many more, “Benga, A Kenyan Kaleidoscope” investigates the future of East African music and avant gardes in the limelight of a digitalization of artistic practises. 
+With the exceptional contributions of artists, academics and musicians such as [Mbithi Masya](http://www.mbithi.co/about) (Just a Band), [Andrew Eisenberg](https://www.nyu.edu/) (NYU); Atelier U-Zehn and many more, “Benga, A Kenyan Kaleidoscope” investigates the future of East African music and avant gardes in the limelight of a digitalization of artistic practises. 
 
 <br/>
 
