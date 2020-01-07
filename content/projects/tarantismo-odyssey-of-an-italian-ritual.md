@@ -5,7 +5,7 @@ date: 2020-01-06T16:01:47.910Z
 title: 'Tarantismo: Odyssey of an Italian Ritual'
 fulltitle: 'Tarantismo: Odyssey of an Italian Ritual'
 color: ''
-cover: /assets/1fle002-product.jpg
+cover: /assets/10fle002-product.jpg
 images:
   - image: /assets/3fle002-product.jpg
   - image: /assets/8fle002-product.jpg
