@@ -15,4 +15,28 @@ images:
   - image: /assets/imgp7842.jpg
   - image: /assets/imgp7746.jpg
 ---
-Extra Muros 19 was held in East Africa
+Client : Flee Project
+
+<br/>
+
+Title : Extra Muros 19 - East Africa 
+
+<br/>
+
+Year : 2019
+
+<br/>
+
+Medium : Art Residency Program
+
+<br/>
+
+[www.fleeproject.com](http://www.fleeproject.com)
+
+- - -
+
+Over the months of August and September 2019, Sepän assisted FLEE in the production and curation of the new art residency "Extra Muros" held in Nairobi and East Africa. 
+
+<br/>
+
+With 7 artists from Kenya, Uganda, France, Switzerland and Italy conveyed, FLEE setup the ideal framework for musical production in the heart of Kenya's vibrating capital. Assisted by SMEM, Varia Instruments, Institut Francais, Pro-Helvetia and Egis, FLEE also
