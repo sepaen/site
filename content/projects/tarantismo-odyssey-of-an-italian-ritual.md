@@ -8,6 +8,7 @@ color: ''
 cover: /assets/1fle002-product.jpg
 images:
   - image: /assets/3fle002-product.jpg
+  - image: /assets/8fle002-product.jpg
 ---
 Client : Flee Project
 
@@ -29,15 +30,15 @@ Medium : Audio, Publication
 
 - - -
 
-For this second release of [FLEE](http://www.fleeproject.com), we worked on a new concept building a narrative between the distinct objects.
+For this second release of the [FLEE platform](http://www.fleeproject.com/), we have been curating the editorial and design of a challenging and transmedial project dedicated to Tarantism, an ancient Italian trance ritual. 
 
 </br>
 
-With the collaboration of graphic bureau [Non-Verbal Club](https://nonverbalclub.pt/), we've made the different central actors of the chosen topic (women, spiders, occult) interact in a user experience manner. 
+The initiative brings together artists, journalists, doctors, priests, intellectuals and musicians invited to reflect on this subject.
 
 </br>
 
-We've curated the written and audial material bringing together artists, journalists, doctors, priests, thinkers and musicians to give a precise and respectful picture of the Kenyan musical genre that is Benga.
+Giving an exhaustive and challenging aesthetical perspective on this obscure music phenomenon, we supervised with an academic rigor the entire research, while articulating a sensorial narrative between the distinct objects, in collaboration with graphic design practice [Non-Verbal Club](https://nonverbalclub.pt/).
 
 </br>
 
