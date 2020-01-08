@@ -5,7 +5,7 @@ date: 2020-01-06T16:01:47.910Z
 title: 'Tarantismo: Odyssey of an Italian Ritual'
 fulltitle: 'Tarantismo: Odyssey of an Italian Ritual'
 color: '#b19964'
-cover: /assets/82302414_687733018423965_1992083201425670144_n.jpg
+cover: /assets/bureau-sepän-projects-covers-template.png
 images:
   - image: /assets/81341073_1046637132338872_6317419712959479808_n.jpg
   - image: /assets/8fle002-product.jpg
