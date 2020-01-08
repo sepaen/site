@@ -5,7 +5,7 @@ date: 2019-02-08T13:39:38.299Z
 title: 'Benga, A Kenyan Kaleidscope - Book '
 fulltitle: 'Benga, A Kenyan Kaleidscope - Book'
 color: '#ffffff'
-cover: /assets/imgp1985.jpg
+cover: /assets/bkk.png
 images:
   - image: /assets/imgp1982.jpg
   - image: /assets/imgp1983.jpg
