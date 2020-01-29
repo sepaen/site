@@ -39,4 +39,4 @@ Over the months of August and September 2019, Sepän assisted FLEE in the produc
 
 <br/>
 
-With 7 artists from Kenya, Uganda, France, Switzerland and Italy conveyed, FLEE setup the ideal framework for musical production in the heart of Kenya's vibrating capital. Assisted by SMEM, Varia Instruments, Institut Francais, Pro-Helvetia and Egis, FLEE also
+With 7 artists from Kenya, Uganda, France, Switzerland and Italy conveyed, FLEE setup the ideal framework for musical production in the heart of Kenya's vibrating capital with the help of SMEM, Varia Instruments, Institut Francais, Pro-Helvetia and Egis.
