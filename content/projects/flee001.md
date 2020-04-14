@@ -5,7 +5,7 @@ date: 2018-09-30T22:00:00.000Z
 title: 'Benga Music - A Signature Genre From Kenya '
 fulltitle: 'Benga Music - A Signature Genre From Kenya '
 subtitle: ''
-cover: /assets/flee001.jpg
+cover: /assets/flee001-2.jpg
 images:
   - image: /assets/20x25_300dpi_flee_benga_06.jpg
   - image: /assets/20x25_300dpi_flee_benga_04.jpg
