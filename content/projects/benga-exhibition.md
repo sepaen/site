@@ -6,7 +6,7 @@ title: 'Benga, A Kenyan Kaleidoscope - Exhibition'
 fulltitle: 'Benga, A Kenyan Kaleidoscope  - Exhibition'
 subtitle: ''
 color: '#9b6f65'
-cover: /assets/bkkexp.png
+cover: /assets/bkkexp.jpg
 images:
   - image: /assets/exposition1.jpg
   - image: /assets/exposition2.jpg
