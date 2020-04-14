@@ -6,7 +6,7 @@ title: Extra Muros 19 - East Africa
 fulltitle: Extra Muros 19 - East Africa
 subtitle: ' Art Residency '
 color: '#4d4d4d'
-cover: /assets/imgp7739.jpg
+cover: /assets/em19.jpg
 images:
   - image: /assets/vlcsnap-2019-09-17-13h59m05s569.jpg
   - image: /assets/407.jpg
