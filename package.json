@@ -17,7 +17,7 @@
     "@pake/react-color": "^3.0.0",
     "bowser": "^2.0.0-beta.3",
     "gatsby": "^2.0.31",
-    "gatsby-plugin-mailchimp": "https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",
+    "gatsby-plugin-mailchimp": "5.2.2",
     "gatsby-plugin-netlify-cms": "^3.0.4",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.8",
