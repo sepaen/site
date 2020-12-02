@@ -1,6 +1,6 @@
 ---
 type: project
-published: false
+published: true
 date: 2020-12-02T10:53:14.648Z
 title: Extra Muros 20 - Italy
 fulltitle: Extra Muros 20 - Italy
