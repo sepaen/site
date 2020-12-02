@@ -12,6 +12,23 @@ images:
   - image: /assets/6bookofthepearl.jpg
   - image: /assets/9bookofthepearl.jpg
 ---
+Client : Flee Project
+
+<br/>
+
+Title : Tales from the Deep - Pearl Divers music from the Gulf
+<br/>
+
+Year : 2021
+
+</br>
+
+Medium : Audio, Publication
+
+<br/>
+
+[www.fleeproject.com](http://www.fleeproject.com)
+
 Designed and directed by FLEE, «Pearl Divers in the Gulf: Tales of asubmerged Art» aims to document the musical phenomenon of pearldiving through history in the Arabian Gulf region.
 
 <br>
