@@ -9,6 +9,7 @@ color: ""
 cover: /assets/mf1.jpg
 images:
   - image: /assets/2bookofthepearl.jpg
+  - image: /assets/6bookofthepearl.jpg
 ---
 Designed and directed by FLEE, «Pearl Divers in the Gulf: Tales of asubmerged Art» aims to document the musical phenomenon of pearldiving through history in the Arabian Gulf region.
 
