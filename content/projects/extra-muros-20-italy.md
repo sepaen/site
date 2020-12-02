@@ -7,6 +7,13 @@ fulltitle: Extra Muros 20 - Italy
 subtitle: "Art Residency "
 color: ""
 cover: /assets/40em20-1-.jpeg
+images:
+  - image: /assets/30em20.jpg
+  - image: /assets/25em20.jpg
+  - image: /assets/18em20.jpg
+  - image: /assets/13em20.jpg
+  - image: /assets/6em20.jpg
+  - image: /assets/1em20.jpg
 ---
 Client : Extra Muros
 
