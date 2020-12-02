@@ -14,4 +14,6 @@ images:
 ---
 Designed and directed by FLEE, «Pearl Divers in the Gulf: Tales of asubmerged Art» aims to document the musical phenomenon of pearldiving through history in the Arabian Gulf region.
 
+<br>
+
 Contributing to its legacy as well as making it interact with contemporaryartists in the music and visual creative fields, the project is articulatedaround the realisation of two distinct objects and of an exhibition.
