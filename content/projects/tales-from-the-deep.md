@@ -6,7 +6,7 @@ title: Tales from the deep
 fulltitle: "Tales from the deep "
 subtitle: Pearl Divers music from the Gulf
 color: ""
-cover: /assets/6bookofthepearl.jpg
+cover: /assets/mf1.jpg
 images:
   - image: /assets/7pearl-divers.png
   - image: /assets/4pearl-divers-©-alain-saint.-hilaire.png
