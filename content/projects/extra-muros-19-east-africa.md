@@ -4,8 +4,8 @@ published: true
 date: 2020-01-07T08:37:08.106Z
 title: Extra Muros 19 - Kenya
 fulltitle: Extra Muros 19 - Kenya
-subtitle: ' Art Residency '
-color: '#4d4d4d'
+subtitle: " Art Residency "
+color: "#4d4d4d"
 cover: /assets/em19-2.jpg
 images:
   - image: /assets/vlcsnap-2019-09-17-13h59m05s569.jpg
@@ -19,7 +19,7 @@ Client : Flee Project
 
 <br/>
 
-Title : Extra Muros 19 - East Africa 
+Title : Extra Muros 19 - Kenya
 
 <br/>
 
