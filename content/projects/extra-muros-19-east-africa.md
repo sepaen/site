@@ -15,7 +15,7 @@ images:
   - image: /assets/imgp7842.jpg
   - image: /assets/imgp7746.jpg
 ---
-Client : Flee Project
+Client : Extra Muros
 
 <br/>
 
@@ -31,7 +31,7 @@ Medium : Art Residency Program
 
 <br/>
 
-[www.fleeproject.com](http://www.fleeproject.com)
+[www.extramurosres.com](http://www.extramurosres.com)
 
 - - -
 
@@ -39,4 +39,4 @@ Over the months of August and September 2019, Sepän assisted FLEE in the produc
 
 <br/>
 
-With 7 artists from Kenya, Uganda, France, Switzerland and Italy conveyed, FLEE setup the ideal framework for musical production in the heart of Kenya's vibrating capital with the help of SMEM, Varia Instruments, Institut Francais, Pro-Helvetia and Egis.
+With seven artists from Kenya, Uganda, France, Switzerland and Italy conveyed, FLEE setup the ideal framework for musical production in the heart of Kenya's vibrating capital with the help of SMEM, Varia Instruments, Institut Francais, Pro-Helvetia and Egis.
