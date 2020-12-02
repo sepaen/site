@@ -3,10 +3,10 @@ type: project
 published: true
 date: 2020-12-01T17:23:51.861Z
 title: Tales from the deep
-fulltitle: 'Tales from the deep '
+fulltitle: "Tales from the deep "
 subtitle: Pearl Divers music from the Gulf
-color: ''
-cover: /assets/mf9.jpg
+color: ""
+cover: /assets/6bookofthepearl.jpg
 images:
   - image: /assets/7pearl-divers.png
   - image: /assets/4pearl-divers-©-alain-saint.-hilaire.png
